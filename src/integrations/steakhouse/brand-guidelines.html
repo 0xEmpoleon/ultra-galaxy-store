@@ -4,234 +4,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steakhouse Financial — Design System v2</title>
+    <title>Steakhouse Financial | Design System [SYS.VER.2.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --brand-green: oklch(0.60 0.16 158);
-            --bg-dark: oklch(0.12 0 0);
-            --surface-dark: oklch(0.18 0 0);
-            --text-primary: oklch(0.98 0.01 90);
-            --text-muted: oklch(0.70 0.01 90);
-            --border-muted: oklch(0.25 0 0);
-
-            --strategy-prime: oklch(0.25 0.04 158);
-            --strategy-high-yield: oklch(0.28 0.06 40);
-            --strategy-term: oklch(0.32 0.06 85);
-            --strategy-turbo: oklch(0.24 0.08 300);
+            --accent-color: oklch(0.60 0.16 158);
+            --bg: oklch(0.12 0 0);
+            --surface: oklch(0.18 0 0);
         }
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
+        .hero__brand {
             font-family: 'Geist Sans', 'Inter', sans-serif;
-            margin: 0;
-            padding: 80px 40px;
+            color: var(--accent-color);
+            letter-spacing: -0.05em;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .specimen__sample--display {
+            font-family: 'Geist Sans', 'Inter', sans-serif;
+            color: var(--accent-color);
+            letter-spacing: -0.04em;
         }
 
-        header {
-            margin-bottom: 80px;
+        .color-swatch-prime {
+            background: oklch(0.25 0.04 158);
         }
 
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 16px;
+        .color-swatch-hy {
+            background: oklch(0.28 0.06 40);
         }
 
-        .tagline {
-            color: var(--text-muted);
-            font-size: 1.25rem;
+        .color-swatch-term {
+            background: oklch(0.32 0.06 85);
         }
 
-        section {
-            margin-bottom: 80px;
-        }
-
-        h2 {
-            border-bottom: 1px solid var(--border-muted);
-            padding-bottom: 16px;
-            margin-bottom: 32px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 1rem;
-            color: var(--text-muted);
-        }
-
-        .swatches {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-        }
-
-        .swatch {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-muted);
-        }
-
-        .swatch-color {
-            height: 120px;
-        }
-
-        .swatch-info {
-            padding: 16px;
-            background: var(--surface-dark);
-        }
-
-        .swatch-label {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .swatch-hex {
-            font-family: monospace;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .strategy-swatches {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-        }
-
-        .strategy-card {
-            padding: 24px;
-            border-radius: 16px;
-            border: 1px solid var(--border-muted);
-            position: relative;
-        }
-
-        /* Swatch Colors */
-        .color-brand {
-            background-color: var(--brand-green);
-        }
-
-        .color-bg {
-            background-color: var(--bg-dark);
-        }
-
-        .color-surface {
-            background-color: var(--surface-dark);
-        }
-
-        .color-strategy-prime {
-            background-color: var(--strategy-prime);
-        }
-
-        .color-strategy-hy {
-            background-color: var(--strategy-high-yield);
-        }
-
-        .color-strategy-term {
-            background-color: var(--strategy-term);
-        }
-
-        .color-strategy-turbo {
-            background-color: var(--strategy-turbo);
-        }
-
-        .image-assets {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .asset-card {
-            background-color: var(--surface-dark);
-            border: 1px solid var(--border-muted);
-            padding: 24px;
-            border-radius: 12px;
-        }
-
-        .asset-preview {
-            max-width: 100%;
-            height: 200px;
-            object-fit: contain;
-            background-color: #000;
-            border-radius: 8px;
-            margin-bottom: 16px;
+        .color-swatch-turbo {
+            background: oklch(0.24 0.08 300);
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Steakhouse Financial</h1>
-            <p class="tagline">Official Design System — 1:1 Reconstruction Grade</p>
-        </header>
 
-        <section>
-            <h2>Core Palette</h2>
-            <div class="swatches">
-                <div class="swatch">
-                    <div class="swatch-color color-brand"></div>
-                    <div class="swatch-info">
-                        <span class="swatch-label">Brand Green</span>
-                        <span class="swatch-hex">oklch(0.60 0.16 158)</span>
-                    </div>
-                </div>
-                <div class="swatch">
-                    <div class="swatch-color color-bg"></div>
-                    <div class="swatch-info">
-                        <span class="swatch-label">Deep Background</span>
-                        <span class="swatch-hex">oklch(0.12 0 0)</span>
-                    </div>
-                </div>
-                <div class="swatch">
-                    <div class="swatch-color color-surface"></div>
-                    <div class="swatch-info">
-                        <span class="swatch-label">Surface Layer</span>
-                        <span class="swatch-hex">oklch(0.18 0 0)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Strategy Themes</h2>
-            <div class="strategy-swatches">
-                <div class="strategy-card color-strategy-prime">
-                    <span class="swatch-label">Prime (Blue-Chip)</span>
-                    <span class="swatch-hex">oklch(0.25 0.04 158)</span>
-                </div>
-                <div class="strategy-card color-strategy-hy">
-                    <span class="swatch-label">High Yield</span>
-                    <span class="swatch-hex">oklch(0.28 0.06 40)</span>
-                </div>
-                <div class="strategy-card color-strategy-term">
-                    <span class="swatch-label">Term Exposure</span>
-                    <span class="swatch-hex">oklch(0.32 0.06 85)</span>
-                </div>
-                <div class="strategy-card color-strategy-turbo">
-                    <span class="swatch-label">Turbo / Leverage</span>
-                    <span class="swatch-hex">oklch(0.24 0.08 300)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Visual Assets</h2>
-            <div class="image-assets">
-                <div class="asset-card">
-                    <img src="https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcollage.0fe3853b.png&w=640&q=75"
-                        class="asset-preview">
-                    <span class="swatch-label">Hero Collage.png</span>
-                </div>
-                <div class="asset-card">
-                    <img src="https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdotgrid.2c508048.png&w=96&q=75"
-                        class="asset-preview" style="background-size: 20px;">
-                    <span class="swatch-label">Dot Grid Pattern</span>
-                </div>
-            </div>
-        </section>
+    <!-- TICKER -->
+    <div class="ticker" style="color: var(--accent-color); opacity: 0.6;">
+        <div class="ticker__inner">
+            STEAKHOUSE FINANCIAL — INSTITUTIONAL DEFI — TRUSTLESS VAULTS — ONCHAIN REPO LENDING — STEAKHOUSE FINANCIAL —
+            INSTITUTIONAL DEFI — TRUSTLESS VAULTS — ONCHAIN REPO LENDING — STEAKHOUSE FINANCIAL —&nbsp;
+        </div>
     </div>
+
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">STEAKHOUSE</h1>
+        <p class="hero__tagline">Institutional Grade Onchain Yield</p>
+        <p class="hero__description">
+            The canonical visual identity reference for Steakhouse Financial. This system balances institutional
+            authority with cryptographic transparency. It utilizes high-contrast dark modes, industrial textures, and
+            strategic color banding to delineate risk profiles.
+        </p>
+        <p class="hero__source">Original → <a href="https://app.steakhouse.financial/" target="_blank"
+                style="color: var(--accent-color);">app.steakhouse.financial</a></p>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number">002 // PALETTE</div>
+            <h2 class="section-title">Color System</h2>
+            <p class="section-description">A foundation of Pure Deep Black and Surface Grey. Brand Green serves as the
+                primary action accent.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: oklch(0.12 0 0); color: #ffffff;">
+                    <span class="swatch__name">DEEP BLACK</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">oklch(0.12 0 0)</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: oklch(0.60 0.16 158); color: #000000;">
+                    <span class="swatch__name">BRAND GREEN</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">oklch(0.60 0.16 158)</div>
+                    <div class="swatch__role">ACTION / ACCENT</div>
+                </div>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">STRATEGY THEMES</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div class="swatch">
+                    <div class="swatch__color color-swatch-prime"></div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">PRIME</div>
+                        <div class="swatch__role">TEAL</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color color-swatch-hy"></div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">HIGH YIELD</div>
+                        <div class="swatch__role">ORANGE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number">003 // TYPOGRAPHY</div>
+            <h2 class="section-title">Type Hierarchy</h2>
+            <p class="section-description">Geist Sans provides the modular, institutional clarity required for financial
+                data. Inter serves as the robust fallback.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: clamp(24px, 4vw, 48px); line-height: 1.1; font-weight: 700;">
+                    CRYPTO VAULTS BUILT FOR TRUST
+                </div>
+                <span class="specimen__label">GEIST SANS BOLD (H1 DISPLAY)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: clamp(18px, 2vw, 24px);">
+                    Institutional DeFi Infrastructure
+                </div>
+                <span class="specimen__label">INTER SEMIBOLD (SUBHEADINGS)</span>
+            </div>
+
+            <table class="type-table">
+                <tr>
+                    <td>Typeface</td>
+                    <td>Geist Sans / Inter</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Headlines & UI Labels</td>
+                </tr>
+                <tr>
+                    <td>Letter Spacing</td>
+                    <td>-0.04em (Display) / 0.1em (Labels)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divider-plus" style="color: var(--accent-color);">+</div>
+
+    <!-- 004 // INTERFACE + 005 // VISUAL ASSETS -->
+    <div class="spec-grid">
+        <!-- INTERFACE COMPONENTS -->
+        <div>
+            <div class="section-number">004 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title">Institutional UI</h2>
+
+            <p class="component-label">ACTION BUTTONS</p>
+            <div class="btn-showcase">
+                <button class="btn-demo btn-demo--solid"
+                    style="background: var(--accent-color); color: #000; border-radius: 8px; font-weight: 600;">CONNECT
+                    WALLET</button>
+                <button class="btn-demo btn-demo--outline"
+                    style="color: var(--accent-color); border-color: var(--accent-color); border-radius: 8px;">DOCS
+                    ↗</button>
+            </div>
+
+            <p class="component-label">RISK BADGES</p>
+            <div style="display: flex; gap: 8px;">
+                <span
+                    style="background: var(--accent-color); color: #000; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">A</span>
+                <span
+                    style="background: oklch(0.28 0.06 40); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">CC</span>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">SURFACE PROPERTIES</p>
+            <div class="spacing-row">
+                <span class="spacing-label">Radius</span>
+                <div
+                    style="width: 60px; height: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;">
+                </div>
+                <span style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">16px — MODERN</span>
+            </div>
+        </div>
+
+        <!-- VISUAL ASSETS -->
+        <div>
+            <div class="section-number">005 // VISUAL ASSETS</div>
+            <h2 class="section-title">Textures & Masks</h2>
+            <p class="section-description">Steakhouse utilizes layered photographic masks and dot patterns to create
+                depth.</p>
+
+            <div style="margin-bottom: 24px;">
+                <p class="component-label">HERO COLLAGE</p>
+                <div style="background: #000; padding: 12px; border: 1px solid var(--border); border-radius: 8px;">
+                    <img src="https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcollage.0fe3853b.png&w=640&q=75"
+                        style="width: 100%; height: 120px; object-fit: contain; opacity: 0.6;">
+                </div>
+            </div>
+
+            <p class="component-label">DOT GRID OVERLAY</p>
+            <div
+                style="height: 60px; background-image: url('https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdotgrid.2c508048.png&w=96&q=75'); background-size: 24px; border: 1px solid var(--border); opacity: 0.8; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer">
+        <div>
+            <div class="guidelines-footer__brand" style="color: var(--accent-color);">STEAKHOUSE FINANCIAL // 2026</div>
+            <a href="../../index.html" class="back-link" style="color: var(--accent-color);">← Back to Galaxy Store</a>
+        </div>
+        <div class="guidelines-footer__version">END OF SPEC [SYS.VER.2.0]</div>
+    </footer>
+
 </body>
 
 </html>

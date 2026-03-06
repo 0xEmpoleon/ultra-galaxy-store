@@ -21,6 +21,8 @@ class SystemCard extends HTMLElement {
                 :host {
                     display: flex;
                     flex-direction: column;
+                    width: 100%;
+                    max-width: 28.125rem; /* ~450px to prevent excessive stretching */
                     text-decoration: none;
                     color: inherit;
                     cursor: pointer;

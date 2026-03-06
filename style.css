@@ -291,6 +291,7 @@ body {
 .store-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+    justify-items: center;
     column-gap: 2.5rem;
     row-gap: 3.125rem;
     width: 100%;

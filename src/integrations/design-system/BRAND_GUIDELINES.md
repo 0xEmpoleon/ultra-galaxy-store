@@ -3,6 +3,8 @@
 ## Brand Identity Overview
 Cipher Digital represents advanced compute and next-generation data centers. The aesthetic relies on high contrast, technical precision, and modern typography suitable for an industrial-scale technology infrastructure company. 
 
+**Original Source:** [https://www.cipherdigital.com/](https://www.cipherdigital.com/)
+
 ## 1. Design Tokens: Colors
 The palette leans heavily on absolute contrasts (Black/White), a deep space/technical "Brand" color, a distinct "Green" for success/action, and specific grays.
 

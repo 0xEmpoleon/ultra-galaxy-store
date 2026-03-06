@@ -2,7 +2,7 @@
 let scene, camera, renderer, object, edges;
 let mouseX = 0, mouseY = 0;
 let targetX = 0, targetY = 0;
-let isLightMode = true; // Default: light mode (white bg, dark text)
+let isLightMode = false; // Default: dark mode (dark bg, white text)
 
 const windowHalfX = window.innerWidth / 2;
 const windowHalfY = window.innerHeight / 2;

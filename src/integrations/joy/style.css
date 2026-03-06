@@ -1,4 +1,7 @@
 :root {
+    /* Fluid root font-size */
+    font-size: clamp(0.875rem, 0.7rem + 0.5vw, 1.125rem);
+
     /* Colors */
     --color-joy-lime: #39FF14;
     --color-joy-lime-dim: rgba(57, 255, 20, 0.15);
@@ -21,7 +24,7 @@
 
     /* Radii */
     --radius-sm: 0;
-    --radius-md: 2px;
+    --radius-md: 0.125rem;
     --radius-pill: 0;
     /* Industrial blocky style */
 }
@@ -52,7 +55,7 @@ body {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 40px 40px;
+    background-size: 2.5rem 2.5rem;
     z-index: -2;
     pointer-events: none;
 }
@@ -61,8 +64,8 @@ body {
     position: fixed;
     top: -30%;
     left: -10%;
-    width: 900px;
-    height: 900px;
+    width: 56.25rem;
+    height: 56.25rem;
     background: radial-gradient(circle, var(--color-joy-lime-dim) 0%, transparent 50%);
     z-index: -1;
     pointer-events: none;
@@ -70,7 +73,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 87.5rem;
     margin: 0 auto;
     padding: 6rem 3rem;
 }
@@ -99,14 +102,14 @@ body {
 
 .brand-text {
     font-family: var(--font-family-display);
-    font-size: 3rem;
-    letter-spacing: 2px;
+    font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+    letter-spacing: 0.125rem;
     line-height: 1.2;
     text-shadow: 3px 3px 0 rgba(57, 255, 20, 0.2);
 }
 
 .motto-box {
-    max-width: 500px;
+    max-width: 31.25rem;
     text-align: right;
 }
 
@@ -180,7 +183,7 @@ body {
 
 .swatch {
     width: 100%;
-    height: 120px;
+    height: clamp(5rem, 4rem + 2vw, 7.5rem);
 }
 
 .swatch-meta {
@@ -212,7 +215,7 @@ body {
 }
 
 .type-sample {
-    width: 60px;
+    width: 3.75rem;
 }
 
 .type-details {
@@ -334,7 +337,7 @@ body {
 
 .data-card:hover {
     border-color: var(--color-joy-lime);
-    transform: translateX(10px);
+    transform: translateX(0.625rem);
 }
 
 .data-label {
@@ -346,7 +349,7 @@ body {
 }
 
 .data-value {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
     font-weight: 700;
     color: var(--color-text-primary);
     line-height: 1.2;

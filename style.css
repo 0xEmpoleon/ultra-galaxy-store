@@ -1,4 +1,7 @@
 :root {
+    /* Fluid root font-size: scales from 14px (0.875rem) to 18px (1.125rem) */
+    font-size: clamp(0.875rem, 0.7rem + 0.5vw, 1.125rem);
+
     /* Base Global Architecture */
     --bi-bg: #f2f2f2;
     --bi-text: #121212;
@@ -67,13 +70,13 @@ body {
 
 .theme-toggle {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 2.5rem;
+    right: 2.5rem;
     z-index: 100;
     background: none;
     border: 1px solid var(--sys-border);
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -87,8 +90,8 @@ body {
 }
 
 .toggle-icon {
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
+    height: 0.75rem;
     background: var(--sys-text-primary);
     border-radius: 50%;
     transition: var(--transition-standard);
@@ -123,7 +126,7 @@ body {
 
 .panel {
     height: 100%;
-    padding: 60px 40px;
+    padding: 3.75rem 2.5rem;
     border-right: 1px solid var(--sys-border);
     display: flex;
     flex-direction: column;
@@ -147,7 +150,7 @@ body {
 
 .mega-headings h1 {
     font-family: var(--sys-font-display);
-    font-size: clamp(48px, 12vw, 90px);
+    font-size: clamp(3rem, 12vw, 5.625rem);
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.04em;
@@ -161,11 +164,11 @@ body {
 }
 
 .sub-headings {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .sub-headings h2 {
-    font-size: clamp(18px, 2.5vw, 32px);
+    font-size: clamp(1.125rem, 2.5vw, 2rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.03em;
@@ -176,25 +179,25 @@ body {
 .info-blocks-group {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 .info-block .label {
-    font-size: 10px;
+    font-size: clamp(0.55rem, 0.5rem + 0.2vw, 0.7rem);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--sys-text-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .info-block .content {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.4;
     font-weight: 400;
 }
 
 .info-block .secondary-content {
-    margin-top: 4px;
+    margin-top: 0.25rem;
 }
 
 .info-block .content a {
@@ -210,17 +213,17 @@ body {
 
 .neo-nav {
     margin-top: auto;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 3.75rem;
+    padding-bottom: 1.25rem;
 }
 
 .neo-nav li {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     list-style: none;
 }
 
 .neo-nav a {
-    font-size: 24px;
+    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
     font-weight: 700;
     color: var(--sys-text-primary);
     text-decoration: none;
@@ -247,29 +250,30 @@ body {
 .gallery-section {
     background-color: var(--bi-bg);
     color: var(--bi-text);
-    padding: 0 40px;
-    padding-bottom: 120px;
+    padding: 0 2.5rem;
+    padding-bottom: 7.5rem;
     min-height: 100vh;
+    container-type: inline-size;
 }
 
 .store-header-container {
-    padding-top: 60px;
-    margin-bottom: 80px;
+    padding-top: 3.75rem;
+    margin-bottom: 5rem;
     border-bottom: 1px solid var(--bi-divider);
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
 }
 
 .store-category-label {
-    font-size: max(11px, min(.76vw, 16.5px));
+    font-size: clamp(0.625rem, 0.5rem + 0.3vw, 0.875rem);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--bi-text);
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .store-title {
     font-family: var(--sys-font-display);
-    font-size: clamp(36px, 8vw, 105px);
+    font-size: clamp(2.25rem, 8vw, 6.5625rem);
     font-weight: 900;
     letter-spacing: -0.05em;
     line-height: 0.9;
@@ -278,31 +282,33 @@ body {
 
 .store-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
-    row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+    column-gap: 2.5rem;
+    row-gap: 3.125rem;
     width: 100%;
 }
 
-/* Responsive Enhancements */
-@media (max-width: 1024px) {
+/* Container query for storefront grid */
+@container (max-width: 640px) {
     .store-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 1.875rem;
     }
 }
 
+/* Responsive Enhancements */
 @media (max-width: 850px) {
     .neo-panels {
         grid-template-columns: 1fr;
         height: auto;
-        padding-top: 60px;
+        padding-top: 3.75rem;
     }
 
     .panel {
         border-right: none;
         border-bottom: 1px solid var(--sys-border);
         height: auto;
-        padding: 40px 24px;
+        padding: 2.5rem 1.5rem;
         min-height: auto;
     }
 
@@ -323,38 +329,33 @@ body {
     .mega-headings h1 {
         white-space: normal;
         text-align: left;
-        font-size: clamp(40px, 15vw, 64px);
+        font-size: clamp(2.5rem, 15vw, 4rem);
     }
 
     .store-header-container {
-        padding-top: 40px;
-        margin-bottom: 30px;
+        padding-top: 2.5rem;
+        margin-bottom: 1.875rem;
     }
 }
 
 @media (max-width: 600px) {
     .panel {
-        padding: 30px 20px;
+        padding: 1.875rem 1.25rem;
     }
 
     .gallery-section {
-        padding: 0 20px;
-        padding-bottom: 60px;
-    }
-
-    .store-grid {
-        grid-template-columns: 1fr;
-        row-gap: 30px;
+        padding: 0 1.25rem;
+        padding-bottom: 3.75rem;
     }
 
     .store-title {
-        font-size: clamp(28px, 10vw, 42px);
+        font-size: clamp(1.75rem, 10vw, 2.625rem);
     }
 
     .theme-toggle {
-        top: 20px;
-        right: 20px;
-        width: 36px;
-        height: 36px;
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 2.25rem;
+        height: 2.25rem;
     }
 }

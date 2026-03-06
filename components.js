@@ -29,7 +29,7 @@ class SystemCard extends HTMLElement {
 
                 .reveal {
                     opacity: 0;
-                    transform: translateY(30px);
+                    transform: translateY(1.875rem);
                     transition: var(--transition-standard);
                 }
 
@@ -42,7 +42,7 @@ class SystemCard extends HTMLElement {
                     position: relative;
                     width: 100%;
                     aspect-ratio: 3 / 2;
-                    margin-bottom: 16px;
+                    margin-bottom: 1rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -57,7 +57,7 @@ class SystemCard extends HTMLElement {
                     font-family: ${fontFamily};
                     font-size: ${typeScale};
                     color: ${accent};
-                    letter-spacing: 2px;
+                    letter-spacing: 0.125rem;
                     font-weight: 600;
                     text-align: center;
                     /* Joy-specific text shadow logic could abstract here, but keeping clean for universal use */
@@ -67,10 +67,10 @@ class SystemCard extends HTMLElement {
                 /* OFFLINE NODE specific styling overrides */
                 .offline-text {
                     font-family: 'Inter', sans-serif;
-                    font-size: 14px;
+                    font-size: 0.875rem;
                     color: #444;
                     text-transform: uppercase;
-                    letter-spacing: 2px;
+                    letter-spacing: 0.125rem;
                 }
 
                 .card-overlay {
@@ -84,7 +84,7 @@ class SystemCard extends HTMLElement {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    gap: 10px;
+                    gap: 0.625rem;
                     opacity: 0;
                     transition: var(--transition-standard);
                     z-index: 10;
@@ -95,20 +95,20 @@ class SystemCard extends HTMLElement {
                 }
 
                 .overlay-btn {
-                    padding: 8px 16px;
+                    padding: 0.5rem 1rem;
                     background: transparent;
                     border: 1px solid #fff;
                     color: #fff;
                     font-family: 'Inter', sans-serif;
-                    font-size: 12px;
+                    font-size: clamp(0.625rem, 0.55rem + 0.15vw, 0.75rem);
                     font-weight: 500;
                     text-transform: uppercase;
                     text-decoration: none;
                     letter-spacing: 0.05em;
                     cursor: pointer;
                     transition: all 0.3s ease;
-                    border-radius: 50px;
-                    width: 180px;
+                    border-radius: 3.125rem;
+                    width: 11.25rem;
                     text-align: center;
                     backdrop-filter: blur(4px);
                     -webkit-backdrop-filter: blur(4px);
@@ -128,12 +128,12 @@ class SystemCard extends HTMLElement {
 
                 .card-title {
                     font-family: 'Inter', sans-serif;
-                    font-size: 13px;
+                    font-size: clamp(0.7rem, 0.6rem + 0.15vw, 0.875rem);
                     font-weight: 400;
                     letter-spacing: 0.08em;
                     text-transform: uppercase;
                     color: var(--sys-text-secondary, #999999);
-                    padding: 14px 0 0;
+                    padding: 0.875rem 0 0;
                     text-align: left;
                 }
             </style>

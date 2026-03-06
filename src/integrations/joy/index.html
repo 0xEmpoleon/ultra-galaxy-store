@@ -4,169 +4,605 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOY - Codified Design System</title>
+    <title>JOY — Say Henlo To JOY Genesis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400..700;1,400..700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Press+Start+2P&display=swap"
         rel="stylesheet">
-    <!-- Using a pixel font as Twobit fallback -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* ---- Joy Reconstruction Overrides ---- */
+        :root {
+            --joy-lime: #CCFF00;
+            --joy-green: #39FF14;
+            --joy-dark: #1A1A1A;
+            --joy-darker: #111111;
+            --joy-surface: #222222;
+            --joy-text: #ffffff;
+            --joy-muted: #999999;
+        }
+
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background: var(--joy-darker);
+            color: var(--joy-text);
+        }
+
+        /* NAV */
+        .joy-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            height: 4rem;
+            background: rgba(17, 17, 17, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .joy-logo {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: var(--joy-lime);
+            text-decoration: none;
+            text-shadow: 2px 2px 0 rgba(204, 255, 0, 0.3);
+        }
+
+        .joy-nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .joy-nav-link {
+            color: var(--joy-muted);
+            font-size: 0.8rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: color 0.3s;
+        }
+
+        .joy-nav-link:hover {
+            color: var(--joy-lime);
+        }
+
+        .joy-preorder-btn {
+            background: var(--joy-lime);
+            color: var(--joy-darker);
+            padding: 0.5rem 1.25rem;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .joy-preorder-btn:hover {
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        /* HERO */
+        .joy-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            overflow: hidden;
+        }
+
+        .joy-hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70vw;
+            height: 70vw;
+            max-width: 50rem;
+            max-height: 50rem;
+            background: radial-gradient(circle, rgba(204, 255, 0, 0.08) 0%, transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-tag {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--joy-lime);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+            color: var(--joy-text);
+            line-height: 1.4;
+            text-shadow: 4px 4px 0 rgba(204, 255, 0, 0.2);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(0.875rem, 0.5rem + 1vw, 1.5rem);
+            color: var(--joy-lime);
+            text-shadow: 2px 2px 0 rgba(204, 255, 0, 0.3);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-description {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--joy-muted);
+            max-width: 36rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-cta {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* CONSOLE PLACEHOLDER */
+        .console-section {
+            padding: clamp(3rem, 2rem + 3vw, 6rem) 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .console-placeholder {
+            width: min(90%, 40rem);
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, rgba(204, 255, 0, 0.03), rgba(0, 0, 0, 0.5));
+            border: 1px dashed rgba(204, 255, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(204, 255, 0, 0.3);
+            margin-bottom: 3rem;
+        }
+
+        /* SPECS GRID */
+        .specs-section {
+            padding: clamp(3rem, 2rem + 3vw, 6rem) 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .specs-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--joy-lime);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .specs-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+            text-align: center;
+            color: var(--joy-text);
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 0 rgba(204, 255, 0, 0.15);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+            gap: 1rem;
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+
+        .spec-card {
+            padding: 1.5rem;
+            background: var(--joy-surface);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s;
+        }
+
+        .spec-card:hover {
+            border-color: var(--joy-lime);
+            box-shadow: 0 0 12px rgba(204, 255, 0, 0.1);
+        }
+
+        .spec-icon {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .spec-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--joy-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-detail {
+            font-size: 0.7rem;
+            color: var(--joy-muted);
+        }
+
+        /* ABOUT */
+        .about-section {
+            padding: clamp(4rem, 3rem + 3vw, 8rem) 2rem;
+            border-top: 2px solid var(--joy-lime);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .about-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--joy-lime);
+            margin-bottom: 1rem;
+        }
+
+        .about-title {
+            font-size: clamp(1.5rem, 1rem + 1vw, 2rem);
+            font-weight: 700;
+            color: var(--joy-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            color: var(--joy-muted);
+            max-width: 30rem;
+        }
+
+        .about-highlight {
+            color: var(--joy-lime);
+            font-weight: 700;
+        }
+
+        /* WHAT IS JOY */
+        .what-section {
+            padding: clamp(4rem, 3rem + 3vw, 8rem) 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .what-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--joy-lime);
+            margin-bottom: 1rem;
+        }
+
+        .what-text {
+            font-size: clamp(1rem, 0.75rem + 0.75vw, 1.5rem);
+            font-weight: 400;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        /* COMMUNITY / FOOTER */
+        .community-section {
+            padding: clamp(4rem, 3rem + 3vw, 8rem) 2rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--joy-lime);
+        }
+
+        .community-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--joy-lime);
+            margin-bottom: 1rem;
+        }
+
+        .community-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+            color: var(--joy-text);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0 rgba(204, 255, 0, 0.15);
+        }
+
+        .community-text {
+            font-size: 0.85rem;
+            color: var(--joy-muted);
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .subscribe-row {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 2rem;
+        }
+
+        .subscribe-input {
+            padding: 0.75rem 1rem;
+            background: var(--joy-surface);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: none;
+            color: var(--joy-lime);
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.8rem;
+            width: min(100%, 18rem);
+            outline: none;
+        }
+
+        .subscribe-input:focus {
+            border-color: var(--joy-lime);
+        }
+
+        .subscribe-input::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .subscribe-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--joy-lime);
+            color: var(--joy-darker);
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border: 1px solid var(--joy-lime);
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .subscribe-btn:hover {
+            opacity: 0.85;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .social-link {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--joy-muted);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--joy-lime);
+        }
+
+        .joy-footer-bottom {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .joy-footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .joy-footer-links a {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .joy-footer-links a:hover {
+            color: var(--joy-lime);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+
+            .joy-nav {
+                padding: 0 1rem;
+            }
+
+            .joy-nav-link {
+                display: none;
+            }
+
+            .joy-footer-bottom {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+
+            .subscribe-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .subscribe-input {
+                border-right: 1px solid rgba(255, 255, 255, 0.1);
+                width: min(100%, 18rem);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="blueprint-grid"></div>
-    <div class="glow-orb"></div>
-
-    <div class="container">
-        <!-- HEADER -->
-        <header class="ds-header">
-            <div class="brand-identifiers">
-                <span class="version-tag">[JOY.SYS.1.0]</span>
-                <h1 class="brand-text">JOY TECH</h1>
-            </div>
-            <div class="motto-box">
-                <p class="motto">GAME. EARN. JOY!</p>
-                <p class="brand-description">The canonical visual identity reference for JOY (Joy Tech). This UI library
-                    embodies the technical credibility, community-first energy, and hardware-meets-Web3 precision of the
-                    JOY ecosystem.</p>
-                <p class="brand-description" style="margin-top: 1rem; color: var(--color-joy-lime);">
-                    <a href="https://design-system-eight-henna.vercel.app/" target="_blank"
-                        style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(57, 255, 20, 0.4); padding-bottom: 2px;">View
-                        Original Source ↗</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="ds-grid">
-            <!-- COLORS -->
-            <section class="ds-module color-module">
-                <div class="module-header">
-                    <h2>Color System</h2>
-                    <span class="module-meta">// 01</span>
-                </div>
-                <p class="module-desc">A dual-base system of Soft Dark and Circuit Grey provides the foundation. Signal
-                    Lime acts as the singular high-impact action colour.</p>
-
-                <div class="color-swatch-grid">
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#111111; border: 1px solid rgba(255,255,255,0.1);"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Soft Dark (Base)</span>
-                            <span class="color-hex">#111111</span>
-                        </div>
-                    </div>
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#222222; border: 1px solid rgba(255,255,255,0.2);"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Circuit Grey</span>
-                            <span class="color-hex">#222222</span>
-                        </div>
-                    </div>
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#39FF14; box-shadow: 0 0 20px rgba(57,255,20,0.4);"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Signal Lime (Action)</span>
-                            <span class="color-hex">#39FF14</span>
-                        </div>
-                    </div>
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#FFFFFF; border: 1px solid rgba(255,255,255,0.5);"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Pure White (Text)</span>
-                            <span class="color-hex">#FFFFFF</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TYPOGRAPHY -->
-            <section class="ds-module type-module">
-                <div class="module-header">
-                    <h2>Type Hierarchy</h2>
-                    <span class="module-meta">// 02</span>
-                </div>
-                <p class="module-desc">Source Code Pro acts as the core workhorse. Twobit is reserved strictly for
-                    exceptional display pops and Easter eggs.</p>
-
-                <div class="type-specimen">
-                    <div class="type-row">
-                        <div class="type-sample"
-                            style="font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 2rem;">Aa
-                        </div>
-                        <div class="type-details">
-                            <span class="type-name" style="font-family: 'Source Code Pro', monospace;">Source Code
-                                Pro</span>
-                            <span class="type-role">Role: Headlines & Body. Geometric Monospace.</span>
-                        </div>
-                    </div>
-                    <div class="type-row type-row-display">
-                        <div class="type-sample"
-                            style="font-family: 'Press Start 2P', cursive; font-size: 1.5rem; text-shadow: 2px 2px 0 rgba(57,255,20,0.5);">
-                            Aa</div>
-                        <div class="type-details">
-                            <span class="type-name"
-                                style="font-family: 'Press Start 2P', cursive; letter-spacing: -1px;">Twobit
-                                (Display)</span>
-                            <span class="type-role">Role: Exceptional Display Pops & Easter Eggs</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- COMPONENTS -->
-            <section class="ds-module components-module">
-                <div class="module-header">
-                    <h2>Interactive Elements</h2>
-                    <span class="module-meta">// 03</span>
-                </div>
-                <p class="module-desc">High visibility Signal Lime states against industrial backgrounds.</p>
-
-                <div class="component-showcase">
-                    <div class="showcase-group">
-                        <span class="label">BUTTONS . ACTIVE STATES</span>
-                        <div class="btn-group">
-                            <button class="btn btn-primary">Join Whitelist</button>
-                            <button class="btn btn-secondary">Claim Console</button>
-                        </div>
-                    </div>
-
-                    <div class="showcase-group">
-                        <span class="label">INPUT FIELDS</span>
-                        <div class="input-group">
-                            <input type="text" class="joy-input" placeholder="ENTER_WALLET_ADDRESS">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PRODUCT & MASCOT -->
-            <section class="ds-module data-module">
-                <div class="module-header">
-                    <h2>Product & Ecosystem</h2>
-                    <span class="module-meta">// 04</span>
-                </div>
-                <p class="module-desc">Always display Genesis renders on Soft Dark backgrounds. Do not add drop shadows
-                    directly to the render files.</p>
-
-                <div class="data-cards-grid">
-                    <div class="data-card">
-                        <span class="data-label">Partner Node</span>
-                        <div class="data-value" style="font-size: 2rem;">SOMNIA NETWORK</div>
-                    </div>
-                    <div class="data-card">
-                        <span class="data-label">Partner Node</span>
-                        <div class="data-value" style="font-size: 2rem;">MOONBEAM</div>
-                    </div>
-                    <div class="data-card">
-                        <span class="data-label">Software Overlay</span>
-                        <div class="data-value" style="font-size: 2rem; color: var(--color-joy-lime);">JOY Store</div>
-                        <span class="data-sub">Hyperplay Integration</span>
-                    </div>
-                </div>
-            </section>
+    <!-- NAV -->
+    <nav class="joy-nav">
+        <a href="#" class="joy-logo">JOY</a>
+        <div class="joy-nav-right">
+            <a href="#" class="joy-nav-link">Home</a>
+            <a href="#" class="joy-nav-link">Blogs</a>
+            <a href="https://playonjoy.com/pre-book" target="_blank" class="joy-preorder-btn">Pre Order Now</a>
         </div>
-    </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="joy-hero">
+        <div class="hero-tag">Next-Gen Handheld &middot; Web3 Gaming</div>
+        <h1 class="hero-title">Say Henlo To<br>JOY Genesis</h1>
+        <p class="hero-subtitle">Game. Earn. Joy!</p>
+        <p class="hero-description">The Next-Gen Handheld Gaming Computer for a Multichain World ⛓️ Play AAA, on-chain,
+            indie and retro games anywhere. Engage to Earn through JOY's Ecosystem. Seamless Social log-ins and built-in
+            Hardware Wallet. Steam & Epic Game Library Support built into JOY.</p>
+        <div class="hero-cta">
+            <a href="https://playonjoy.com/pre-book" target="_blank" class="joy-preorder-btn">Pre Order Now</a>
+        </div>
+    </section>
+
+    <!-- CONSOLE 3D RENDER PLACEHOLDER -->
+    <section class="console-section">
+        <div class="console-placeholder">
+            [JOY GENESIS CONSOLE 3D RENDER]
+        </div>
+    </section>
+
+    <!-- SPECS GRID -->
+    <section class="specs-section">
+        <div class="specs-label">JOY Genesis Specs</div>
+        <h2 class="specs-title">Once a JOY Owner:<br>Endless rewards await</h2>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <div class="spec-icon">📶</div>
+                <div class="spec-name">WiFi & Bluetooth</div>
+                <div class="spec-detail">Connectivity</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">⚡</div>
+                <div class="spec-name">AMD Ryzen Processor</div>
+                <div class="spec-detail">High-Performance CPU</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">📷</div>
+                <div class="spec-name">Rear Camera</div>
+                <div class="spec-detail">Identity & AR</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🔐</div>
+                <div class="spec-name">Built-In HW Wallet</div>
+                <div class="spec-detail">Secure Ownership</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🧠</div>
+                <div class="spec-name">16GB RAM</div>
+                <div class="spec-detail">AAA-Ready Memory</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">👤</div>
+                <div class="spec-name">Social Logins</div>
+                <div class="spec-detail">Seamless Onboarding</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">📱</div>
+                <div class="spec-name">7" Touch Display</div>
+                <div class="spec-detail">Immersive Screen</div>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">🎮</div>
+                <div class="spec-name">Hall Effect Joysticks</div>
+                <div class="spec-detail">Zero-Drift Precision</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="about-section">
+        <div>
+            <div class="about-label">About Us</div>
+            <h2 class="about-title">30+ Years of Semiconductor Design</h2>
+            <p class="about-text">Our team brings <span class="about-highlight">30+ years of experience</span> in
+                semiconductor design, from <span class="about-highlight">32nm to 7nm</span> chips. With previous work on
+                PlayStation and Xbox consoles and successful crypto hardware manufacturing, we bring deep hardware
+                expertise to the Web3 gaming frontier.</p>
+        </div>
+        <div>
+            <div class="about-label">Joy Studios</div>
+            <h2 class="about-title">Native Gaming IP House</h2>
+            <p class="about-text">Joy Studios is our native IP house supporting the Joy Ecosystem and Web3 gaming. We're
+                building exclusive titles and integrations that showcase the full potential of the JOY Genesis handheld.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHAT IS JOY -->
+    <section class="what-section">
+        <div class="what-label">What Is Joy</div>
+        <p class="what-text">JOY Genesis is the first Web3 gaming console capable of playing AAA and indie games. It
+            emphasizes identity and ownership through the device's camera and hardware wallet — bridging the gap between
+            traditional gaming and the decentralized future.</p>
+    </section>
+
+    <!-- COMMUNITY / FOOTER -->
+    <section class="community-section">
+        <div class="community-label">// Join Our Community</div>
+        <h2 class="community-title">It's time to plug in, player.</h2>
+        <p class="community-text">We're starting a wave where web3 gaming meets true handheld freedom. Stay updated on
+            launches, drops, and exclusive rewards.</p>
+        <div class="subscribe-row">
+            <input type="email" class="subscribe-input" placeholder="ENTER_EMAIL_ADDRESS">
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+        <div class="social-links">
+            <a href="https://x.com/JoyTechHQ" target="_blank" class="social-link">X (Twitter)</a>
+            <a href="#" class="social-link">Telegram</a>
+            <a href="#" class="social-link">Discord</a>
+        </div>
+        <div class="joy-footer-bottom">
+            <span>2026 All Rights Reserved © JOY</span>
+            <div class="joy-footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy & Data</a>
+                <a href="https://playonjoy.com/" target="_blank">Original Site ↗</a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

@@ -4,156 +4,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cipher Digital - Codified Design System</title>
+    <title>Cipher Digital — Built for Hyperscale</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/jiw5nsk.css">
+    <style>
+        /* ---- Cipher Reconstruction Overrides ---- */
+        body {
+            font-family: 'articulat-cf', 'Inter', sans-serif;
+        }
+
+        /* NAV */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+            height: 4rem;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            background: var(--color-brand-blue);
+            color: #fff !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.85;
+        }
+
+        /* HERO */
+        .cipher-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 6rem 2.5rem 4rem;
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+            overflow: hidden;
+        }
+
+        .cipher-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 3rem 3rem;
+            pointer-events: none;
+        }
+
+        .hero-headline {
+            font-size: clamp(3.5rem, 3rem + 5vw, 8rem);
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            line-height: 0.95;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            max-width: 80rem;
+        }
+
+        .hero-trusted {
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-trusted-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-trusted-logos {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .trusted-logo {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.35);
+            letter-spacing: 0.05em;
+        }
+
+        /* GLOW ORB behind hero */
+        .cipher-hero .glow-orb {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 50rem;
+            height: 50rem;
+            background: radial-gradient(circle, rgba(15, 135, 255, 0.12) 0%, transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* MISSION */
+        .mission-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .mission-visual {
+            background: linear-gradient(135deg, #0a0a0a, #111);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            min-height: 25rem;
+        }
+
+        .mission-visual-placeholder {
+            width: 80%;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, rgba(15, 135, 255, 0.05), rgba(0, 0, 0, 0.3));
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .mission-content {
+            padding: clamp(3rem, 2rem + 3vw, 6rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mission-text {
+            font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
+            font-weight: 400;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 32rem;
+        }
+
+        .mission-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-brand-blue);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: opacity 0.3s;
+        }
+
+        .mission-cta:hover {
+            opacity: 0.7;
+        }
+
+        /* APPROACH ACCORDION */
+        .approach-section {
+            padding: clamp(4rem, 3rem + 3vw, 8rem) 2.5rem;
+            background: #000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .approach-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-brand-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .approach-title {
+            font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 3rem;
+        }
+
+        .accordion-item {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem 0;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .accordion-header h3 {
+            font-size: clamp(1.25rem, 1rem + 0.5vw, 1.75rem);
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .accordion-number {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 500;
+        }
+
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .accordion-item.active .accordion-body {
+            max-height: 12rem;
+        }
+
+        .accordion-body p {
+            padding-top: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 50rem;
+        }
+
+        /* STATS */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-card {
+            padding: clamp(3rem, 2rem + 2vw, 5rem) 2.5rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-card:last-child {
+            border-right: none;
+        }
+
+        .stat-value {
+            font-size: clamp(2.5rem, 2rem + 2vw, 4.5rem);
+            font-weight: 600;
+            color: #fff;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.05em;
+        }
+
+        /* PORTFOLIO */
+        .portfolio-section {
+            padding: clamp(4rem, 3rem + 3vw, 8rem) 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .portfolio-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-brand-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .portfolio-tab {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .portfolio-tab.active {
+            background: var(--color-brand-blue);
+            border-color: var(--color-brand-blue);
+            color: #fff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+            gap: 1.5rem;
+        }
+
+        .site-card {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: border-color 0.3s;
+        }
+
+        .site-card:hover {
+            border-color: rgba(15, 135, 255, 0.5);
+        }
+
+        .site-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .site-specs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .site-spec-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+            margin-bottom: 0.25rem;
+        }
+
+        .site-spec-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-brand-blue);
+        }
+
+        /* FOOTER */
+        .cipher-footer {
+            padding: clamp(4rem, 3rem + 3vw, 8rem) 2.5rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-headline {
+            font-size: clamp(2rem, 1.5rem + 3vw, 4rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 4rem;
+            max-width: 50rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .mission-section {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-visual {
+                min-height: 15rem;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .stats-section {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .stat-card:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="blueprint-grid"></div>
-    <div class="glow-orb"></div>
+    <!-- NAV -->
+    <nav class="site-nav">
+        <a href="#" class="nav-logo">Cipher Digital</a>
+        <ul class="nav-links">
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#" class="nav-cta">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="container">
-        <!-- HEADER -->
-        <header class="ds-header">
-            <div class="brand-identifiers">
-                <span class="version-tag">[SYS.VER.1.0]</span>
-                <h1 class="brand-text">CIPHER DIGITAL</h1>
+    <!-- HERO -->
+    <section class="cipher-hero">
+        <div class="glow-orb"></div>
+        <h1 class="hero-headline">Built for<br>Hyperscale</h1>
+        <div class="hero-trusted">
+            <span class="hero-trusted-label">Trusted by</span>
+            <div class="hero-trusted-logos">
+                <span class="trusted-logo">Google</span>
+                <span class="trusted-logo">AWS</span>
+                <span class="trusted-logo">Fluidstack</span>
             </div>
-            <div class="motto-box">
-                <p class="motto">ADVANCED COMPUTE.<br>NEXT-GENERATION DATA CENTERS.</p>
-                <p class="brand-description">The canonical visual identity reference for Cipher Digital. This UI library
-                    embodies technical precision, hyperscale efficiency, and the uncompromising reliability of
-                    industrial-grade infrastructure.</p>
-                <p class="brand-description" style="margin-top: 1rem; color: var(--color-brand-blue);">
-                    <a href="https://www.cipherdigital.com/" target="_blank"
-                        style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(15, 135, 255, 0.4); padding-bottom: 2px;">View
-                        Original Source ↗</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="ds-grid">
-            <!-- COLORS -->
-            <section class="ds-module color-module">
-                <div class="module-header">
-                    <h2>Color System</h2>
-                    <span class="module-meta">// 01</span>
-                </div>
-                <p class="module-desc">A deep-space foundational system of absolute contrast (Black/White), highlighted
-                    by Vibrant Tech Blue and Technical Green.</p>
-
-                <div class="color-swatch-grid">
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#000000; border: 1px solid rgba(255,255,255,0.2);"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Deep Space (Base)</span>
-                            <span class="color-hex">#000000</span>
-                        </div>
-                    </div>
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#0f87ff;"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Tech Blue (Primary)</span>
-                            <span class="color-hex">#0F87FF</span>
-                        </div>
-                    </div>
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#0082f3;"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Data Blue (Dark)</span>
-                            <span class="color-hex">#0082F3</span>
-                        </div>
-                    </div>
-                    <div class="swatch-container">
-                        <div class="swatch" style="background:#39FF14;"></div>
-                        <div class="swatch-meta">
-                            <span class="color-name">Status Green (Active)</span>
-                            <span class="color-hex">#39FF14</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TYPOGRAPHY -->
-            <section class="ds-module type-module">
-                <div class="module-header">
-                    <h2>Type Hierarchy</h2>
-                    <span class="module-meta">// 02</span>
-                </div>
-                <p class="module-desc">Articulat CF acts as the core geometric sans-serif workhorse, delivering a
-                    modern, structural look built for scale.</p>
-
-                <div class="type-specimen">
-                    <div class="type-row">
-                        <div class="type-sample" style="font-weight: 600; font-size: 2rem;">Aa</div>
-                        <div class="type-details">
-                            <span class="type-name">Articulat CF Semi-Bold</span>
-                            <span class="type-role">Role: Headlines & Primary Displays</span>
-                        </div>
-                    </div>
-                    <div class="type-row">
-                        <div class="type-sample" style="font-weight: 500; font-size: 1.5rem;">Aa</div>
-                        <div class="type-details">
-                            <span class="type-name">Articulat CF Medium</span>
-                            <span class="type-role">Role: Body Copy & Sub-headers</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- COMPONENTS -->
-            <section class="ds-module components-module">
-                <div class="module-header">
-                    <h2>Interactive Elements</h2>
-                    <span class="module-meta">// 03</span>
-                </div>
-                <p class="module-desc">Strict radii rules. Sharp (2px) for structural elements, pill (50px) for
-                    prominent calls to action. High reliance on alpha-channel glassmorphism.</p>
-
-                <div class="component-showcase">
-                    <div class="showcase-group">
-                        <span class="label">BUTTONS . ACTIVE STATES</span>
-                        <div class="btn-group">
-                            <button class="btn btn-primary">Initialize Node</button>
-                            <button class="btn btn-secondary">View Compute Logs</button>
-                        </div>
-                    </div>
-
-                    <div class="showcase-group">
-                        <span class="label">STATUS BADGES . ORGANISMS</span>
-                        <div class="badge-group">
-                            <span class="badge badge-success">327MW Operating</span>
-                            <span class="badge badge-error">Critical Capacity</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DATA CARDS -->
-            <section class="ds-module data-module">
-                <div class="module-header">
-                    <h2>Architecture Display</h2>
-                    <span class="module-meta">// 04</span>
-                </div>
-                <p class="module-desc">Always display data metrics on Soft Dark backgrounds with semi-transparent
-                    borders. Do not add drop shadows directly to components; use glowing borders.</p>
-
-                <div class="data-cards-grid">
-                    <div class="data-card">
-                        <span class="data-label">Facility . Odessa</span>
-                        <div class="data-value">7.5 EH/s</div>
-                        <span class="data-sub">Operating Hashrate</span>
-                    </div>
-                    <div class="data-card">
-                        <span class="data-label">Facility . Stingray</span>
-                        <div class="data-value">100 MW</div>
-                        <span class="data-sub">Live Capacity</span>
-                    </div>
-                </div>
-            </section>
         </div>
-    </div>
+    </section>
+
+    <!-- MISSION -->
+    <section class="mission-section">
+        <div class="mission-visual">
+            <div class="mission-visual-placeholder">
+                [DATA CENTER CONSTRUCTION]
+            </div>
+        </div>
+        <div class="mission-content">
+            <p class="mission-text">Dedicated to developing and operating industrial-scale data centers engineered for
+                next-generation compute at the highest standards of innovation, precision, and excellence.</p>
+            <a href="#" class="mission-cta">Our experience →</a>
+        </div>
+    </section>
+
+    <!-- OUR PROVEN APPROACH -->
+    <section class="approach-section">
+        <div class="approach-label">Our Proven Approach</div>
+        <h2 class="approach-title">How We Deliver</h2>
+
+        <div class="accordion-item active">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h3>Sourcing</h3>
+                <span class="accordion-number">01</span>
+            </div>
+            <div class="accordion-body">
+                <p>Cipher secures best-in-class sites and power agreements by leveraging deep industry expertise,
+                    strategic partnerships, and a disciplined approach to identifying high-value, long-term locations
+                    for advanced compute. To date, we have sourced 4.3 gigawatts of power capacity.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h3>Partnering</h3>
+                <span class="accordion-number">02</span>
+            </div>
+            <div class="accordion-body">
+                <p>We build strategic alliances with hyperscalers, utilities, and local governments to ensure long-term
+                    viability and mutual benefit across every engagement.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h3>Developing</h3>
+                <span class="accordion-number">03</span>
+            </div>
+            <div class="accordion-body">
+                <p>Our engineering team delivers purpose-built facilities with industry-leading power and cooling
+                    density, designed for next-generation workloads at scale.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <h3>Operating</h3>
+                <span class="accordion-number">04</span>
+            </div>
+            <div class="accordion-body">
+                <p>We provide 24/7 operational excellence with dedicated facilities teams ensuring maximum uptime and
+                    efficiency across every site in our portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="stat-card">
+            <div class="stat-value">600 MW</div>
+            <div class="stat-label">Contracted Capacity</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">3.4 GW</div>
+            <div class="stat-label">Pipeline Capacity</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">207 MW</div>
+            <div class="stat-label">Operating Capacity</div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio-section">
+        <div class="portfolio-label">Portfolio</div>
+        <div class="portfolio-tabs">
+            <button class="portfolio-tab active">Contracted</button>
+            <button class="portfolio-tab">Pipeline</button>
+            <button class="portfolio-tab">Operating</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="site-card">
+                <div class="site-name">Barber Lake</div>
+                <div class="site-specs">
+                    <div>
+                        <div class="site-spec-label">Capacity</div>
+                        <div class="site-spec-value">300 MW</div>
+                    </div>
+                    <div>
+                        <div class="site-spec-label">Land Area</div>
+                        <div class="site-spec-value">587 Acres</div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-card">
+                <div class="site-name">Black Pearl</div>
+                <div class="site-specs">
+                    <div>
+                        <div class="site-spec-label">Capacity</div>
+                        <div class="site-spec-value">300 MW</div>
+                    </div>
+                    <div>
+                        <div class="site-spec-label">Land Area</div>
+                        <div class="site-spec-value">410 Acres</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cipher-footer">
+        <h2 class="footer-headline">Building the future of digital progress.</h2>
+        <div class="footer-bottom">
+            <span>© 2026 Cipher Digital Inc.</span>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="https://www.cipherdigital.com/" target="_blank">Original Site ↗</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

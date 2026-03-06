@@ -254,6 +254,7 @@ body {
     padding-bottom: 7.5rem;
     min-height: 100vh;
     container-type: inline-size;
+    transition: background-color var(--transition-standard), color var(--transition-standard);
 }
 
 .store-header-container {
@@ -265,6 +266,7 @@ body {
 
 .store-category-label {
     font-size: clamp(0.625rem, 0.5rem + 0.3vw, 0.875rem);
+    font-family: var(--sys-font-primary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--bi-text);

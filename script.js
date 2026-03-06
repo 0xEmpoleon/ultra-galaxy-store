@@ -2,7 +2,7 @@
 let scene, camera, renderer, object, edges;
 let mouseX = 0, mouseY = 0;
 let targetX = 0, targetY = 0;
-let isLightMode = false;
+let isLightMode = true; // Default: light mode (white bg, dark text)
 
 const windowHalfX = window.innerWidth / 2;
 const windowHalfY = window.innerHeight / 2;
@@ -56,7 +56,7 @@ function init() {
     if (toggleBtn) {
         toggleBtn.addEventListener('click', () => {
             isLightMode = !isLightMode;
-            document.body.classList.toggle('light-mode', isLightMode);
+            document.body.classList.toggle('dark-mode', !isLightMode);
             updateThemeAssets();
         });
     }
@@ -280,9 +280,10 @@ document.addEventListener('theme-applied', (e) => {
             document.documentElement.style.setProperty(customProperty, value);
         });
 
-        // Force Dark Mode context for 3D Asset
-        isLightMode = false;
-        document.body.classList.remove('dark-mode');
+        // Force Dark Mode for dark-themed systems, light for light
+        const isDarkSystem = systemId !== 'telekom-ot';
+        isLightMode = !isDarkSystem;
+        document.body.classList.toggle('dark-mode', isDarkSystem);
         updateThemeAssets();
 
         const revertBtn = document.getElementById('revert-btn');
@@ -298,7 +299,8 @@ if (revertBtn) {
             document.documentElement.style.removeProperty(key);
         });
 
-        isLightMode = false;
+        // Reset to default light mode
+        isLightMode = true;
         document.body.classList.remove('dark-mode');
         updateThemeAssets();
 

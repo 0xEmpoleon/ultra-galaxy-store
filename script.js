@@ -200,3 +200,25 @@ function initReveal() {
 // Initializing scene and reveal
 init();
 initReveal();
+
+// Design System Theme Logic
+const applyButtons = document.querySelectorAll('.apply-btn');
+applyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const theme = btn.getAttribute('data-apply');
+        
+        // Remove existing themes (if we had more, we'd loop or use a class prefix)
+        document.body.classList.remove('theme-cipher');
+        
+        // Apply new theme
+        if (theme) {
+            document.body.classList.add(`theme-${theme}`);
+            // Force dark mode base since Cipher is dark
+            isLightMode = false;
+            document.body.classList.remove('light-mode');
+            updateThemeAssets();
+        }
+    });
+});

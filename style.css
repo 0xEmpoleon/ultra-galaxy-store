@@ -33,6 +33,12 @@ body.dark-mode {
     --sys-border: rgba(242, 242, 242, 0.1);
     --sys-button-bg-hover: #f2f2f2;
     --sys-button-text-hover: #121212;
+
+    /* THE SELECTION section */
+    --bi-bg: #1a1a1a;
+    --bi-text: #f2f2f2;
+    --bi-divider: rgba(242, 242, 242, 0.1);
+    --bi-header-bg: #111111;
 }
 
 * {

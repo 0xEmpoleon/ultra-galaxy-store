@@ -4,31 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoLab | Design System [V1.0]</title>
+    <title>CoLab Communications | Brand Guidelines</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: var(--co-alabaster);
+            color: var(--co-ebony);
+            padding: var(--space-xl) var(--layout-padding);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: var(--space-md);
+            border-bottom: 1px solid var(--co-ebony-o20);
+            margin-bottom: var(--space-xl);
+        }
+
+        .back-link {
+            font-family: var(--font-body);
+            font-size: var(--size-meta);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--co-ebony-o50);
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--co-violet-200);
+        }
+
+        .system-tags {
+            font-family: var(--font-meta);
+            font-size: var(--size-meta);
+            display: flex;
+            gap: 1rem;
+            color: var(--co-ebony-o50);
+        }
+
+        .title-block {
+            margin-bottom: var(--space-2xl);
+            max-width: 68rem;
+        }
+
+        .title-block h1 {
+            margin-bottom: var(--space-md);
+        }
+
+        .title-block p {
+            font-size: var(--size-h4);
+            font-weight: 300;
+            color: var(--co-ebony-o50);
+        }
+
+        .section {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: var(--size-h2);
+            margin-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--co-ebony-o20);
+            padding-bottom: var(--space-xs);
+        }
+
+        /* Color Grid */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .color-card {
+            border: 1px solid var(--co-ebony-o20);
+            padding: var(--space-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .color-swatch {
+            height: 120px;
+            width: 100%;
+            border: 1px solid var(--co-ebony-o20);
+        }
+
+        .color-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .color-name {
+            font-weight: 500;
+            font-family: var(--font-body);
+            font-size: var(--size-body-lg);
+        }
+
+        .color-hex {
+            font-family: var(--font-meta);
+            font-size: var(--size-meta);
+            color: var(--co-ebony-o50);
+        }
+
+        /* Typography Scale */
+        .type-scale {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .type-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            align-items: baseline;
+            gap: var(--space-md);
+            border-bottom: 1px solid var(--co-ebony-o20);
+            padding-bottom: var(--space-md);
+        }
+
+        .type-label {
+            font-family: var(--font-meta);
+            font-size: var(--size-meta);
+            color: var(--co-ebony-o50);
+        }
+
+        .type-sample {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="guidelines-header">
-        <a href="https://ultra-galaxy-store.vercel.app/" class="back-link">← Back to Galaxy Store</a>
-        <div>COLAB COMMS.</div>
-    </header>
+    <div class="container" style="max-width: 85rem;">
+        <header class="header">
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link">← Back to Galaxy Store</a>
+            <div class="system-tags">
+                <span>V 1.0.1</span>
+                <span>1:1 Reconstruction Grade</span>
+            </div>
+        </header>
 
-    <section class="hero-section">
-        <h1 class="hero-title">CoLab<br><span>Communications</span></h1>
-        <p class="hero-description">An elegant, editorial design system focusing on large fluid typography, warm
-            alabaster backgrounds, and striking deep ebony contrasts.</p>
-    </section>
-
-    <section class="color-swatches">
-        <div class="swatch" style="background-color: #F5F2E8; color: #180F26; border: 1px solid rgba(0,0,0,0.1);">
-            Alabaster</div>
-        <div class="swatch" style="background-color: #180F26;">Ebony</div>
-        <div class="swatch" style="background-color: #C3A0FA; color: #180F26;">Violet</div>
-        <div class="swatch" style="background-color: #F8B5AF; color: #180F26;">Melon</div>
-        <div class="swatch" style="background-color: #FFFAFC; color: #180F26; border: 1px solid rgba(0,0,0,0.1);">Snow
+        <div class="title-block">
+            <h1 class="display-lg">CoLab Communications<br>Brand Guidelines</h1>
+            <p>A bold, editorial layout fueled by striking typographic contrast and confident use of negative space.
+                Relies on a warm Alabaster foundation, cut by sharp Ebony text.</p>
         </div>
-    </section>
+
+        <section class="section">
+            <h2 class="section-title">Color System</h2>
+            <div class="color-grid">
+                <!-- Alabaster -->
+                <div class="color-card bg-ebony text-snow">
+                    <div class="color-swatch" style="background-color: var(--co-alabaster);"></div>
+                    <div class="color-details">
+                        <span class="color-name text-snow">Alabaster</span>
+                        <span class="color-hex" style="color: rgba(255,255,255,0.5);">#F5F2E8 | --sys-bg-main</span>
+                    </div>
+                </div>
+                <!-- Snow -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: var(--co-snow);"></div>
+                    <div class="color-details">
+                        <span class="color-name">Snow</span>
+                        <span class="color-hex">#FFFAFC | Secondary Background</span>
+                    </div>
+                </div>
+                <!-- Ebony -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: var(--co-ebony);"></div>
+                    <div class="color-details">
+                        <span class="color-name">Ebony</span>
+                        <span class="color-hex">#180F26 | --sys-text-primary</span>
+                    </div>
+                </div>
+                <!-- Violet 200 -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: var(--co-violet-200);"></div>
+                    <div class="color-details">
+                        <span class="color-name">Violet 200</span>
+                        <span class="color-hex">#C3A0FA | --sys-accent</span>
+                    </div>
+                </div>
+                <!-- Melon -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: var(--co-melon);"></div>
+                    <div class="color-details">
+                        <span class="color-name">Melon</span>
+                        <span class="color-hex">#F8B5AF | Secondary Accent</span>
+                    </div>
+                </div>
+                <!-- Ebony 50% -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: var(--co-ebony-o50);"></div>
+                    <div class="color-details">
+                        <span class="color-name">Ebony (50%)</span>
+                        <span class="color-hex">rgba(24, 15, 38, 0.5) | Muted Text</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Typography Scale</h2>
+            <div class="type-scale">
+                <div class="type-row">
+                    <div class="type-label">Display Large<br>Roslindale Condensed</div>
+                    <div class="type-sample display-lg">Ideas that shift.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Display Base<br>Roslindale Condensed</div>
+                    <div class="type-sample display">Ideas that shift.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Heading 1<br>Roslindale Condensed</div>
+                    <div class="type-sample h1">Strategic communications.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Heading 2<br>Roslindale Condensed</div>
+                    <div class="type-sample h2">Strategic communications.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Heading 3<br>Roslindale Condensed</div>
+                    <div class="type-sample h3">Strategic communications.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Heading 4<br>Roslindale Condensed</div>
+                    <div class="type-sample h4">Strategic communications.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Body Large<br>PP Neue Montreal</div>
+                    <div class="type-sample body-lg">We craft narratives that define categories, build credibility, and
+                        drive commercial success for the most innovative brands in the world.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-label">Meta Text<br>IBM Plex Mono</div>
+                    <div class="type-sample meta">Strategic Comms Partner</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Interactive Elements</h2>
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-xl);">
+                <a href="#" class="btn btn-primary">Primary Button</a>
+                <a href="#" class="btn btn-dark">Dark Button</a>
+                <a href="#" class="btn btn-secondary">Secondary Button</a>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

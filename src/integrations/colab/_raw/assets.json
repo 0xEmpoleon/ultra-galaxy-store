@@ -1,0 +1,556 @@
+{
+  "images": [
+    {
+      "src": "https://cdn-cookieyes.com/assets/images/close.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69467b5e4605a17092146171_the-colab_logo.png",
+      "alt": "",
+      "classes": "navbar-logo-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6946841ef5d98347823e11fa_nav_toggle-icon.svg",
+      "alt": "",
+      "classes": "nav-toggle-icon"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6949321e1d96bd27070a27d0_Media_Relations.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6949321ee37a56780183e4ef_Strategic_Messaging.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6949321e29bc623e4329becd_Thought_Leadership.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6949321ed85ca3e88ca1712c_Content-Development.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6949321e4d9c00e26d929465_Major_Announcements.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6946841ef5d98347823e11fa_nav_toggle-icon.svg",
+      "alt": "",
+      "classes": "nav-toggle-icon"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0fc55cffb297068ddd_Artificial-Intelligence.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0ff85886b9917daca5_Climate-Tech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0fe37a5678017eda07_MarTech-and-AdTech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0ffa768470da3d310a_Cybersecurity.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f812289b570cac380_Supply-Chain.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f6da260cbb8c8d1e2_Logistics.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f0e64d7ba76a9e8b0_FinTech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0fbd9c88e6cf39ae79_Health-Tech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f632ca5647374baf0_GovTech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f812289b570cac368_HR-Tech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f66d85dbabeba37f6_ConTech.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f6837615d874497fd_Infra-and-DevOps.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f84b11232faa08019_SAAS.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0fcfc877b82a88f292_B2B.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0f9414a8ec1daaef8d_Analyst-Firms.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69491c0fa5c680967e0cb315_VC-and-PE.webp",
+      "alt": "",
+      "classes": "dropdown-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66e25163b15c2915cab_uc.webp",
+      "alt": "The Washington Times headline: 'U.S. employers announced most October layoffs in 22 years: Report'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea680275434728f436c98_uc.webp",
+      "alt": "Business Insider headline: 'Read the pitch decks of 11 startups looking to disrupt advertising and marketing with AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea671888933f40eab11fa_uc.webp",
+      "alt": "Trellis headline: 'Get ready to weigh in on an overhaul of carbon accounting for electricity'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693941bb909c60977fcbdcab_syncurrent_axios_1.webp",
+      "alt": "Axios headline: 'How these states are making their own rules for AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66f44af158ea3cc9675_uc.webp",
+      "alt": "Rawstory headline: 'It's a talent tax: AI CEOs fear demise as they accuse Trump of launching 'labor war''",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea659c45a2357b34310f9_uc.webp",
+      "alt": "Inc headline: '‘It Was a Masterstroke of Creating Chaos’: The H-1B Rule That Left Companies Scrambling'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693942720e7e227d6454d8c2_kusari_forbes_1.webp",
+      "alt": "Forbes headline: 'Never Drop The SBOM, Why A Software Bill Of Materials Pays Off'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/69394233f74cd606c23c161f_carbondirect_thewallstreetjournal_1.webp",
+      "alt": "The Wall Street Journal headline: 'Trump and His Allies Are Taking On Climate Regulations at Home and Abroad'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea6720e508e0aa005d0c4_uc.webp",
+      "alt": "Morning Brew headline: 'Nature-based carbon removals provide the right volume at the right price'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea65dc1b31bf542de5b04_uc.webp",
+      "alt": "DigiDay headline: 'In Graphic Detail: Virtual influencers click with young audiences, yet brands’ interest wanes'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea65cc698cc34d76e23a0_uc.webp",
+      "alt": "Sillicon Angle headline: 'Agentic AI identity verification startup Vouched gets $17M to build trust in autonomous agents'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66fb154a50ae57923ea_uc.webp",
+      "alt": "Yahoo Finance headline: 'Nvidia earnings beat on top and bottom lines, S&P 500 notches fresh record close'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea65992f40d7862c7cb26_uc.webp",
+      "alt": "Fortune headline: 'AGI talk is out in Silicon Valley’s latest vibe shift, but worries remain about superpowered AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea670b704b152be25028a_uc.webp",
+      "alt": "S&P Global headline: 'AMD, NVIDIA navigating enhanced scrutiny as US-China AI race accelerates'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66c4744fab1c77387e2_uc.webp",
+      "alt": "Bloomberg headline: 'Traders Are Fleeing Stocks Feared to Be Under Threat From AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/6939414e037e98762486dfe8_vouched_theinformation_1.webp",
+      "alt": "The Information headline: 'AI Threats Raise Demand for Cybersecurity Products That Don’t Exist (Yet)'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66dfa59b3a516fda5d9_uc.webp",
+      "alt": "Morning Brew headline: 'Why some cybersecurity professionals are sick of hearing that humans are the weakest link'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea6702f7a38d89212605b_uc.webp",
+      "alt": "Forbes headline: '5 Tips For Purchasing Carbon Removals: A Business Leader's Guide'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693941fe2c8f13ff604b0c86_carbondirect_npr_1.webp",
+      "alt": "NPR headline: 'Trump funding freeze could leave communities on their own as climate threats grow'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea671c45a2357b34315b3_uc.webp",
+      "alt": "NBC News headline: 'Trump's executive orders might threaten growth of electric vehicles and wind power'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/69393f74f72b30aa9f61aa73_carbondirect_thenewyorktimes_1.webp",
+      "alt": "The New York Times headline: 'As the World Warms, Davos Braces for Political Drama'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea671e3e0cc02508e986a_uc.webp",
+      "alt": "The New York Times headline: 'What Will Power the A.I. Revolution?'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66e25163b15c2915cab_uc.webp",
+      "alt": "The Washington Times headline: 'U.S. employers announced most October layoffs in 22 years: Report'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea680275434728f436c98_uc.webp",
+      "alt": "Business Insider headline: 'Read the pitch decks of 11 startups looking to disrupt advertising and marketing with AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea671888933f40eab11fa_uc.webp",
+      "alt": "Trellis headline: 'Get ready to weigh in on an overhaul of carbon accounting for electricity'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693941bb909c60977fcbdcab_syncurrent_axios_1.webp",
+      "alt": "Axios headline: 'How these states are making their own rules for AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66f44af158ea3cc9675_uc.webp",
+      "alt": "Rawstory headline: 'It's a talent tax: AI CEOs fear demise as they accuse Trump of launching 'labor war''",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea659c45a2357b34310f9_uc.webp",
+      "alt": "Inc headline: '‘It Was a Masterstroke of Creating Chaos’: The H-1B Rule That Left Companies Scrambling'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693942720e7e227d6454d8c2_kusari_forbes_1.webp",
+      "alt": "Forbes headline: 'Never Drop The SBOM, Why A Software Bill Of Materials Pays Off'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/69394233f74cd606c23c161f_carbondirect_thewallstreetjournal_1.webp",
+      "alt": "The Wall Street Journal headline: 'Trump and His Allies Are Taking On Climate Regulations at Home and Abroad'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea6720e508e0aa005d0c4_uc.webp",
+      "alt": "Morning Brew headline: 'Nature-based carbon removals provide the right volume at the right price'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea65dc1b31bf542de5b04_uc.webp",
+      "alt": "DigiDay headline: 'In Graphic Detail: Virtual influencers click with young audiences, yet brands’ interest wanes'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea65cc698cc34d76e23a0_uc.webp",
+      "alt": "Sillicon Angle headline: 'Agentic AI identity verification startup Vouched gets $17M to build trust in autonomous agents'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66fb154a50ae57923ea_uc.webp",
+      "alt": "Yahoo Finance headline: 'Nvidia earnings beat on top and bottom lines, S&P 500 notches fresh record close'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea65992f40d7862c7cb26_uc.webp",
+      "alt": "Fortune headline: 'AGI talk is out in Silicon Valley’s latest vibe shift, but worries remain about superpowered AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea670b704b152be25028a_uc.webp",
+      "alt": "S&P Global headline: 'AMD, NVIDIA navigating enhanced scrutiny as US-China AI race accelerates'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66c4744fab1c77387e2_uc.webp",
+      "alt": "Bloomberg headline: 'Traders Are Fleeing Stocks Feared to Be Under Threat From AI'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/6939414e037e98762486dfe8_vouched_theinformation_1.webp",
+      "alt": "The Information headline: 'AI Threats Raise Demand for Cybersecurity Products That Don’t Exist (Yet)'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea66dfa59b3a516fda5d9_uc.webp",
+      "alt": "Morning Brew headline: 'Why some cybersecurity professionals are sick of hearing that humans are the weakest link'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea6702f7a38d89212605b_uc.webp",
+      "alt": "Forbes headline: '5 Tips For Purchasing Carbon Removals: A Business Leader's Guide'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693941fe2c8f13ff604b0c86_carbondirect_npr_1.webp",
+      "alt": "NPR headline: 'Trump funding freeze could leave communities on their own as climate threats grow'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea671c45a2357b34315b3_uc.webp",
+      "alt": "NBC News headline: 'Trump's executive orders might threaten growth of electric vehicles and wind power'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/69393f74f72b30aa9f61aa73_carbondirect_thenewyorktimes_1.webp",
+      "alt": "The New York Times headline: 'As the World Warms, Davos Braces for Political Drama'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694ea671e3e0cc02508e986a_uc.webp",
+      "alt": "The New York Times headline: 'What Will Power the A.I. Revolution?'",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/694536f09e4e4b94a9a3cae8_DigitalOcean_Logo.svg",
+      "alt": "Digital Ocean logo",
+      "classes": "logo-banner-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693c2689ae844ea0b2c006d7_Qualified_Logo.svg",
+      "alt": "Qualified logo",
+      "classes": "logo-banner-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693ab82375c6ed8a978f49f3_FuturumGroup_Logo.svg",
+      "alt": "The Futurum Group logo",
+      "classes": "logo-banner-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693c267f0b1c3c4a10dd0534_Boundless_Logo.svg",
+      "alt": "Boundless logo",
+      "classes": "logo-banner-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693c2692509dbb1a715403ff_CarbonDirect_Logo.svg",
+      "alt": "Carbon Direct logo",
+      "classes": "logo-banner-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/69384242f6952d25e9f4186c_Vouched_Logo.png",
+      "alt": "Vouched logo",
+      "classes": "logo-banner-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6953ad87afa40871c4a4973c_anti-agency-colab.webp",
+      "alt": "Hand with painted nails stopping a line of standing wooden dominoes on a wooden table with a stack of magazines in the background.",
+      "classes": "sticky-image-parallax-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6953b2d4a40f89c97f882d86_colab-icon.webp",
+      "alt": "Abstract icon showing six circles connected by lines in a hexagonal form.",
+      "classes": "agency-icon"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6953b433c5ddc1a92991359f_676c870653eaa698f40642fee80c78a7_LizzyHarris_Avatar.webp",
+      "alt": "Lizzy Harris, CEO & Co-Founder of The Colab",
+      "classes": "testimonial-avatar-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693aa901c52acc530a31e3de_ThumbnailImage3x4.webp",
+      "alt": "",
+      "classes": "featured-work-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693c2692509dbb1a715403ff_CarbonDirect_Logo.svg",
+      "alt": "",
+      "classes": "featured-work-logo"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693aa8ee76141580d52d375e_ThumbnailImage3x4.webp",
+      "alt": "",
+      "classes": "featured-work-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693c267f0b1c3c4a10dd0534_Boundless_Logo.svg",
+      "alt": "",
+      "classes": "featured-work-logo"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693a9b0e64175cfd5bba7764_ThumbnailImage3x4.webp",
+      "alt": "",
+      "classes": "featured-work-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/693c2689ae844ea0b2c006d7_Qualified_Logo.svg",
+      "alt": "",
+      "classes": "featured-work-logo"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6936f453b904de70995dd500_cabc8baf5e4016247037d1b6525efa94_arrow_right40x40.svg",
+      "alt": "",
+      "classes": "button-full-screen-icon"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695bbed58db7ddf2f2372934_services-sticky-section.webp",
+      "alt": "Person with red nail polish writing with a red pencil in an open notebook filled with handwritten lists on a marble table surrounded by newspapers and a glass of water.",
+      "classes": "sticky-stack-background-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69399c40826a1495de2f7ee5_arrow_right24x24.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69399c40826a1495de2f7ee5_arrow_right24x24.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69399c40826a1495de2f7ee5_arrow_right24x24.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69399c40826a1495de2f7ee5_arrow_right24x24.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6936f453b904de70995dd500_cabc8baf5e4016247037d1b6525efa94_arrow_right40x40.svg",
+      "alt": "",
+      "classes": "button-full-screen-icon"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695ba46cde14ae200bdcc915_horizontal_section-main.webp",
+      "alt": "Person with decorative rings organizing vintage stationery and drafting tools in an open red briefcase on a green surface.",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695c003e764ebc820ce10006_horizontal_section-small.webp",
+      "alt": "Two smiling women sitting side by side writing in open notebooks on a wooden table.",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695f84f49e5394f40b6391a1_homepage_background_horizontal_scroll.webp",
+      "alt": "Eight people wearing colorful patterned blazers sitting around a round table using laptops with a colorful carpet underneath.",
+      "classes": "is-image-cover"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695f8b4d6e7c094ee3fc439e_testimonial_mockup_3.webp",
+      "alt": "Smartphone displaying Semafor article titled 'COP30 has a carbon trading problem' by Tim McDonneil with a photo of a crowd and performers at COP30 Brasil Amazônia.",
+      "classes": "parallax-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695f80c5f3a6846d7e893dab_testimonials_image2-home.webp",
+      "alt": "Hand holding a tablet displaying a Forbes article titled 'Hybrid Careers Will Win The RTO War in 2023' with a photo of a laptop keyboard, mouse, and sticky note reading 'Home + Office = HYBRID'.",
+      "classes": "parallax-image"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/69525885101e496079c2be82_newsletter_subscribers.webp",
+      "alt": "Portraits of four diverse smiling adults against a light background.",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/695264039f4b1d301d3bd8ac_When_Big_Deals_Go_Public.webp",
+      "alt": "",
+      "classes": "article-img"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695267120fec759f8b1f6576_Star-divider.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/695268a623ae545f85bdc5f4_ash-and-lizzy-authors.webp",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/695298baa8be54918256f08b_Inside-the-New-Era-of-Journalism.webp",
+      "alt": "",
+      "classes": "article-img"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695267120fec759f8b1f6576_Star-divider.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/695268a623ae545f85bdc5f4_ash-and-lizzy-authors.webp",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/69526570b44a9875496ce1b3_When-the-Media-Boils-Over.webp",
+      "alt": "",
+      "classes": "article-img"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695267120fec759f8b1f6576_Star-divider.svg",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/692ed3f409f6d9a68f99d802/695268a623ae545f85bdc5f4_ash-and-lizzy-authors.webp",
+      "alt": "",
+      "classes": ""
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6936f453b904de70995dd500_cabc8baf5e4016247037d1b6525efa94_arrow_right40x40.svg",
+      "alt": "",
+      "classes": "button-full-screen-icon"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6953bb82ecc5a41178496736_49578c7f683a2cc698b698dfc3630c7d_cta-homepage.webp",
+      "alt": "",
+      "classes": "cta-parallax-image hide-mobile-portrait"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6968b599ca87684a397d5857_homepage_cta_mobile.webp",
+      "alt": "",
+      "classes": "cta-parallax-image show-mobile-portrait"
+    },
+    {
+      "src": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6932bd92f21415c4d4449835_0e7ba69f3e87188fafede1d63a7a8f0b_the_colab-footer-logo.webp",
+      "alt": "",
+      "classes": "footer-logo-image"
+    }
+  ],
+  "favicon": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6932c3d4bc800466e22de4d0_Favicon32x32.png",
+  "ogImage": "https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/696b932fb4d2a20f118b15a5_OpenGraph%20-%20The%20Colab.png"
+}

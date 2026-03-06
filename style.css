@@ -210,6 +210,8 @@ body {
 
 .neo-nav {
     margin-top: auto;
+    padding-top: 60px;
+    /* Force separation even when space is tight */
     padding-bottom: 20px;
 }
 
@@ -407,7 +409,8 @@ body {
     .neo-panels {
         grid-template-columns: 1fr;
         height: auto;
-        padding-top: 60px; /* Push content down slightly for mobile header */
+        padding-top: 60px;
+        /* Push content down slightly for mobile header */
     }
 
     .panel {
@@ -415,7 +418,8 @@ body {
         border-bottom: 1px solid var(--border-dark);
         height: auto;
         padding: 40px 24px;
-        min-height: auto; /* Remove forced 50vh to let content dictate height */
+        min-height: auto;
+        /* Remove forced 50vh to let content dictate height */
     }
 
     .panel:last-child {
@@ -423,7 +427,8 @@ body {
     }
 
     .panel-main {
-        justify-content: flex-start; /* Align top for mobile reading flow */
+        justify-content: flex-start;
+        /* Align top for mobile reading flow */
         align-items: flex-start;
         text-align: left;
     }
@@ -435,12 +440,14 @@ body {
     .mega-headings h1 {
         white-space: normal;
         text-align: left;
-        font-size: clamp(40px, 15vw, 64px); /* Tighter scaling for mobile */
+        font-size: clamp(40px, 15vw, 64px);
+        /* Tighter scaling for mobile */
     }
 
     .store-header-container {
         padding-top: 40px;
-        margin-bottom: 30px; /* Tighter margin */
+        margin-bottom: 30px;
+        /* Tighter margin */
     }
 }
 
@@ -456,20 +463,25 @@ body {
 
     .store-grid {
         grid-template-columns: 1fr;
-        row-gap: 30px; /* Tighter gap for mobile scrolling */
+        row-gap: 30px;
+        /* Tighter gap for mobile scrolling */
     }
 
     .product-media {
-        aspect-ratio: auto; /* Let content dictate shape on mobile if needed, though 3/2 is fine */
-        padding: 40px 0; /* ensure height if aspect ratio fails */
+        aspect-ratio: auto;
+        /* Let content dictate shape on mobile if needed, though 3/2 is fine */
+        padding: 40px 0;
+        /* ensure height if aspect ratio fails */
     }
 
     .store-title {
-        font-size: clamp(28px, 10vw, 42px); /* Responsive title size */
+        font-size: clamp(28px, 10vw, 42px);
+        /* Responsive title size */
     }
 
     .theme-toggle {
-        top: 20px; /* Tighter header spacing */
+        top: 20px;
+        /* Tighter header spacing */
         right: 20px;
         width: 36px;
         height: 36px;

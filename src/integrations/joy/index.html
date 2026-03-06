@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOY - Codified Design System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <!-- Using a pixel font as Twobit fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="blueprint-grid"></div>
+    <div class="glow-orb"></div>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header class="ds-header">
+            <div class="brand-identifiers">
+                <span class="version-tag">[JOY.SYS.1.0]</span>
+                <h1 class="brand-text">JOY TECH</h1>
+            </div>
+            <div class="motto-box">
+                <p class="motto">GAME. EARN. JOY!</p>
+                <p class="brand-description">The canonical visual identity reference for JOY (Joy Tech). This UI library
+                    embodies the technical credibility, community-first energy, and hardware-meets-Web3 precision of the
+                    JOY ecosystem.</p>
+                <p class="brand-description" style="margin-top: 1rem; color: var(--color-joy-lime);">
+                    <a href="https://design-system-eight-henna.vercel.app/" target="_blank"
+                        style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(57, 255, 20, 0.4); padding-bottom: 2px;">View
+                        Original Source ↗</a>
+                </p>
+            </div>
+        </header>
+
+        <div class="ds-grid">
+            <!-- COLORS -->
+            <section class="ds-module color-module">
+                <div class="module-header">
+                    <h2>Color System</h2>
+                    <span class="module-meta">// 01</span>
+                </div>
+                <p class="module-desc">A dual-base system of Soft Dark and Circuit Grey provides the foundation. Signal
+                    Lime acts as the singular high-impact action colour.</p>
+
+                <div class="color-swatch-grid">
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#111111; border: 1px solid rgba(255,255,255,0.1);"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Soft Dark (Base)</span>
+                            <span class="color-hex">#111111</span>
+                        </div>
+                    </div>
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#222222; border: 1px solid rgba(255,255,255,0.2);"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Circuit Grey</span>
+                            <span class="color-hex">#222222</span>
+                        </div>
+                    </div>
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#39FF14; box-shadow: 0 0 20px rgba(57,255,20,0.4);"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Signal Lime (Action)</span>
+                            <span class="color-hex">#39FF14</span>
+                        </div>
+                    </div>
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#FFFFFF; border: 1px solid rgba(255,255,255,0.5);"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Pure White (Text)</span>
+                            <span class="color-hex">#FFFFFF</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TYPOGRAPHY -->
+            <section class="ds-module type-module">
+                <div class="module-header">
+                    <h2>Type Hierarchy</h2>
+                    <span class="module-meta">// 02</span>
+                </div>
+                <p class="module-desc">Source Code Pro acts as the core workhorse. Twobit is reserved strictly for
+                    exceptional display pops and Easter eggs.</p>
+
+                <div class="type-specimen">
+                    <div class="type-row">
+                        <div class="type-sample"
+                            style="font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 2rem;">Aa
+                        </div>
+                        <div class="type-details">
+                            <span class="type-name" style="font-family: 'Source Code Pro', monospace;">Source Code
+                                Pro</span>
+                            <span class="type-role">Role: Headlines & Body. Geometric Monospace.</span>
+                        </div>
+                    </div>
+                    <div class="type-row type-row-display">
+                        <div class="type-sample"
+                            style="font-family: 'Press Start 2P', cursive; font-size: 1.5rem; text-shadow: 2px 2px 0 rgba(57,255,20,0.5);">
+                            Aa</div>
+                        <div class="type-details">
+                            <span class="type-name"
+                                style="font-family: 'Press Start 2P', cursive; letter-spacing: -1px;">Twobit
+                                (Display)</span>
+                            <span class="type-role">Role: Exceptional Display Pops & Easter Eggs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMPONENTS -->
+            <section class="ds-module components-module">
+                <div class="module-header">
+                    <h2>Interactive Elements</h2>
+                    <span class="module-meta">// 03</span>
+                </div>
+                <p class="module-desc">High visibility Signal Lime states against industrial backgrounds.</p>
+
+                <div class="component-showcase">
+                    <div class="showcase-group">
+                        <span class="label">BUTTONS . ACTIVE STATES</span>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">Join Whitelist</button>
+                            <button class="btn btn-secondary">Claim Console</button>
+                        </div>
+                    </div>
+
+                    <div class="showcase-group">
+                        <span class="label">INPUT FIELDS</span>
+                        <div class="input-group">
+                            <input type="text" class="joy-input" placeholder="ENTER_WALLET_ADDRESS">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRODUCT & MASCOT -->
+            <section class="ds-module data-module">
+                <div class="module-header">
+                    <h2>Product & Ecosystem</h2>
+                    <span class="module-meta">// 04</span>
+                </div>
+                <p class="module-desc">Always display Genesis renders on Soft Dark backgrounds. Do not add drop shadows
+                    directly to the render files.</p>
+
+                <div class="data-cards-grid">
+                    <div class="data-card">
+                        <span class="data-label">Partner Node</span>
+                        <div class="data-value" style="font-size: 2rem;">SOMNIA NETWORK</div>
+                    </div>
+                    <div class="data-card">
+                        <span class="data-label">Partner Node</span>
+                        <div class="data-value" style="font-size: 2rem;">MOONBEAM</div>
+                    </div>
+                    <div class="data-card">
+                        <span class="data-label">Software Overlay</span>
+                        <div class="data-value" style="font-size: 2rem; color: var(--color-joy-lime);">JOY Store</div>
+                        <span class="data-sub">Hyperplay Integration</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

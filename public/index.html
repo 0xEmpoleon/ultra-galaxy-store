@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/jiw5nsk.css">
+
+    <!-- JOY Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../src/css/style.css">
 </head>
 
@@ -105,13 +111,24 @@
                 </div>
             </div>
 
-            <!-- System 2: Awaiting -->
-            <div class="product-card reveal" style="opacity: 0.5;">
-                <div class="product-media" style="background: #111;">
-                    <div style="font-size: 40px; color: #333; font-weight: 300;">+</div>
+            <!-- System 2: JOY Tech -->
+            <div class="product-card reveal" data-system="joy">
+                <div class="product-media"
+                    style="background: radial-gradient(circle, rgba(57,255,20,0.15) 0%, #111111 80%); border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">
+                    <div
+                        style="font-family: 'Press Start 2P', cursive; font-size: 32px; color: #39FF14; text-shadow: 4px 4px 0px rgba(255,255,255,0.1); text-align: center;">
+                        JOY</div>
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                    <div class="card-overlay">
+                        <a href="../src/integrations/joy/index.html" class="overlay-btn view-btn">View System</a>
+                        <button class="overlay-btn apply-btn" data-apply="joy">Apply System</button>
+                    </div>
                 </div>
                 <div class="product-meta">
-                    <div class="product-titling">Awaiting Integration</div>
+                    <div class="product-titling" style="font-family: 'Source Code Pro', monospace; font-weight: 700;">
+                        JOY Tech</div>
                 </div>
             </div>
 

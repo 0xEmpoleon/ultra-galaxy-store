@@ -208,10 +208,10 @@ applyButtons.forEach(btn => {
         e.preventDefault();
         e.stopPropagation();
         const theme = btn.getAttribute('data-apply');
-        
-        // Remove existing themes (if we had more, we'd loop or use a class prefix)
-        document.body.classList.remove('theme-cipher');
-        
+
+        // Remove existing themes
+        document.body.classList.remove('theme-cipher', 'theme-joy');
+
         // Apply new theme
         if (theme) {
             document.body.classList.add(`theme-${theme}`);

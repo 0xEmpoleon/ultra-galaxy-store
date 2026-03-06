@@ -543,3 +543,55 @@ body.theme-cipher .mega-headings h1 {
 body.theme-cipher .product-titling {
     font-family: 'articulat-cf', sans-serif;
 }
+
+/* =========================================
+   THEME: JOY TECH
+   ========================================= */
+body.theme-joy {
+    background-color: #111111;
+    color: #ffffff;
+    --color-brand-blue: #39FF14;
+    /* Map store blue to joy lime */
+    --color-bg-secondary: #222222;
+    --color-surface-glass-dark: rgba(255, 255, 255, 0.05);
+    font-family: 'Source Code Pro', monospace;
+}
+
+body.theme-joy .store-title {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: -1px;
+    font-size: 1rem;
+}
+
+body.theme-joy .mega-headings h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--color-brand-blue);
+    text-shadow: 6px 6px 0 rgba(255, 255, 255, 0.1);
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+body.theme-joy .product-titling {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+}
+
+body.theme-joy .nav-links a {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+body.theme-joy .card-overlay {
+    background: rgba(17, 17, 17, 0.9);
+}
+
+body.theme-joy .overlay-btn {
+    font-family: 'Source Code Pro', monospace;
+    border-radius: 0;
+}
+
+body.theme-joy .apply-btn {
+    background: var(--color-brand-blue);
+    color: #111111;
+    font-weight: 700;
+}

@@ -1,0 +1,84 @@
+:root {
+    --colab-bg: #F5F2E8;
+    /* Alabaster */
+    --colab-text: #180F26;
+    /* Ebony */
+    --colab-accent: #C3A0FA;
+    /* Violet */
+    --colab-accent-hover: #F8B5AF;
+    /* Melon */
+    --colab-border: rgba(24, 15, 38, 0.1);
+
+    --font-primary: 'PP Neue Montreal', 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--colab-bg);
+    color: var(--colab-text);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.guidelines-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    border-bottom: 1px solid var(--colab-border);
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--colab-accent);
+    font-weight: 500;
+}
+
+.hero-section {
+    padding: 10% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--colab-border);
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+}
+
+.hero-title span {
+    color: var(--colab-accent);
+}
+
+.hero-description {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    max-width: 800px;
+    line-height: 1.4;
+    color: var(--colab-text);
+    opacity: 0.8;
+}
+
+.color-swatches {
+    padding: 5%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.swatch {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}

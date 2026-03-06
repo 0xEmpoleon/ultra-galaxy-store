@@ -288,6 +288,24 @@ const DESIGN_SYSTEMS = {
         '--strategy-high-yield': '#703B2D',
         '--strategy-term': '#696038',
         '--strategy-turbo': '#583655'
+    },
+    colab: {
+        '--sys-bg-main': '#F5F2E8',
+        '--sys-text-primary': '#180F26',
+        '--sys-text-secondary': 'rgba(24, 15, 38, 0.6)',
+        '--sys-border': 'rgba(24, 15, 38, 0.1)',
+        '--bi-divider': 'rgba(24, 15, 38, 0.1)',
+        '--bi-bg': '#FFFAFC',
+        '--bi-text': '#180F26',
+        '--bi-header-bg': '#E8E5DC',
+        '--sys-font-primary': "'PP Neue Montreal', 'Inter', sans-serif",
+        '--sys-font-display': "'PP Neue Montreal', 'Inter', sans-serif",
+        '--sys-accent-shadow': '0 0 40px rgba(195, 160, 250, 0.5)',
+        '--sys-button-radius': '100vw',
+        '--sys-button-bg-hover': '#C3A0FA',
+        '--sys-button-text-hover': '#180F26',
+        '--sys-3d-color': '#C3A0FA',
+        '--sys-3d-edge': '#180F26'
     }
 };
 

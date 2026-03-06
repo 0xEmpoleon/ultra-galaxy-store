@@ -539,3 +539,7 @@ body.theme-cipher .mega-headings h1 {
     color: var(--bi-blue);
     text-shadow: 0 0 40px rgba(15, 135, 255, 0.3);
 }
+
+body.theme-cipher .product-titling {
+    font-family: 'articulat-cf', sans-serif;
+}

@@ -10,6 +10,7 @@ class SystemCard extends HTMLElement {
         const title = this.getAttribute('title') || 'SYSTEM';
         const accent = this.getAttribute('accent') || '#ffffff';
         const fontFamily = this.getAttribute('font') || 'Inter, sans-serif';
+        const typeScale = this.getAttribute('scale') || 'clamp(32px, 6vw, 80px)';
         const link = this.getAttribute('link') || '#';
         const isOffline = systemId === 'offline';
 
@@ -53,7 +54,7 @@ class SystemCard extends HTMLElement {
 
                 .branding-text {
                     font-family: ${fontFamily};
-                    font-size: clamp(32px, 6vw, 80px);
+                    font-size: ${typeScale};
                     color: ${accent};
                     letter-spacing: 2px;
                     font-weight: 600;

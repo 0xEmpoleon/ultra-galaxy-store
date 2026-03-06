@@ -327,17 +327,17 @@ body {
 
     .panel-main {
         justify-content: flex-start;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
     }
 
     .mega-headings {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .mega-headings h1 {
         white-space: normal;
-        text-align: left;
+        text-align: center;
         font-size: clamp(2.5rem, 12vw, 4rem);
         line-height: 0.9;
     }

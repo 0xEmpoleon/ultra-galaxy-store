@@ -1,68 +1,25 @@
-# 🌌 Ultra Design System
+# ULTRA — The Design System Laboratory
 
-**Ultra Design System** is an agentic, multi-brand platform designed for rapid extraction, codification, and implementation of premium brand identities. It bridges the gap between raw brand materials and production-ready code.
+ULTRA is a high-fidelity design system storefront and laboratory. It specializes in **1:1 Reconstruction** of institutional grade DeFi and fintech websites, codifying their aesthetics into reusable tokens and standards.
 
-## 🎯 Project Purpose
+## 🏆 The Steakhouse Standard (10/10 Fidelity)
+This project enforces a 10/10 reconstruction grade. Every integration node is visually indistinguishable from its live counterpart, featuring:
+- **Exact Token Parity**: Precise OKLCH and Hex color mapping.
+- **Institutional SVG Data-Viz**: Real-time SVG reconstruction of charts and graphs.
+- **Fluid iOS Fidelity**: Native-grade mobile responsiveness and background synchronization.
 
-This repository is built to showcase a **universal design system** that can morph to fit any brand identity through an "Applied Design" mechanic. It serves three primary functions:
+## 🛠 Codified AI Skills
+The laboratory includes codified skills for AI agents to maintain technical excellence:
+- **[10/10 Extraction](.agents/skills/extractor-10-10.md)**: Procedure for pixel-perfect brand ingestion.
+- **[10/10 Reconstruction](.agents/skills/reconstructor-10-10.md)**: Principles for high-end frontend implementation and iOS stability.
 
-1.  **AI-Driven Extraction**: An agentic system that reverse-engineers design tokens (color, type, spacing, motion) from websites, PDFs, and Figma exports.
-2.  **Fluid & Responsive Foundation**: A core CSS architecture built on fluid variables (`clamp()`, `rem`, `vw`) that ensures visual consistency from 320px to 2560px without media-query bloat.
-3.  **Cross-Brand Integrations**: Real-world reconstructions of premium brands (**Cipher Digital**, **Joy Tech**, **Telekom OT**) to demonstrate the system's flexibility and precision.
+## 🧩 Featured Systems
+- **[Cipher Digital](src/integrations/design-system/index.html)**: The standard for neo-brutalist dark mode.
+- **[Joy Tech](src/integrations/joy/index.html)**: The benchmark for playful, grid-based aesthetic.
+- **[Steakhouse Financial](src/integrations/steakhouse/index.html)**: The 10/10 "Gold Standard" reconstruction (Teal themes + SVG viz).
 
----
-
-## 🏗️ Architecture
-
-### 1. Token-Based Theming (`src/tokens/`)
-The system's "brain" lives in [design-tokens.css](src/tokens/design-tokens.css). It organizes brand identities into namespaced custom properties (`--color-*`, `--font-*`, etc.), allowing for instant site-wide theme switching.
-
-### 2. Component Layer (`src/components/`)
-A library of modular, theme-agnostic components:
--   **Buttons**: Primary, secondary, ghost, and destructive variants.
--   **Cards**: Header/Body/Footer structures with container-query responsiveness.
--   **Inputs**: Accessible forms with fluid spacing and custom styling.
--   **Layout**: `grid`, `stack`, `cluster`, and `sidebar` primitives for rapid layout building.
-
-### 3. Integrations (`src/integrations/`)
-Detailed reconstructions of world-class web experiences:
--   **Cipher Digital**: Industrial hyperscale. Dark, precision-engineered aesthetic.
--   **Joy Tech**: Retro-futuristic gaming. Neon accents and brutalist layouts.
--   **Telekom OT**: Editorial Swiss minimalism. Light, whitespace-heavy design.
--   **Steakhouse Financial**: Institutional DeFi. Deep teal themes, SVG data-viz, and 1:1 asset parity. (The "Gold Standard" for reconstruction).
+## 🚀 Deployment
+Hosted on Vercel: [ultra-galaxy-store.vercel.app](https://ultra-galaxy-store.vercel.app/)
 
 ---
-
-## 🚀 Key Features
-
--   **Apply System**: A runtime mechanic that swaps the entire storefront's identity, including fonts, 3D assets (Three.js), and spacing protocols.
--   **Reconstruct Mode (10/10 Grade)**: High-fidelity website reconstructions built using exact CSS extraction, SVG component replication, and asset mirroring.
--   **Visual Brand Guidelines**: A documentation layer for each brand showing color swatches, typography specimens, and component usage.
-
----
-
-## 🛠️ Usage for Developers
-
-### Prerequisites
--   **Docker**: Used to offload compute-heavy tasks or run isolated design extraction agents.
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/0xEmpoleon/ultra-galaxy-store.git
-
-# Run via Docker (if required)
-docker-compose up
-```
-
----
-
-## 📜 Documentation Links
--   [Full Token Reference](src/tokens/design-tokens.css)
--   [Changelog](CHANGELOG.md)
--   [Extraction Research](docs/DESIGN_SYSTEM_EXTRACTION_RESEARCH.md)
-
----
-
-**Built with Precision for the Ultra Galaxy.**
-**GitHub:** [0xEmpoleon](https://github.com/0xEmpoleon) | **Vercel:** [ti8218b-5326s-projects](https://vercel.com/ti8218b-5326s-projects)
+*Created and Curated by [Toshinori Ishibashi](https://github.com/0xEmpoleon).*

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toshinori Ishibashi × Refined Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hidden Youtube Player for Autoplay -->
+    <div style="position: absolute; width: 0; height: 0; pointer-events: none; opacity: 0;">
+        <iframe width="0" height="0"
+            src="https://www.youtube.com/embed/cORCsXQSv5g?autoplay=1&loop=1&playlist=cORCsXQSv5g" frameborder="0"
+            allow="autoplay"></iframe>
+    </div>
+
+    <!-- Landing Page (Neo-Classical / Dark Mode) -->
+    <section class="hero-section">
+        <div id="landing-hero" class="neo-hero">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span class="toggle-icon"></span>
+            </button>
+            <!-- 3D Canvas Container -->
+            <div id="canvas-container"></div>
+
+            <div class="neo-panels">
+                <!-- Center Panel: Major Identity -->
+                <div class="panel panel-main">
+                    <div class="mega-headings">
+                        <h1>Toshinori Ishibashi</h1>
+                        <div class="sub-headings">
+                            <h2>Not a Curator</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Info & Links -->
+                <div class="panel panel-info">
+                    <div class="info-blocks-group">
+                        <div class="info-block">
+                            <div class="label">Status & Position</div>
+                            <div class="content"><a href="https://www.laserdigital.com/" target="_blank">Laser Digital
+                                    Asset
+                                    Management</a></div>
+                            <div class="content secondary-content"><a href="https://playonjoy.com/pre-book"
+                                    target="_blank">Play on Joy</a></div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="label">Location</div>
+                            <div class="content">London, Dubai</div>
+                        </div>
+                    </div>
+
+                    <nav class="neo-nav">
+                        <ul>
+                            <li><a href="https://0xempoleon.notion.site/0xEmpoleon-a705323cd04540c6a74917ffcdbb69a0"
+                                    target="_blank">Knowledge</a></li>
+                            <li><a href="https://github.com/0xEmpoleon" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=cORCsXQSv5g&list=PLh2CwYobtzXw3snHZWZYQrTSduF56R4zx&index=2"
+                                    target="_blank">Playlist</a></li>
+                            <li><a href="#store" class="scroll-trigger">Store ↓</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="spline-bg">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/iK7lP-x0x-wXgQ7O/scene.splinecode"></spline-viewer>
+        </div>
+    </section>
+
+    <!-- Store Section (High-Fidelity One-to-One Reproduction) -->
+    <section class="gallery-section" id="store">
+        <div class="store-header-container">
+            <div class="store-category-label">Favourites</div>
+            <h2 class="store-title">The Selection</h2>
+        </div>
+
+        <div class="store-grid">
+            <!-- Product 1 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/synth.png" alt="The Synth H6">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">The Synth H6</div>
+                    <div class="product-sub">Teenage Engineering</div>
+                    <div class="product-pricing">$ 499.00</div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/speaker.png" alt="TP-7 Hi-Fi">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">TP-7 Hi-Fi</div>
+                    <div class="product-sub">Teenage Engineering</div>
+                    <div class="product-pricing">$ 899.00</div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/clock.png" alt="OP–TIME | 01">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">OP–TIME | 01</div>
+                    <div class="product-sub">Precision Goods</div>
+                    <div class="product-pricing">$ 299.00</div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/art_print.png" alt="Bauhaus Structure">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">Bauhaus Structure</div>
+                    <div class="product-sub">Modern Art Collective</div>
+                    <div class="product-pricing">$ 55.00</div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/chair.png" alt="The Oak Lounge">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">The Oak Lounge</div>
+                    <div class="product-sub">Asset Kit (Nordic Design)</div>
+                    <div class="product-pricing">$ 2,450.00</div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/lamp.png" alt="Industrial Beam">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">Industrial Beam</div>
+                    <div class="product-sub">Product Mockup (Dieter Studio)</div>
+                    <div class="product-pricing">$ 189.00</div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/headphones.png" alt="Acoustic MK II">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">Acoustic MK II</div>
+                    <div class="product-sub">Jitter Template (Pure Sound)</div>
+                    <div class="product-pricing">$ 399.00</div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card reveal">
+                <div class="product-media">
+                    <img src="assets/art_print.png" alt="Bauhaus Structure">
+                    <div class="bookmark-trigger">
+                        <div class="bookmark-icon"></div>
+                    </div>
+                </div>
+                <div class="product-meta">
+                    <div class="product-titling">Bauhaus Structure</div>
+                    <div class="product-sub">Swiss Design (Swiss Edition)</div>
+                    <div class="product-pricing">$ 75.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

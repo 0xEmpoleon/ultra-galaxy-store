@@ -162,6 +162,36 @@ body {
     transition: var(--transition-fast);
 }
 
+/* Stats Bar */
+.stats-bar {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-muted);
+    padding: 40px 0;
+}
+
+.stats-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
 /* Vault Grid */
 .vault-grid-section {
     padding: 80px 40px;
@@ -377,6 +407,110 @@ body {
     cursor: pointer;
 }
 
+/* Asset Distribution */
+.distribution-section {
+    padding: 80px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.dist-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-muted);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.dist-header {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 16px;
+}
+
+.dist-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.dist-label:first-child {
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--brand-green);
+}
+
+.dist-chart-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    min-height: 300px;
+}
+
+.donut-visual {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 25px solid var(--brand-green);
+    border-left-color: #3b82f6;
+    /* Blue for Base */
+    border-bottom-color: #ef4444;
+    /* Arbitrum-ish red */
+    position: relative;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot.mainnet {
+    background-color: var(--brand-green);
+}
+
+.dot.base {
+    background-color: #3b82f6;
+}
+
+.dot.arbitrum {
+    background-color: #ef4444;
+}
+
+/* Partner Cloud */
+.partners-section {
+    padding: 60px 40px;
+    border-top: 1px solid var(--border-muted);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.4;
+    filter: grayscale(1);
+}
+
+.partner-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
 .trust-banner {
     padding: 40px;
     text-align: center;
@@ -403,5 +537,16 @@ body {
 
     .nav-links {
         display: none;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .dist-chart-placeholder {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
     }
 }

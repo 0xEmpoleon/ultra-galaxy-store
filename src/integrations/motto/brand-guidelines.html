@@ -4,120 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motto® | Design System [V1.0.0]</title>
-    <link rel="stylesheet" href="../../src/shared/brand-guidelines.css">
+    <title>Motto® | Design System [SYS.VER.2.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@1&f[]=plein@1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #DBFF00;
+            /* Motto Lime */
+            --bg: #1B1B1C;
+            /* Ebony Core */
+            --surface: #F2F2F2;
+            /* Alabaster */
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #FFFFFF;
+        }
+
+        .hero__brand {
+            font-family: 'Plein', 'NON Natural Grotesk', sans-serif;
+            color: var(--accent-color);
+            letter-spacing: -0.02em;
+        }
+
+        .specimen__sample--display {
+            font-family: 'Plein', 'NON Natural Grotesk', sans-serif;
+            color: var(--accent-color);
+            letter-spacing: -0.02em;
+        }
+
+        .specimen__sample {
+            font-family: 'Switzer', 'PP Neue Montreal', sans-serif;
+        }
+
+        .divider-plus {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-number {
+            color: rgba(255, 255, 255, 0.4);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: #FFFFFF;
+        }
+
+        .section-description {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .swatch {
+            border-color: var(--border);
+        }
+
+        .swatch__meta {
+            border-top-color: var(--border);
+        }
+
+        .component-label {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .color-swatch-prime {
+            background: #DBFF00;
+        }
+
+        .color-swatch-hy {
+            background: #F2F2F2;
+        }
+
+        .color-swatch-term {
+            background: #FFFFFF;
+        }
+
+        .color-swatch-turbo {
+            background: #1B1B1C;
+        }
+    </style>
 </head>
 
-<body class="guidelines-body">
+<body>
 
-    <!-- Storefront Navigation -->
-    <nav class="storefront-nav">
-        <a href="../../../index.html" class="back-link">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Back to Galaxy Store
-        </a>
-        <div class="system-badge">MOTTO.SYS.VER.1.0</div>
-    </nav>
-
-    <!-- Header Section -->
-    <header class="guidelines-header"
-        style="background-color: #F2F2F2; color: #000000; border-bottom: 2px solid #000000;">
-        <div class="header-content">
-            <h1 style="font-family: 'Plein', sans-serif;">MOTTO</h1>
-            <p class="subtitle" style="color: rgba(0,0,0,0.6);">Institutional Core Brand Guidelines</p>
+    <!-- TICKER -->
+    <div class="ticker" style="color: var(--bg); background: var(--accent-color);">
+        <div class="ticker__inner" style="font-family: 'Plein', sans-serif; font-weight: bold;">
+            IDEAS WORTH RALLYING AROUND® • IDEAS WORTH RALLYING AROUND® • IDEAS WORTH RALLYING AROUND® •
+            IDEAS WORTH RALLYING AROUND® •
         </div>
-        <div class="header-meta">
-            <div class="meta-item">
-                <span class="meta-label">Source</span>
-                <span class="meta-val">wearemotto.com</span>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Extraction Pipeline</span>
-                <span class="meta-val">Puppeteer Crawler (Stealth)</span>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Reconstruction Grade</span>
-                <span class="meta-val">10/10 Standard</span>
-            </div>
-        </div>
-    </header>
+    </div>
 
-    <main class="guidelines-content">
-        <!-- 01. Brand Philosophy -->
-        <section class="guideline-section">
-            <div class="section-label">01 // PHILOSOPHY</div>
-            <div class="section-body">
-                <h2 style="font-family: 'Plein', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Ideas Worth
-                    Rallying Around®</h2>
-                <p style="font-size: 1.125rem; line-height: 1.5; color: rgba(0,0,0,0.8); max-width: 800px;">
-                    The **Motto** design system champions a bold, editorial layout fueled by striking high-contrast
-                    typography and confident use of negative space.
-                    It relies on a stark **Alabaster** foundation (#F2F2F2), cut by sharp **Ebony** text (#000000), and
-                    accented with extreme brutalist hover interactions to create unforgettable digital experiences.
-                </p>
-            </div>
-        </section>
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero" style="border-bottom: 1px solid var(--border);">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">MOTTO®</h1>
+        <p class="hero__tagline" style="color: rgba(255,255,255,0.8);">Narrative Shaping Brand System</p>
+        <p class="hero__description" style="color: rgba(255,255,255,0.6);">
+            The canonical visual identity reference for Motto. This system leverages extreme brutalist layouts,
+            high-contrast negative space, and a striking typography pairing to drive an editorial narrative layout.
+        </p>
+        <p class="hero__source" style="color: rgba(255,255,255,0.4);">Original → <a
+                href="https://wearemotto.com/clients" target="_blank"
+                style="color: var(--accent-color);">wearemotto.com</a></p>
+    </section>
 
-        <!-- 02. Color Architecture -->
-        <section class="guideline-section">
-            <div class="section-label">02 // Color Architecture</div>
-            <div class="section-body">
-                <div class="color-grid">
-                    <div class="color-swatch-card">
-                        <div class="swatch" style="background-color: #F2F2F2; border: 1px solid rgba(0,0,0,0.1);"></div>
-                        <div class="swatch-meta">
-                            <span class="swatch-name" style="color: #000000;">Alabaster Foundation</span>
-                            <span class="swatch-hex" style="color: rgba(0,0,0,0.6);">#F2F2F2</span>
-                            <span class="swatch-role" style="color: rgba(0,0,0,0.5);">--sys-bg-main</span>
-                        </div>
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid" style="border-bottom: 1px solid var(--border);">
+        <!-- PALETTE -->
+        <div style="border-right: 1px solid var(--border);">
+            <div class="section-number">002 // PALETTE</div>
+            <h2 class="section-title">Color System</h2>
+            <p class="section-description">A stark foundation of Alabaster and deep Ebony, commanded by the aggressive
+                Motto Lime accent.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #1B1B1C; color: #ffffff;">
+                    <span class="swatch__name">EBONY CORE</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#1B1B1C</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #DBFF00; color: #000000;">
+                    <span class="swatch__name">MOTTO LIME</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#DBFF00</div>
+                    <div class="swatch__role">ACTION / ACCENT</div>
+                </div>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">SURFACE LAYERS</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div class="swatch">
+                    <div class="swatch__color color-swatch-hy"></div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#F2F2F2</div>
+                        <div class="swatch__role">ALABASTER</div>
                     </div>
-                    <div class="color-swatch-card">
-                        <div class="swatch" style="background-color: #000000;"></div>
-                        <div class="swatch-meta">
-                            <span class="swatch-name" style="color: #000000;">Ebony Core</span>
-                            <span class="swatch-hex" style="color: rgba(0,0,0,0.6);">#000000</span>
-                            <span class="swatch-role" style="color: rgba(0,0,0,0.5);">--sys-text-primary</span>
-                        </div>
-                    </div>
-                    <div class="color-swatch-card">
-                        <div class="swatch" style="background-color: #DBFF00;"></div>
-                        <div class="swatch-meta">
-                            <span class="swatch-name" style="color: #000000;">Motto Lime</span>
-                            <span class="swatch-hex" style="color: rgba(0,0,0,0.6);">#DBFF00</span>
-                            <span class="swatch-role" style="color: rgba(0,0,0,0.5);">--sys-accent</span>
-                        </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color color-swatch-term" style="border: 1px solid var(--border);"></div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#FFFFFF</div>
+                        <div class="swatch__role">PURE WHITE</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- 03. Typography -->
-        <section class="guideline-section">
-            <div class="section-label">03 // Typography System</div>
-            <div class="section-body">
-                <div class="typography-spec">
-                    <div class="type-sample">
-                        <div class="type-meta" style="color: rgba(0,0,0,0.6);">Display / NON Natural Grotesk / Plein
-                        </div>
-                        <div
-                            style="font-family: 'Plein', sans-serif; font-size: clamp(3rem, 5vw, 5rem); line-height: 1; letter-spacing: -0.02em; color: #000;">
-                            BEHOLD THE BRANDS
-                        </div>
-                    </div>
-                    <div class="type-sample" style="margin-top: 3rem;">
-                        <div class="type-meta" style="color: rgba(0,0,0,0.6);">Body / PP Neue Montreal / Switzer</div>
-                        <div
-                            style="font-family: 'Switzer', sans-serif; font-size: 1.25rem; line-height: 1.4; color: #000; max-width: 600px;">
-                            Eighteen years of shaping the narratives for the world's brightest companies. Built on a
-                            foundation of extreme visual clarity and fluid typography.
-                        </div>
-                    </div>
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number">003 // TYPOGRAPHY</div>
+            <h2 class="section-title">Type Hierarchy</h2>
+            <p class="section-description">NON Natural Grotesk (Plein) dominates headlines, offset by fluid Montreal
+                (Switzer) for editorial body copy.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: clamp(24px, 4vw, 48px); line-height: 1.1; font-weight: 700; color: #FFF;">
+                    BEHOLD THE BRANDS
                 </div>
+                <span class="specimen__label">PLEIN BOLD (H1 DISPLAY)</span>
             </div>
-        </section>
-    </main>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: 'Switzer', sans-serif; font-weight: 500; font-size: clamp(18px, 2vw, 24px); color: rgba(255,255,255,0.8);">
+                    Eighteen years of shaping narratives.
+                </div>
+                <span class="specimen__label">SWITZER MEDIUM (MESSAGING)</span>
+            </div>
+
+            <table class="type-table" style="border-top: 1px solid var(--border);">
+                <tr>
+                    <td style="color: rgba(255,255,255,0.6);">Typeface</td>
+                    <td style="color: #FFF;">Plein / Switzer</td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid var(--border); color: rgba(255,255,255,0.6);">Role</td>
+                    <td style="border-top: 1px solid var(--border); color: #FFF;">Headers & Narratives</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer">
+        <div>
+            <div class="guidelines-footer__brand" style="color: var(--accent-color);">MOTTO® // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link" style="color: var(--accent-color);">←
+                Back to Galaxy Store</a>
+        </div>
+        <div class="guidelines-footer__version">END OF SPEC [SYS.VER.2.0]</div>
+    </footer>
 
 </body>
 

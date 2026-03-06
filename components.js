@@ -125,6 +125,17 @@ class SystemCard extends HTMLElement {
                 .offline-node .card-overlay {
                     display: none;
                 }
+
+                .card-title {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 13px;
+                    font-weight: 400;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: var(--sys-text-secondary, #999999);
+                    padding: 14px 0 0;
+                    text-align: left;
+                }
             </style>
 
             <div class="product-media ${isOffline ? 'offline-node' : ''}">
@@ -138,6 +149,7 @@ class SystemCard extends HTMLElement {
                 </div>
                 ` : ''}
             </div>
+            ${!isOffline ? `<div class="card-title">${this.getAttribute('subtitle') || title}</div>` : ''}
         `;
 
         // We re-bind the apply theme functionality since it's now living inside a ShadowDOM 

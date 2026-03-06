@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELKOM-OT | Design System [SYS.VER.1.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #FF4F33;
+            --bg: #1a1a1a;
+            --surface: #242424;
+        }
+
+        .hero__brand {
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+        }
+
+        .hero__brand span {
+            color: #FF4F33;
+        }
+
+        .specimen__sample--display {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Corner brackets for decorative section */
+        .bracket-demo {
+            position: relative;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            background: rgba(255, 79, 51, 0.03);
+        }
+
+        .bracket-demo::before,
+        .bracket-demo::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-color: #FF4F33;
+            border-style: solid;
+        }
+
+        .bracket-demo::before {
+            top: 0;
+            left: 0;
+            border-width: 2px 0 0 2px;
+        }
+
+        .bracket-demo::after {
+            bottom: 0;
+            right: 0;
+            border-width: 0 2px 2px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TICKER -->
+    <div class="ticker" style="color: #FF4F33; opacity: 0.6;">
+        <div class="ticker__inner">
+            TELKOM-OT D.O.O. — PRECISION TOOLING — DIE-CASTING MOLDS — ENGINEERING EXCELLENCE — SINCE 2012 — DESIGNED BY
+            .RAW — TELKOM-OT D.O.O. — PRECISION TOOLING — DIE-CASTING MOLDS — ENGINEERING EXCELLENCE — SINCE 2012 —
+            DESIGNED BY .RAW —&nbsp;
+        </div>
+    </div>
+
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">TELKOM-<span>OT</span></h1>
+        <p class="hero__tagline">Precision Tooling & Engineering</p>
+        <p class="hero__description">
+            Slovenian precision tooling and engineering company specializing in die-casting molds, injection molds, and
+            complex industrial tooling. The visual identity is defined by a brutalist-industrial aesthetic: sharp edges,
+            light/dark section alternation, monospace navigation labels, and vibrant red accent elements.
+        </p>
+        <p class="hero__source">Original → <a href="https://telkom-ot.si/" target="_blank"
+                style="color: #FF4F33;">telkom-ot.si</a> · Designed by <a href="https://www.rawlab.co/" target="_blank"
+                style="color: #FF4F33;">.raw</a></p>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number">002 // PALETTE</div>
+            <h2 class="section-title">Color System</h2>
+            <p class="section-description">High-contrast alternating sections. Light grey and black backgrounds create
+                industrial depth. Red-Orange anchors all actions and decorative elements.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #F2F2F2; color: #1A1A1A;">
+                    <span class="swatch__name">STEEL LIGHT</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#F2F2F2</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND (LIGHT)</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #000000; color: #ffffff;">
+                    <span class="swatch__name">FORGE BLACK</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#000000</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND (DARK)</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #FF4F33; color: #ffffff;">
+                    <span class="swatch__name">INDUSTRIAL RED</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#FF4F33</div>
+                    <div class="swatch__role">BRAND ACCENT / CTA / BRACKETS</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #1A1A1A; color: #ffffff;">
+                    <span class="swatch__name">CHARCOAL</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#1A1A1A</div>
+                    <div class="swatch__role">TEXT PRIMARY / DARK ALT</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #666666; color: #ffffff;">
+                    <span class="swatch__name">TOOL GREY</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#666666</div>
+                    <div class="swatch__role">BODY TEXT / MUTED</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number">003 // TYPOGRAPHY</div>
+            <h2 class="section-title">Type Hierarchy</h2>
+            <p class="section-description">Aeonik Pro provides the geometric precision for headings and body. SF Mono
+                delivers technical credibility through monospace navigation labels with numerical prefixes.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: clamp(28px, 4vw, 48px);">
+                    Visokokakovostna orodja Telkom-OT©
+                </div>
+                <span class="specimen__label">AEONIK PRO REGULAR (HERO DISPLAY)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: var(--mono); font-weight: 500; font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase; color: #FF4F33;">
+                    1.0 ORODJA &nbsp;·&nbsp; 2.0 IZDELKI &nbsp;·&nbsp; 3.0 STROJNI PARK &nbsp;·&nbsp; 4.0 KONSTRUIRANJE
+                </div>
+                <span class="specimen__label">SF MONO MEDIUM (NAVIGATION / TECHNICAL LABELS)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__body" style="font-family: 'Inter', sans-serif;">
+                    Izdelava orodij pogosto zahteva kompleksne konstrukcije, ki morajo ustrezati specifičnim zahtevam
+                    različnih industrijskih panog. TELKOM-OT ima izkušeno ekipo inženirjev in konstruktorjev, ki so
+                    sposobni reševati te izzive.
+                </div>
+                <span class="specimen__label">AEONIK PRO REGULAR (BODY)</span>
+            </div>
+
+            <table class="type-table">
+                <tr>
+                    <td>Primary</td>
+                    <td>Aeonik Pro</td>
+                </tr>
+                <tr>
+                    <td>Technical</td>
+                    <td>SF Mono</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Display + Monospace Labels</td>
+                </tr>
+                <tr>
+                    <td>Classification</td>
+                    <td>Geometric Sans + Monospace</td>
+                </tr>
+                <tr>
+                    <td>Sourcing</td>
+                    <td>Self-Hosted (TTF/OTF)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divider-plus" style="color: #FF4F33;">+</div>
+
+    <!-- 004 // INTERFACE + 005 // STRUCTURE -->
+    <div class="spec-grid">
+        <!-- INTERFACE COMPONENTS -->
+        <div>
+            <div class="section-number">004 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title">Interactive Elements</h2>
+
+            <p class="component-label">BUTTONS · ACTIVE STATES</p>
+            <div class="btn-showcase">
+                <button class="btn-demo btn-demo--solid"
+                    style="background: #FF4F33; color: #fff; border-radius: 0; font-family: var(--mono);">POGLEJ
+                    GALERIJO</button>
+                <button class="btn-demo btn-demo--outline"
+                    style="color: #FF4F33; border-color: #FF4F33; border-radius: 0; font-family: var(--mono);">VEČ O
+                    NAS</button>
+            </div>
+
+            <p class="component-label">NAVIGATION PATTERN</p>
+            <div style="display: flex; border: 1px solid var(--border); margin-bottom: 24px;">
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid var(--border); font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;">
+                    Telkom-<span style="color: #FF4F33;">OT</span></div>
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid var(--border); font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center; gap: 4px; color: var(--text-muted);">
+                    <span style="opacity: 0.4;">1.0</span> ORODJA</div>
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid var(--border); font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center; gap: 4px; color: var(--text-muted);">
+                    <span style="opacity: 0.4;">2.0</span> IZDELKI</div>
+                <div
+                    style="padding: 12px 16px; background: #FF4F33; color: #fff; font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center;">
+                    KONTAKT</div>
+            </div>
+
+            <p class="component-label">DECORATIVE ELEMENT — CORNER BRACKETS</p>
+            <div class="bracket-demo">
+                <span
+                    style="font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase;">Red
+                    L-Shaped Brackets — Technical Framing</span>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">SURFACE PROPERTIES</p>
+            <div class="spacing-row">
+                <span class="spacing-label">Radius</span>
+                <div
+                    style="width: 60px; height: 40px; background: var(--surface); border: 1px solid #FF4F33; border-radius: 0;">
+                </div>
+                <span style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">0px —
+                    BRUTALIST</span>
+            </div>
+        </div>
+
+        <!-- STRUCTURE -->
+        <div>
+            <div class="section-number">005 // STRUCTURE & LAYOUT</div>
+            <h2 class="section-title">Spacing & Grid</h2>
+
+            <p class="component-label">SPACING SCALE</p>
+            <div class="spacing-row"><span class="spacing-label">4px</span>
+                <div class="spacing-block" style="width: 16px; background: #FF4F33;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">8px</span>
+                <div class="spacing-block" style="width: 32px; background: #FF4F33;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">16px</span>
+                <div class="spacing-block" style="width: 64px; background: #FF4F33;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">32px</span>
+                <div class="spacing-block" style="width: 128px; background: #FF4F33;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">64px</span>
+                <div class="spacing-block" style="width: 256px; background: #FF4F33;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">120px</span>
+                <div class="spacing-block" style="width: 100%; max-width: 400px; background: #FF4F33;"></div>
+            </div>
+
+            <p class="component-label" style="margin-top: 40px;">LAYOUT SYSTEM</p>
+            <table class="type-table">
+                <tr>
+                    <td>Max Width</td>
+                    <td>1440px</td>
+                </tr>
+                <tr>
+                    <td>Nav Height</td>
+                    <td>70px</td>
+                </tr>
+                <tr>
+                    <td>Section Pad</td>
+                    <td>120px × 40px</td>
+                </tr>
+                <tr>
+                    <td>Grid</td>
+                    <td>Text (40%) + Model (60%)</td>
+                </tr>
+                <tr>
+                    <td>Breakpoints</td>
+                    <td>>1024 / 768-1024 / <768< /td>
+                </tr>
+            </table>
+
+            <p class="component-label" style="margin-top: 40px;">TRANSITIONS</p>
+            <table class="type-table">
+                <tr>
+                    <td>Standard</td>
+                    <td>0.4s cubic-bezier(0.25, 0.1, 0.25, 1)</td>
+                </tr>
+                <tr>
+                    <td>Fast</td>
+                    <td>0.2s ease</td>
+                </tr>
+            </table>
+
+            <p class="component-label" style="margin-top: 40px;">3D MODELS</p>
+            <table class="type-table">
+                <tr>
+                    <td>Technology</td>
+                    <td>Google model-viewer</td>
+                </tr>
+                <tr>
+                    <td>Interaction</td>
+                    <td>Touch/Drag rotation</td>
+                </tr>
+                <tr>
+                    <td>Context</td>
+                    <td>Industrial tooling renders</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer">
+        <div>
+            <div class="guidelines-footer__brand" style="color: #FF4F33;">TELKOM-OT D.O.O. // 2026</div>
+            <a href="../../index.html" class="back-link" style="color: #FF4F33;">← Back to Galaxy Store</a>
+        </div>
+        <div class="guidelines-footer__version">END OF PROTOCOL [SYS.VER.1.0]</div>
+    </footer>
+
+</body>
+
+</html>

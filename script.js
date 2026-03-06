@@ -248,6 +248,24 @@ const DESIGN_SYSTEMS = {
         '--sys-button-text-hover': '#111111',
         '--sys-3d-color': '#39FF14',
         '--sys-3d-edge': '#ffffff'
+    },
+    'telekom-ot': {
+        '--sys-bg-main': '#F2F2F2',
+        '--sys-text-primary': '#1A1A1A',
+        '--sys-text-secondary': '#666666',
+        '--sys-border': 'rgba(0, 0, 0, 0.15)',
+        '--bi-divider': 'rgba(0, 0, 0, 0.15)',
+        '--bi-bg': '#F2F2F2',
+        '--bi-text': '#1A1A1A',
+        '--bi-header-bg': '#E8E8E8',
+        '--sys-font-primary': "'Inter', sans-serif",
+        '--sys-font-display': "'Inter', sans-serif",
+        '--sys-accent-shadow': '0 0 30px rgba(255, 79, 51, 0.3)',
+        '--sys-button-radius': '0px',
+        '--sys-button-bg-hover': '#FF4F33',
+        '--sys-button-text-hover': '#FFFFFF',
+        '--sys-3d-color': '#FF4F33',
+        '--sys-3d-edge': '#1A1A1A'
     }
 };
 

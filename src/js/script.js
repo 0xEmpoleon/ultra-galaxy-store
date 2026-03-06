@@ -267,6 +267,24 @@ const DESIGN_SYSTEMS = {
         '--sys-3d-color': '#FF4F33',
         '--sys-3d-edge': '#1A1A1A'
     },
+    motto: {
+        '--sys-bg-main': '#F2F2F2',
+        '--sys-text-primary': '#000000',
+        '--sys-text-secondary': 'rgba(0, 0, 0, 0.6)',
+        '--sys-border': 'rgba(0, 0, 0, 0.1)',
+        '--bi-divider': 'rgba(0, 0, 0, 0.1)',
+        '--bi-bg': '#FFFFFF',
+        '--bi-text': '#000000',
+        '--bi-header-bg': '#1B1B1C',
+        '--sys-font-primary': "'Plein', 'NON Natural Grotesk', sans-serif",
+        '--sys-font-display': "'Plein', 'NON Natural Grotesk', sans-serif",
+        '--sys-accent-shadow': '0 0 40px rgba(219, 255, 0, 0.5)',
+        '--sys-button-radius': '9999px',
+        '--sys-button-bg-hover': '#DBFF00',
+        '--sys-button-text-hover': '#000000',
+        '--sys-3d-color': '#DBFF00',
+        '--sys-3d-edge': '#1B1B1C'
+    },
     steakhouse: {
         '--sys-bg-main': '#002B24',
         '--sys-text-primary': '#ffffff',

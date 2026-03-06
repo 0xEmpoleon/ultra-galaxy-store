@@ -29,13 +29,14 @@ Detailed reconstructions of world-class web experiences:
 -   **Cipher Digital**: Industrial hyperscale. Dark, precision-engineered aesthetic.
 -   **Joy Tech**: Retro-futuristic gaming. Neon accents and brutalist layouts.
 -   **Telekom OT**: Editorial Swiss minimalism. Light, whitespace-heavy design.
+-   **Steakhouse Financial**: Institutional DeFi. Deep teal themes, SVG data-viz, and 1:1 asset parity. (The "Gold Standard" for reconstruction).
 
 ---
 
 ## 🚀 Key Features
 
 -   **Apply System**: A runtime mechanic that swaps the entire storefront's identity, including fonts, 3D assets (Three.js), and spacing protocols.
--   **Reconstruct Mode**: 1:1 website reconstructions built using the extracted design guidelines.
+-   **Reconstruct Mode (10/10 Grade)**: High-fidelity website reconstructions built using exact CSS extraction, SVG component replication, and asset mirroring.
 -   **Visual Brand Guidelines**: A documentation layer for each brand showing color swatches, typography specimens, and component usage.
 
 ---

@@ -59,9 +59,10 @@ class SystemCard extends HTMLElement {
                     font-family: ${fontFamily};
                     font-size: ${typeScale};
                     color: ${accent};
-                    letter-spacing: 0.125rem;
-                    font-weight: 600;
+                    letter-spacing: -0.02em;
+                    font-weight: 800;
                     text-align: center;
+                    white-space: nowrap;
                     /* Joy-specific text shadow logic could abstract here, but keeping clean for universal use */
                     ${systemId === 'joy' ? 'text-shadow: 4px 4px 0px rgba(255,255,255,0.1);' : ''}
                 }

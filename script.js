@@ -133,11 +133,21 @@ function updateThemeAssets() {
     setupLighting();
 
     const params = getMaterialParams(isLightMode);
+    const sysColor = document.documentElement.style.getPropertyValue('--sys-3d-color');
+    if (sysColor) {
+        params.color = new THREE.Color(sysColor.trim());
+    }
     object.material.setValues(params);
     object.material.needsUpdate = true;
 
     // Update Edges
-    edges.material.color.setHex(isLightMode ? 0x121212 : 0xffffff);
+    const sysEdge = document.documentElement.style.getPropertyValue('--sys-3d-edge');
+    if (sysEdge) {
+        edges.material.color = new THREE.Color(sysEdge.trim());
+    } else {
+        edges.material.color.setHex(isLightMode ? 0x121212 : 0xffffff);
+    }
+
     edges.material.opacity = isLightMode ? 0.4 : 0.2;
     edges.material.blending = isLightMode ? THREE.NormalBlending : THREE.AdditiveBlending;
 }
@@ -217,7 +227,9 @@ const DESIGN_SYSTEMS = {
         '--sys-accent-shadow': '0 0 40px rgba(15, 135, 255, 0.3)',
         '--bi-blue': '#0f87ff',
         '--sys-button-bg-hover': '#ffffff',
-        '--sys-button-text-hover': '#000000'
+        '--sys-button-text-hover': '#000000',
+        '--sys-3d-color': '#0f87ff',
+        '--sys-3d-edge': '#ffffff'
     },
     joy: {
         '--sys-bg-main': '#111111',
@@ -233,7 +245,9 @@ const DESIGN_SYSTEMS = {
         '--sys-accent-shadow': '6px 6px 0 rgba(255, 255, 255, 0.1)',
         '--sys-button-radius': '0px',
         '--sys-button-bg-hover': '#39FF14',
-        '--sys-button-text-hover': '#111111'
+        '--sys-button-text-hover': '#111111',
+        '--sys-3d-color': '#39FF14',
+        '--sys-3d-edge': '#ffffff'
     }
 };
 
@@ -252,5 +266,24 @@ document.addEventListener('theme-applied', (e) => {
         isLightMode = false;
         document.body.classList.remove('dark-mode');
         updateThemeAssets();
+
+        const revertBtn = document.getElementById('revert-btn');
+        if (revertBtn) revertBtn.style.display = 'inline-block';
     }
 });
+
+const revertBtn = document.getElementById('revert-btn');
+if (revertBtn) {
+    revertBtn.addEventListener('click', () => {
+        // Clear all injected properties
+        Object.keys(DESIGN_SYSTEMS.cipher).forEach(key => {
+            document.documentElement.style.removeProperty(key);
+        });
+
+        isLightMode = false;
+        document.body.classList.remove('dark-mode');
+        updateThemeAssets();
+
+        revertBtn.style.display = 'none';
+    });
+}

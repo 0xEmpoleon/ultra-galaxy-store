@@ -47,11 +47,20 @@ body.dark-mode {
     box-sizing: border-box;
 }
 
+html,
 body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    /* Prevent iOS rubber-banding from showing weird white gutters */
     background-color: var(--sys-bg-main);
+}
+
+body {
     font-family: var(--sys-font-primary);
     color: var(--sys-text-primary);
-    overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     transition: background-color var(--transition-standard), color var(--transition-standard);
@@ -255,11 +264,14 @@ body {
 
 /* STOREFRONT */
 .gallery-section {
-    background-color: var(--bi-bg);
-    color: var(--bi-text);
+    background-color: var(--bi-bg, var(--sys-bg-main));
+    color: var(--bi-text, var(--sys-text-primary));
     padding: 0 2.5rem;
     padding-bottom: 7.5rem;
     min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     container-type: inline-size;
     transition: background-color var(--transition-standard), color var(--transition-standard);
 }

@@ -63,6 +63,10 @@ class SystemCard extends HTMLElement {
                     font-weight: 800;
                     text-align: center;
                     white-space: nowrap;
+                    /* Prevent overflow from breaking layout */
+                    max-width: 90%;
+                    overflow: hidden;
+                    text-overflow: clip;
                     /* Joy-specific text shadow logic could abstract here, but keeping clean for universal use */
                     ${systemId === 'joy' ? 'text-shadow: 4px 4px 0px rgba(255,255,255,0.1);' : ''}
                 }

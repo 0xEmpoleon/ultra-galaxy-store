@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,69 +8,147 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jiw5nsk.css">
 </head>
+
 <body>
-    <div class="glass-bg"></div>
+    <div class="blueprint-grid"></div>
+    <div class="glow-orb"></div>
+
     <div class="container">
-        <header class="hero">
-            <h1 class="brand-text">Cipher Digital</h1>
-            <p class="subtitle">Next-generation data centers for advanced compute.</p>
+        <!-- HEADER -->
+        <header class="ds-header">
+            <div class="brand-identifiers">
+                <span class="version-tag">[SYS.VER.1.0]</span>
+                <h1 class="brand-text">CIPHER DIGITAL</h1>
+            </div>
+            <div class="motto-box">
+                <p class="motto">ADVANCED COMPUTE.<br>NEXT-GENERATION DATA CENTERS.</p>
+                <p class="brand-description">The canonical visual identity reference for Cipher Digital. This UI library
+                    embodies technical precision, hyperscale efficiency, and the uncompromising reliability of
+                    industrial-grade infrastructure.</p>
+            </div>
         </header>
 
-        <section class="ds-section">
-            <h2>1. Typography</h2>
-            <div class="card glass">
-                <h1>Heading 1 - Articulat CF Semi-Bold</h1>
-                <h2>Heading 2 - Articulat CF Medium</h2>
-                <h3>Heading 3 - Data Center Specs</h3>
-                <p>Body copy. We operate industrial-scale data centers engineered for the world’s most demanding tenants. We deliver uncompromising reliability, efficiency, and performance at hyperscale.</p>
-                <p class="text-tertiary">Tertiary text for minor details or captions.</p>
-            </div>
-        </section>
+        <div class="ds-grid">
+            <!-- COLORS -->
+            <section class="ds-module color-module">
+                <div class="module-header">
+                    <h2>Color System</h2>
+                    <span class="module-meta">// 01</span>
+                </div>
+                <p class="module-desc">A deep-space foundational system of absolute contrast (Black/White), highlighted
+                    by Vibrant Tech Blue and Technical Green.</p>
 
-        <section class="ds-section">
-            <h2>2. Components</h2>
-            <div class="grid-2">
-                <div class="card glass">
-                    <h3>Buttons</h3>
-                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                        <button class="btn btn-primary">Primary Action</button>
-                        <button class="btn btn-secondary">Secondary Action</button>
+                <div class="color-swatch-grid">
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#000000; border: 1px solid rgba(255,255,255,0.2);"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Deep Space (Base)</span>
+                            <span class="color-hex">#000000</span>
+                        </div>
+                    </div>
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#0f87ff;"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Tech Blue (Primary)</span>
+                            <span class="color-hex">#0F87FF</span>
+                        </div>
+                    </div>
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#0082f3;"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Data Blue (Dark)</span>
+                            <span class="color-hex">#0082F3</span>
+                        </div>
+                    </div>
+                    <div class="swatch-container">
+                        <div class="swatch" style="background:#39FF14;"></div>
+                        <div class="swatch-meta">
+                            <span class="color-name">Status Green (Active)</span>
+                            <span class="color-hex">#39FF14</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card glass">
-                    <h3>Status Badges</h3>
-                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                        <span class="badge badge-success">327MW Operating</span>
-                        <span class="badge badge-brand">600MW Contracted</span>
-                        <span class="badge badge-error">Alert</span>
+            </section>
+
+            <!-- TYPOGRAPHY -->
+            <section class="ds-module type-module">
+                <div class="module-header">
+                    <h2>Type Hierarchy</h2>
+                    <span class="module-meta">// 02</span>
+                </div>
+                <p class="module-desc">Articulat CF acts as the core geometric sans-serif workhorse, delivering a
+                    modern, structural look built for scale.</p>
+
+                <div class="type-specimen">
+                    <div class="type-row">
+                        <div class="type-sample" style="font-weight: 600; font-size: 2rem;">Aa</div>
+                        <div class="type-details">
+                            <span class="type-name">Articulat CF Semi-Bold</span>
+                            <span class="type-role">Role: Headlines & Primary Displays</span>
+                        </div>
+                    </div>
+                    <div class="type-row">
+                        <div class="type-sample" style="font-weight: 500; font-size: 1.5rem;">Aa</div>
+                        <div class="type-details">
+                            <span class="type-name">Articulat CF Medium</span>
+                            <span class="type-role">Role: Body Copy & Sub-headers</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="ds-section">
-            <h2>3. Data Cards (Organisms)</h2>
-            <div class="grid-3">
-                <div class="card glass interactive">
-                    <h4>Stingray</h4>
-                    <p class="text-secondary">Operating Capacity</p>
-                    <div class="metric">100 MW</div>
-                    <button class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">View Details</button>
+            <!-- COMPONENTS -->
+            <section class="ds-module components-module">
+                <div class="module-header">
+                    <h2>Interactive Elements</h2>
+                    <span class="module-meta">// 03</span>
                 </div>
-                <div class="card glass interactive">
-                    <h4>Odessa</h4>
-                    <p class="text-secondary">Operating Hashrate</p>
-                    <div class="metric">7.5 EH/s</div>
-                    <button class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">View Details</button>
+                <p class="module-desc">Strict radii rules. Sharp (2px) for structural elements, pill (50px) for
+                    prominent calls to action. High reliance on alpha-channel glassmorphism.</p>
+
+                <div class="component-showcase">
+                    <div class="showcase-group">
+                        <span class="label">BUTTONS . ACTIVE STATES</span>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">Initialize Node</button>
+                            <button class="btn btn-secondary">View Compute Logs</button>
+                        </div>
+                    </div>
+
+                    <div class="showcase-group">
+                        <span class="label">STATUS BADGES . ORGANISMS</span>
+                        <div class="badge-group">
+                            <span class="badge badge-success">327MW Operating</span>
+                            <span class="badge badge-error">Critical Capacity</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card glass interactive">
-                    <h4>Black Pearl</h4>
-                    <p class="text-secondary">Pipeline Capacity</p>
-                    <div class="metric">300 MW</div>
-                    <button class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">View Details</button>
+            </section>
+
+            <!-- DATA CARDS -->
+            <section class="ds-module data-module">
+                <div class="module-header">
+                    <h2>Architecture Display</h2>
+                    <span class="module-meta">// 04</span>
                 </div>
-            </div>
-        </section>
+                <p class="module-desc">Always display data metrics on Soft Dark backgrounds with semi-transparent
+                    borders. Do not add drop shadows directly to components; use glowing borders.</p>
+
+                <div class="data-cards-grid">
+                    <div class="data-card">
+                        <span class="data-label">Facility . Odessa</span>
+                        <div class="data-value">7.5 EH/s</div>
+                        <span class="data-sub">Operating Hashrate</span>
+                    </div>
+                    <div class="data-card">
+                        <span class="data-label">Facility . Stingray</span>
+                        <div class="data-value">100 MW</div>
+                        <span class="data-sub">Live Capacity</span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </body>
+
 </html>

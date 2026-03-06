@@ -1,42 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
-    /* Steakhouse Financial Core Tokens (Dark Mode) */
-    --background: oklch(17% 0.004 229);
-    --foreground: oklch(97% 0.022 92.9);
-    --primary: oklch(55% 0.103 173);
-    --primary-foreground: oklch(17% 0.004 229);
+    /* Core Tokens */
+    --brand-green: oklch(0.60 0.16 158);
+    --bg-dark: oklch(0.12 0 0);
+    --surface-dark: oklch(0.18 0 0);
+    --text-primary: oklch(0.98 0.01 90);
+    --text-muted: oklch(0.70 0.01 90);
+    --border-muted: oklch(0.25 0 0);
 
-    --card: oklch(22.8% 0.007 229);
-    --card-foreground: oklch(97% 0.022 92.9);
+    /* Strategy Colors */
+    --strategy-prime: oklch(0.25 0.04 158);
+    --strategy-high-yield: oklch(0.28 0.06 40);
+    --strategy-term: oklch(0.32 0.06 85);
+    --strategy-turbo: oklch(0.24 0.08 300);
 
-    --popover: oklch(17% 0.004 229);
-    --popover-foreground: oklch(97% 0.022 92.9);
-
-    --secondary: oklch(37% 0.011 286);
-    --secondary-foreground: oklch(97% 0.022 92.9);
-
-    --muted: oklch(27% 0.009 235);
-    --muted-foreground: oklch(83.8% 0.011 98.5);
-
-    --accent: oklch(37% 0.011 286);
-    --accent-foreground: oklch(97% 0.022 92.9);
-
-    --destructive: oklch(66.7% 0.19 34.1);
-    --destructive-foreground: oklch(97% 0.022 92.9);
-
-    --border: oklch(31.1% 0.004 229);
-    --input: oklch(31.1% 0.004 229);
-    --ring: oklch(55% 0.103 173);
-
-    /* Strategy Identity Colors */
-    --strategy-prime: #355a52;
-    --strategy-high-yield: #7c4032;
-    --strategy-term: #5b3a5d;
-    --strategy-turbo: #d4a018;
-
-    /* Animation Tokens */
-    --transition-standard: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* Interaction */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-standard: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -46,29 +25,28 @@
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
+    font-family: 'Geist Sans', 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 
-/* Header & Nav */
-header {
-    height: 76px;
+/* Nav */
+.main-nav {
+    height: 80px;
     display: flex;
     align-items: center;
-    padding: 0 2rem;
-    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border-muted);
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(33, 33, 33, 0.8);
+    background-color: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(12px);
 }
 
-.nav-container {
+.nav-content {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -77,279 +55,353 @@ header {
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 700;
-    font-size: 1.25rem;
-    text-decoration: none;
-    color: var(--foreground);
+.logo-svg {
+    height: 24px;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 32px;
 }
 
 .nav-links a {
-    color: var(--muted-foreground);
     text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
     font-weight: 500;
-    transition: var(--transition-standard);
+    transition: var(--transition-fast);
 }
 
 .nav-links a:hover {
-    color: var(--foreground);
+    color: var(--text-primary);
 }
 
-/* Hero Section */
-.hero {
+.connect-btn {
+    background-color: var(--brand-green);
+    color: #000;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.connect-btn:hover {
+    filter: brightness(1.1);
+}
+
+/* Hero */
+.hero-section {
     position: relative;
-    padding: 8rem 2rem;
+    min-height: 60vh;
+    padding: 120px 40px;
     display: flex;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
-    min-height: 80vh;
+    border-bottom: 1px solid var(--border-muted);
 }
 
-.hero-content {
+.hero-container {
     max-width: 1440px;
     width: 100%;
     position: relative;
     z-index: 10;
 }
 
-.hero h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    line-height: 1.1;
-    font-weight: 800;
+.hero-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
     letter-spacing: -0.04em;
-    max-width: 800px;
-    margin-bottom: 1.5rem;
-    color: var(--foreground);
+    margin-bottom: 24px;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    color: var(--muted-foreground);
-    max-width: 600px;
-    margin-bottom: 2.5rem;
+.hero-subtitle {
+    font-size: 20px;
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.4;
+    margin-bottom: 40px;
 }
 
-.hero-collage {
+.hero-bg-collage {
     position: absolute;
-    right: -5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-image: url('https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcollage.0fe3853b.png&w=640&q=75');
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
     opacity: 0.15;
     pointer-events: none;
 }
 
-/* Base Dot Grid Background */
-.dot-grid {
+.dot-grid-overlay {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
-    background-size: 32px 32px;
-    opacity: 0.2;
+    background-image: url('https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdotgrid.2c508048.png&w=96&q=75');
+    background-size: 48px;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
-/* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
+.primary-action-btn {
+    background-color: var(--brand-green);
+    color: #000;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition-standard);
-    border: none;
-    text-decoration: none;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-}
-
-.btn-primary:hover {
-    filter: brightness(1.1);
-    transform: scale(0.98);
+    transition: var(--transition-fast);
 }
 
 /* Vault Grid */
-.vault-section {
-    padding: 4rem 2rem;
+.vault-grid-section {
+    padding: 80px 40px;
     max-width: 1440px;
     margin: 0 auto;
 }
 
-.section-label {
-    font-size: 0.875rem;
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--muted-foreground);
-    margin-bottom: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
 }
 
-.vault-grid {
+.strategies-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
 }
 
-/* Vault Card */
-.vault-card {
-    background-color: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: var(--transition-standard);
-    cursor: pointer;
+.strategy-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-muted);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     position: relative;
     overflow: hidden;
+    transition: var(--transition-standard);
+    cursor: pointer;
 }
 
-.vault-card:hover {
-    border-color: var(--primary);
+.strategy-card:hover {
+    border-color: var(--brand-green);
     transform: translateY(-4px);
 }
 
-.vault-card::before {
+.strategy-card:active {
+    transform: scale(0.98) translateY(-2px);
+}
+
+.strategy-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background-color: var(--strategy-color, var(--primary));
+    height: 60px;
+    background: linear-gradient(to bottom, var(--strategy-color), transparent);
+    opacity: 0.2;
+}
+
+/* Base strategy colors */
+.prime-base {
+    --strategy-color: var(--strategy-prime);
+}
+
+.high-yield-base {
+    --strategy-color: var(--strategy-high-yield);
+}
+
+.term-base {
+    --strategy-color: var(--strategy-term);
+}
+
+.turbo-base {
+    --strategy-color: var(--strategy-turbo);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
-.card-title {
-    font-size: 1.25rem;
+.strategy-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.info-icon {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-left: 8px;
+    opacity: 0.5;
+}
+
+.explore-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.strategy-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    height: 40px;
+}
+
+.strategy-tag {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    align-self: flex-start;
+    color: var(--text-muted);
+}
+
+.vault-row {
+    margin-top: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: var(--transition-fast);
+}
+
+.strategy-card:hover .vault-row {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.vault-icons {
+    position: relative;
+    width: 44px;
+    height: 32px;
+}
+
+.icon-stack {
+    position: relative;
+}
+
+.token-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.network-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid var(--surface-dark);
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.vault-info {
+    flex: 1;
+}
+
+.vault-name {
+    font-size: 15px;
     font-weight: 600;
 }
 
-.card-desc {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-    margin-bottom: 1.5rem;
+.rating-badge {
+    font-size: 10px;
+    background-color: var(--brand-green);
+    color: #000;
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
 }
 
-.card-stats {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
+.vault-stats {
+    text-align: right;
 }
 
-.stat-item .label {
-    font-size: 0.75rem;
-    color: var(--muted-foreground);
-    display: block;
-}
-
-.stat-item .value {
-    font-size: 1.125rem;
+.stat-apy {
+    font-size: 16px;
     font-weight: 700;
-    color: var(--foreground);
+    color: var(--brand-green);
 }
 
-/* Strategy Color Mappings */
-.card-prime {
-    --strategy-color: var(--strategy-prime);
+.stat-tvl {
+    font-size: 12px;
+    color: var(--text-muted);
 }
 
-.card-high-yield {
-    --strategy-color: var(--strategy-high-yield);
+.explore-all-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
-.card-term {
-    --strategy-color: var(--strategy-term);
+.explore-all-btn {
+    width: 100%;
+    background-color: var(--brand-green);
+    color: #000;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-.card-turbo {
-    --strategy-color: var(--strategy-turbo);
-}
-
-/* Footer */
-footer {
-    border-top: 1px solid var(--border);
-    padding: 6rem 2rem;
-    background-color: var(--background);
-}
-
-.footer-content {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 4rem;
-}
-
-.footer-brand h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.footer-links h4 {
-    margin-bottom: 1.5rem;
-    font-size: 0.875rem;
+.trust-banner {
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted-foreground);
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-    color: var(--foreground);
-    text-decoration: none;
-    font-size: 0.875rem;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-}
-
-/* Responsiveness */
-@media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-    }
+    color: var(--text-muted);
+    letter-spacing: 0.2rem;
+    opacity: 0.5;
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero-title {
         font-size: 2.5rem;
     }
 
-    .hero-collage {
-        display: none;
+    .strategies-container {
+        grid-template-columns: 1fr;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+    .main-nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
     }
 }

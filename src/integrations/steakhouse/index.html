@@ -4,160 +4,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steakhouse Financial — RECONSTRUCTION</title>
+    <title>Steakhouse Financial — RECONSTRUCTION v2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dark">
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 12L12 22L22 12L12 2Z" />
-                </svg>
-                <span>Steakhouse</span>
-            </a>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <header class="main-nav">
+        <div class="nav-content">
+            <div class="logo-group">
+                <img src="https://app.steakhouse.financial/_next/static/media/text.cbecaae0.svg"
+                    alt="Steakhouse Financial" class="logo-svg">
+            </div>
             <nav class="nav-links">
                 <a href="#">Earn</a>
                 <a href="#">Borrow</a>
                 <a href="#">Portfolio</a>
-                <a href="#">Docs ↗</a>
+                <a href="#" class="external-link">Docs ↗</a>
             </nav>
-            <button class="btn btn-primary">Connect Wallet</button>
+            <button class="connect-btn">Connect</button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="dot-grid"></div>
-        <div class="hero-content">
-            <h1>Crypto vaults<br>built for trust</h1>
-            <p>Steakhouse Financial is the leading institutional provider of onchain vaults. Earn yield across Ethereum,
-                Base, Arbitrum, and more.</p>
-            <div class="hero-actions">
-                <a href="#" class="btn btn-primary">Explore all vaults</a>
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="dot-grid-overlay"></div>
+        <div class="hero-bg-collage"></div>
+        <div class="hero-container">
+            <h1 class="hero-title">Crypto vaults<br>built for trust</h1>
+            <p class="hero-subtitle">Steakhouse Financial is the leading institutional provider of onchain vaults. Earn
+                yield across Ethereum, Base, Arbitrum, and more.</p>
+            <div class="hero-cta">
+                <button class="primary-action-btn">Explore all vaults</button>
             </div>
         </div>
-        <div class="hero-collage"></div>
     </section>
 
-    <!-- Vault Grid -->
-    <section class="vault-section">
-        <div class="section-label">Selected Vaults</div>
-        <div class="vault-grid">
+    <!-- Strategies / Selected Vaults -->
+    <section class="vault-grid-section">
+        <h2 class="section-title">Selected Vaults</h2>
+
+        <div class="strategies-container">
             <!-- Prime -->
-            <div class="vault-card card-prime">
+            <div class="strategy-card prime-base">
                 <div class="card-header">
-                    <div class="card-title">Prime</div>
-                    <div class="badge">Explore</div>
-                </div>
-                <div class="card-desc">Blue-chip onchain repo lending. Wider-range collateral.</div>
-                <div class="card-stats">
-                    <div class="stat-item">
-                        <span class="label">Projected APY</span>
-                        <span class="value">3.15%</span>
+                    <div class="strategy-name-group">
+                        <span class="strategy-title">Prime</span>
+                        <span class="info-icon">ⓘ</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="label">TVL</span>
-                        <span class="value">$10.08M</span>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <p class="strategy-desc">Blue-chip onchain repo lending.</p>
+                <div class="strategy-tag">Blue-Chip Lending</div>
+
+                <div class="vault-row">
+                    <div class="vault-icons">
+                        <div class="icon-stack">
+                            <img src="https://app.steakhouse.financial/assets/tokens/usdc.svg" class="token-icon"
+                                alt="USDC">
+                            <img src="https://app.steakhouse.financial/assets/networks/ethereum.svg"
+                                class="network-icon" alt="Ethereum">
+                        </div>
+                    </div>
+                    <div class="vault-info">
+                        <div class="vault-name">Prime Instant <span class="rating-badge">A</span></div>
+                    </div>
+                    <div class="vault-stats">
+                        <div class="stat-apy">3.15%</div>
+                        <div class="stat-tvl">$10.08M</div>
                     </div>
                 </div>
             </div>
 
             <!-- High Yield -->
-            <div class="vault-card card-high-yield">
+            <div class="strategy-card high-yield-base">
                 <div class="card-header">
-                    <div class="card-title">High Yield</div>
-                    <div class="badge">Explore</div>
-                </div>
-                <div class="card-desc">Risk-managed collateral for maximized yield generation.</div>
-                <div class="card-stats">
-                    <div class="stat-item">
-                        <span class="label">Projected APY</span>
-                        <span class="value">4.68%</span>
+                    <div class="strategy-name-group">
+                        <span class="strategy-title">High Yield</span>
+                        <span class="info-icon">ⓘ</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="label">TVL</span>
-                        <span class="value">$2.92M</span>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <p class="strategy-desc">Wider-range collateral onchain repo lending.</p>
+                <div class="strategy-tag">High Yield Lending</div>
+
+                <div class="vault-row">
+                    <div class="vault-icons">
+                        <div class="icon-stack">
+                            <img src="https://app.steakhouse.financial/assets/tokens/usdc.svg" class="token-icon"
+                                alt="USDC">
+                            <img src="https://app.steakhouse.financial/assets/networks/ethereum.svg"
+                                class="network-icon" alt="Ethereum">
+                        </div>
+                    </div>
+                    <div class="vault-info">
+                        <div class="vault-name">High Yield Instant <span class="rating-badge">CC</span></div>
+                    </div>
+                    <div class="vault-stats">
+                        <div class="stat-apy">4.68%</div>
+                        <div class="stat-tvl">$2.92M</div>
                     </div>
                 </div>
             </div>
 
             <!-- Term -->
-            <div class="vault-card card-term">
+            <div class="strategy-card term-base">
                 <div class="card-header">
-                    <div class="card-title">Term</div>
-                    <div class="badge">Explore</div>
-                </div>
-                <div class="card-desc">Unlevered direct exposure for long-term allocation.</div>
-                <div class="card-stats">
-                    <div class="stat-item">
-                        <span class="label">Projected APY</span>
-                        <span class="value">9.07%</span>
+                    <div class="strategy-name-group">
+                        <span class="strategy-title">Term</span>
+                        <span class="info-icon">ⓘ</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="label">TVL</span>
-                        <span class="value">$1.01M</span>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <p class="strategy-desc">Unlevered direct exposure.</p>
+                <div class="strategy-tag">Longer Term Allocation</div>
+
+                <div class="vault-row">
+                    <div class="vault-icons">
+                        <div class="icon-stack">
+                            <img src="https://app.steakhouse.financial/assets/tokens/usdc.svg" class="token-icon"
+                                alt="USDC">
+                            <img src="https://app.steakhouse.financial/assets/networks/ethereum.svg"
+                                class="network-icon" alt="Ethereum">
+                        </div>
+                    </div>
+                    <div class="vault-info">
+                        <div class="vault-name">High Yield Term <span class="rating-badge">CC</span></div>
+                    </div>
+                    <div class="vault-stats">
+                        <div class="stat-apy">9.07%</div>
+                        <div class="stat-tvl">$1.01M</div>
                     </div>
                 </div>
             </div>
 
             <!-- Turbo -->
-            <div class="vault-card card-turbo">
+            <div class="strategy-card turbo-base">
                 <div class="card-header">
-                    <div class="card-title">Turbo</div>
-                    <div class="badge">Explore</div>
-                </div>
-                <div class="card-desc">Aggressive strategies including looping and carry trades.</div>
-                <div class="card-stats">
-                    <div class="stat-item">
-                        <span class="label">Projected APY</span>
-                        <span class="value">15.12%</span>
+                    <div class="strategy-name-group">
+                        <span class="strategy-title">Turbo</span>
+                        <span class="info-icon">ⓘ</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="label">TVL</span>
-                        <span class="value">$7.91M</span>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <p class="strategy-desc">Leverage strategies such as carry trades or looping.</p>
+                <div class="strategy-tag">High Risk Leverage</div>
+
+                <div class="vault-row">
+                    <div class="vault-icons">
+                        <div class="icon-stack">
+                            <img src="https://app.steakhouse.financial/assets/tokens/usdc.svg" class="token-icon"
+                                alt="USDC">
+                            <img src="https://app.steakhouse.financial/assets/networks/ethereum.svg"
+                                class="network-icon" alt="Ethereum">
+                        </div>
+                    </div>
+                    <div class="vault-info">
+                        <div class="vault-name">Turbo <span class="rating-badge">CC</span></div>
+                    </div>
+                    <div class="vault-stats">
+                        <div class="stat-apy">15.12%</div>
+                        <div class="stat-tvl">$1.91M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-all-container">
+            <button class="explore-all-btn">Explore All Vaults</button>
+        </div>
+    </section>
+
+    <!-- Asset Distribution -->
+    <section class="distribution-section">
+        <h2 class="section-title">Asset Distribution</h2>
+        <div class="distribution-grid">
+            <div class="dist-card">
+                <div class="dist-header">
+                    <span class="dist-label">Network</span>
+                    <span class="dist-label">Protocol</span>
+                    <span class="dist-label">Asset</span>
+                </div>
+                <div class="dist-chart-placeholder">
+                    <!-- Simplified Visual Representation of the donut chart -->
+                    <div class="donut-visual"></div>
+                    <div class="dist-legend">
+                        <div class="legend-item"><span class="dot mainnet"></span> Mainnet (48.8%)</div>
+                        <div class="legend-item"><span class="dot base"></span> Base (34.4%)</div>
+                        <div class="legend-item"><span class="dot arbitrum"></span> Arbitrum (16.8%)</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Steakhouse</h3>
-                <p>Leading Institutional DeFi provider.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Platform</h4>
-                <ul>
-                    <li><a href="#">Vaults</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <li><a href="#">Risk</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Social</h4>
-                <ul>
-                    <li><a href="#">X / Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Mirror</a></li>
-                </ul>
-            </div>
+    <!-- Partner Cloud -->
+    <section class="partners-section">
+        <div class="partners-container">
+            <div class="partner-logo">Lido</div>
+            <div class="partner-logo">Morpho</div>
+            <div class="partner-logo">Aave</div>
+            <div class="partner-logo">Maker</div>
+            <div class="partner-logo">Uniswap</div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Footer Banner -->
+    <div class="trust-banner">
+        <span>Trusted by institutional partners across the globe</span>
+    </div>
+
 </body>
 
 </html>

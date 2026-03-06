@@ -12,6 +12,7 @@ class SystemCard extends HTMLElement {
         const fontFamily = this.getAttribute('font') || 'Inter, sans-serif';
         const typeScale = this.getAttribute('scale') || 'clamp(32px, 6vw, 80px)';
         const link = this.getAttribute('link') || '#';
+        const reconstructLink = this.getAttribute('reconstruct-link') || '#';
         const isOffline = systemId === 'offline';
 
         // Render the component's HTML and scoped CSS
@@ -83,7 +84,7 @@ class SystemCard extends HTMLElement {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    gap: 12px;
+                    gap: 10px;
                     opacity: 0;
                     transition: var(--transition-standard);
                     z-index: 10;
@@ -94,12 +95,12 @@ class SystemCard extends HTMLElement {
                 }
 
                 .overlay-btn {
-                    padding: 10px 20px;
+                    padding: 8px 16px;
                     background: transparent;
                     border: 1px solid #fff;
                     color: #fff;
                     font-family: 'Inter', sans-serif;
-                    font-size: 14px;
+                    font-size: 12px;
                     font-weight: 500;
                     text-transform: uppercase;
                     text-decoration: none;
@@ -132,6 +133,7 @@ class SystemCard extends HTMLElement {
                 ${!isOffline ? `
                 <div class="card-overlay">
                     <a href="${link}" class="overlay-btn view-btn">View System</a>
+                    <a href="${reconstructLink}" class="overlay-btn reconstruct-btn">Reconstruct</a>
                     <button class="overlay-btn apply-btn" data-apply="${systemId}">Apply System</button>
                 </div>
                 ` : ''}

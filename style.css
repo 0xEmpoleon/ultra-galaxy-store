@@ -116,7 +116,8 @@ body {
 }
 
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
     position: relative;
     border-bottom: 1px solid var(--sys-border);
@@ -132,7 +133,7 @@ body {
 
 .panel {
     height: 100%;
-    padding: 3.75rem 2.5rem;
+    padding: clamp(2rem, 5vh, 3.75rem) clamp(1.25rem, 5vw, 2.5rem);
     border-right: 1px solid var(--sys-border);
     display: flex;
     flex-direction: column;
@@ -264,10 +265,10 @@ body {
 }
 
 .store-header-container {
-    padding-top: 3.75rem;
-    margin-bottom: 5rem;
+    padding-top: clamp(2rem, 8vh, 3.75rem);
+    padding-bottom: clamp(2rem, 8vh, 3.75rem);
+    margin-bottom: clamp(3rem, 10vh, 5rem);
     border-bottom: 1px solid var(--bi-divider);
-    padding-bottom: 2.5rem;
 }
 
 .store-category-label {
@@ -317,7 +318,7 @@ body {
         border-right: none;
         border-bottom: 1px solid var(--sys-border);
         height: auto;
-        padding: 2.5rem 1.5rem;
+        padding: clamp(1.5rem, 8vw, 2.5rem) clamp(1rem, 5vw, 1.5rem);
         min-height: auto;
     }
 
@@ -355,8 +356,9 @@ body {
     }
 
     .store-header-container {
-        padding-top: 2.5rem;
-        margin-bottom: 1.875rem;
+        padding-top: clamp(1.25rem, 6vw, 2.5rem);
+        padding-bottom: clamp(1.25rem, 6vw, 2.5rem);
+        margin-bottom: clamp(1.5rem, 8vw, 3rem);
     }
 }
 

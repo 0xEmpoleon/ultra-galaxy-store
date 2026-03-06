@@ -4,81 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steakhouse Financial — Institutional Vaults</title>
+    <title>Steakhouse Financial — RECONSTRUCTION</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;700&display=swap"
-        rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <svg width="180" height="40" viewBox="0 0 180 40" fill="none">
-                    <path d="M10 10l15 15l-15 15" stroke="currentColor" stroke-width="4" />
-                    <text x="35" y="28" font-family="Inter" font-weight="800" font-size="20"
-                        fill="white">STEAKHOUSE</text>
+<body class="dark">
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 12L12 22L22 12L12 2Z" />
                 </svg>
-            </div>
+                <span>Steakhouse</span>
+            </a>
             <nav class="nav-links">
-                <a href="#" class="nav-link">Earn</a>
-                <a href="#" class="nav-link">Borrow</a>
-                <a href="#" class="nav-link">Portfolio</a>
-                <a href="#" class="nav-link">Docs ↗</a>
+                <a href="#">Earn</a>
+                <a href="#">Borrow</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Docs ↗</a>
             </nav>
-            <button class="btn-connect">Connect</button>
-        </header>
+            <button class="btn btn-primary">Connect Wallet</button>
+        </div>
+    </header>
 
-        <main>
-            <section class="hero">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <h1 class="hero-title">Crypto vaults built for trust</h1>
-                        <p class="hero-subtitle">
-                            Steakhouse Financial is the leading institutional provider of onchain vaults.
-                            We focus on strong noncustodiality and risk management.
-                        </p>
-                        <button class="btn-connect" style="padding: 12px 24px; font-size: 16px;">Explore all
-                            vaults</button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="dot-grid"></div>
+        <div class="hero-content">
+            <h1>Crypto vaults<br>built for trust</h1>
+            <p>Steakhouse Financial is the leading institutional provider of onchain vaults. Earn yield across Ethereum,
+                Base, Arbitrum, and more.</p>
+            <div class="hero-actions">
+                <a href="#" class="btn btn-primary">Explore all vaults</a>
+            </div>
+        </div>
+        <div class="hero-collage"></div>
+    </section>
+
+    <!-- Vault Grid -->
+    <section class="vault-section">
+        <div class="section-label">Selected Vaults</div>
+        <div class="vault-grid">
+            <!-- Prime -->
+            <div class="vault-card card-prime">
+                <div class="card-header">
+                    <div class="card-title">Prime</div>
+                    <div class="badge">Explore</div>
+                </div>
+                <div class="card-desc">Blue-chip onchain repo lending. Wider-range collateral.</div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="label">Projected APY</span>
+                        <span class="value">3.15%</span>
                     </div>
-                    <div class="hero-visual">
-                        <div class="hero-visual-placeholder">
-                            <span>[Visual Collage Placeholder]</span>
-                        </div>
+                    <div class="stat-item">
+                        <span class="label">TVL</span>
+                        <span class="value">$10.08M</span>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="vaults-section">
-                <span class="section-label">Institutional Partners // 61 Verified</span>
-                <div class="vault-grid">
-                    <div class="vault-card">
-                        <span class="vault-strategy strategy-prime">Stablecoin</span>
-                        <div class="vault-name">Prime USDC</div>
-                        <div class="vault-apy">4.82% APY</div>
-                        <p style="font-size: 14px; opacity: 0.6; margin-top: 12px;">Managed by Steakhouse Advisory</p>
+            <!-- High Yield -->
+            <div class="vault-card card-high-yield">
+                <div class="card-header">
+                    <div class="card-title">High Yield</div>
+                    <div class="badge">Explore</div>
+                </div>
+                <div class="card-desc">Risk-managed collateral for maximized yield generation.</div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="label">Projected APY</span>
+                        <span class="value">4.68%</span>
                     </div>
-                    <div class="vault-card">
-                        <span class="vault-strategy strategy-hy">Risk-Adjusted</span>
-                        <div class="vault-name">High Yield ETH</div>
-                        <div class="vault-apy">8.45% APY</div>
-                        <p style="font-size: 14px; opacity: 0.6; margin-top: 12px;">Meta-vault with lido & rocketpool
-                        </p>
-                    </div>
-                    <div class="vault-card">
-                        <span class="vault-strategy strategy-prime" style="background:#5b3a5d;">Lending</span>
-                        <div class="vault-name">Morpho Blue</div>
-                        <div class="vault-apy">12.10% APY</div>
-                        <p style="font-size: 14px; opacity: 0.6; margin-top: 12px;">Isolated lending market
-                            infrastructure</p>
+                    <div class="stat-item">
+                        <span class="label">TVL</span>
+                        <span class="value">$2.92M</span>
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+
+            <!-- Term -->
+            <div class="vault-card card-term">
+                <div class="card-header">
+                    <div class="card-title">Term</div>
+                    <div class="badge">Explore</div>
+                </div>
+                <div class="card-desc">Unlevered direct exposure for long-term allocation.</div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="label">Projected APY</span>
+                        <span class="value">9.07%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">TVL</span>
+                        <span class="value">$1.01M</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Turbo -->
+            <div class="vault-card card-turbo">
+                <div class="card-header">
+                    <div class="card-title">Turbo</div>
+                    <div class="badge">Explore</div>
+                </div>
+                <div class="card-desc">Aggressive strategies including looping and carry trades.</div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="label">Projected APY</span>
+                        <span class="value">15.12%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">TVL</span>
+                        <span class="value">$7.91M</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Steakhouse</h3>
+                <p>Leading Institutional DeFi provider.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Vaults</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                    <li><a href="#">Risk</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="#">X / Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Mirror</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

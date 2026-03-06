@@ -273,17 +273,21 @@ const DESIGN_SYSTEMS = {
         '--sys-text-secondary': 'oklch(83.8% 0.011 98.5)',
         '--sys-border': 'oklch(31.1% 0.004 229)',
         '--bi-divider': 'oklch(31.1% 0.004 229)',
-        '--bi-bg': 'oklch(20% 0.005 229)',
+        '--bi-bg': 'oklch(22.8% 0.007 229)',
         '--bi-text': 'oklch(97% 0.022 92.9)',
         '--bi-header-bg': 'oklch(22.8% 0.007 229)',
         '--sys-font-primary': "'Inter', sans-serif",
         '--sys-font-display': "'Inter', sans-serif",
-        '--sys-accent-shadow': '0 0 30px oklch(55% 0.103 173 / 0.2)',
+        '--sys-accent-shadow': '0 0 40px oklch(55% 0.103 173 / 0.3)',
         '--sys-button-radius': '4px',
         '--sys-button-bg-hover': 'oklch(55% 0.103 173)',
         '--sys-button-text-hover': 'oklch(17% 0.004 229)',
         '--sys-3d-color': 'oklch(55% 0.103 173)',
-        '--sys-3d-edge': '#ffffff'
+        '--sys-3d-edge': 'oklch(97% 0.022 92.9)',
+        '--strategy-prime': '#355a52',
+        '--strategy-high-yield': '#7c4032',
+        '--strategy-term': '#5b3a5d',
+        '--strategy-turbo': '#d4a018'
     }
 };
 

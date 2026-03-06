@@ -1,0 +1,52 @@
+{
+    "breakpoints": {
+        "desktop": "1440px",
+        "tablet": "768px",
+        "mobile": "375px"
+    },
+    "sections": [
+        {
+            "name": "Header",
+            "tag": "header",
+            "classes": "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur",
+            "height": "76px"
+        },
+        {
+            "name": "Hero",
+            "tag": "section",
+            "classes": "relative overflow-hidden bg-background pt-16 pb-20",
+            "layout": "centered text + right-aligned floating collage",
+            "children": [
+                "heading",
+                "subheading",
+                "cta"
+            ]
+        },
+        {
+            "name": "Selected Vaults",
+            "tag": "section",
+            "classes": "container py-12",
+            "layout": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
+            "children": [
+                "vault-card"
+            ]
+        },
+        {
+            "name": "Footer",
+            "tag": "footer",
+            "classes": "border-t bg-card py-12"
+        }
+    ],
+    "components": {
+        "vault-card": {
+            "structure": [
+                "header",
+                "content",
+                "footer"
+            ],
+            "borderRadius": "8px",
+            "background": "var(--card)",
+            "hover": "scale-98 transition"
+        }
+    }
+}

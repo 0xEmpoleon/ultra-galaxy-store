@@ -1,0 +1,51 @@
+{
+    "tag": "BODY",
+    "classes": "__className_2c0474 dark",
+    "children": [
+        {
+            "tag": "HEADER",
+            "classes": "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur",
+            "content": "Navigation (Earn, Borrow, Portfolio, Docs) + Connect Button",
+            "dimensions": {
+                "height": "76px"
+            }
+        },
+        {
+            "tag": "MAIN",
+            "classes": "flex-1",
+            "children": [
+                {
+                    "tag": "SECTION",
+                    "classes": "hero-section relative py-20",
+                    "layout": "centered content + absolute image",
+                    "background": "oklch(17% .004 229)",
+                    "children": [
+                        "h1",
+                        "p",
+                        "button-group",
+                        "collage-image"
+                    ]
+                },
+                {
+                    "tag": "SECTION",
+                    "classes": "vaults-grid container",
+                    "layout": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+                    "gap": "1.5rem",
+                    "children": [
+                        "vault-card x 4"
+                    ]
+                }
+            ]
+        },
+        {
+            "tag": "FOOTER",
+            "classes": "border-t bg-card",
+            "children": [
+                "form",
+                "nav-links",
+                "socials",
+                "theme-toggle"
+            ]
+        }
+    ]
+}

@@ -316,7 +316,6 @@ body {
 
     .panel {
         border-right: none;
-        border-bottom: 1px solid var(--sys-border);
         height: auto;
         padding: clamp(1.5rem, 8vw, 2.5rem) clamp(1rem, 5vw, 1.5rem);
         min-height: auto;

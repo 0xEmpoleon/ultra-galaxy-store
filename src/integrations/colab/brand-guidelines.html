@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLab Communications | Design System [V1.0.1]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400&display=swap"
+        rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Ppneuemontreal';
+            src: url('https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/692ecaa3ba17f002241b71aa_PPNeueMontreal-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Roslindale Condensed';
+            src: url('https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/692fd86c6731ec1bfcad4b59_Roslindale-Condensed.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        :root {
+            --accent-color: #C3A0FA;
+            /* Violet */
+            --bg: #F5F2E8;
+            /* Alabaster */
+            --surface: #FFFAFC;
+            /* Snow */
+            --text-primary: #180F26;
+            /* Ebony */
+            --text-muted: rgba(24, 15, 38, 0.6);
+            /* Ebony 60% */
+            --border: rgba(24, 15, 38, 0.1);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+        }
+
+        .hero__brand {
+            font-family: 'Roslindale Condensed', 'Times New Roman', serif;
+            color: var(--accent-color);
+            letter-spacing: -0.02em;
+        }
+
+        .hero__tagline,
+        .hero__description,
+        .section-title,
+        .section-description,
+        .component-label,
+        .specimen__sample,
+        .guidelines-footer__brand,
+        .hero__number {
+            font-family: 'Ppneuemontreal', Arial, sans-serif;
+        }
+
+        .hero__number,
+        .section-number,
+        .component-label,
+        .specimen__label,
+        .swatch__name,
+        .swatch__hex,
+        .swatch__role {
+            color: var(--text-muted);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .specimen__sample--display {
+            font-family: 'Roslindale Condensed', 'Times New Roman', serif;
+            color: var(--accent-color);
+            letter-spacing: -0.02em;
+        }
+
+        .ticker {
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .section-title {
+            color: var(--text-primary);
+        }
+
+        .guidelines-footer {
+            border-top: 1px solid var(--border);
+        }
+
+        .guidelines-footer__brand,
+        .guidelines-footer__version,
+        .back-link {
+            color: var(--text-primary);
+        }
+
+        .color-swatch-prime {
+            background: #C3A0FA;
+            /* Violet */
+        }
+
+        .color-swatch-hy {
+            background: #F8B5AF;
+            /* Melon */
+        }
+
+        .color-swatch-term {
+            background: #F1E8FE;
+            /* Violet 50 */
+        }
+
+        .color-swatch-turbo {
+            background: #180F26;
+            /* Ebony */
+        }
+
+        .type-table td {
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .type-table td:first-child {
+            color: var(--text-muted);
+        }
+
+        .btn-demo--solid {
+            background: var(--accent-color);
+            color: var(--text-primary);
+            border-color: var(--accent-color);
+            border-radius: 100vw;
+            font-family: 'Roslindale Condensed', 'Times New Roman', serif;
+            font-size: 24px;
+            padding: 8px 16px;
+        }
+
+        .btn-demo--outline {
+            color: var(--text-primary);
+            border-color: var(--border);
+            border-radius: 100vw;
+            background: var(--bg);
+            font-family: 'Roslindale Condensed', 'Times New Roman', serif;
+            font-size: 24px;
+            padding: 8px 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TICKER -->
+    <div class="ticker" style="color: var(--accent-color); opacity: 0.6;">
+        <div class="ticker__inner" style="font-family: 'IBM Plex Mono', monospace;">
+            COLAB COMMUNICATIONS — STRATEGIC COMMS PARTNER — IDEAS THAT SHIFT PERCEPTION — COLAB COMMUNICATIONS —
+            STRATEGIC COMMS PARTNER — IDEAS THAT SHIFT PERCEPTION — COLAB COMMUNICATIONS —&nbsp;
+        </div>
+    </div>
+
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand" style="color: var(--text-primary); font-family: 'Roslindale Condensed', serif;">COLAB
+            COMMS<span style="color: var(--accent-color);">.</span></h1>
+        <p class="hero__tagline">Ideas that shift perception.</p>
+        <p class="hero__description" style="color: var(--text-muted);">
+            The canonical visual identity reference for CoLab Communications. This system champions a bold, editorial
+            layout fueled by striking typographic contrast and confident use of negative space. It relies on a warm
+            Alabaster foundation, cut by sharp Ebony text.
+        </p>
+        <p class="hero__source" style="color: var(--text-muted); font-family: 'IBM Plex Mono', monospace;">Original → <a
+                href="https://www.colabcomms.co/" target="_blank" style="color: var(--accent-color);">colabcomms.co</a>
+        </p>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number">002 // PALETTE</div>
+            <h2 class="section-title">Color System</h2>
+            <p class="section-description" style="color: var(--text-muted);">A foundation of warm Alabaster and deep
+                Ebony. Violet serves as the primary playful accent.</p>
+
+            <div class="swatch">
+                <div class="swatch__color"
+                    style="background: #F5F2E8; color: #180F26; border: 1px solid var(--border);">
+                    <span class="swatch__name" style="color: #180F26;">ALABASTER</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#F5F2E8</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color"
+                    style="background: #FFFAFC; color: #180F26; border: 1px solid var(--border);">
+                    <span class="swatch__name" style="color: #180F26;">SNOW</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#FFFAFC</div>
+                    <div class="swatch__role">SECONDARY SURFACE</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #180F26; color: #FFFFFF;">
+                    <span class="swatch__name" style="color: #FFFFFF;">EBONY</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#180F26</div>
+                    <div class="swatch__role">PRIMARY TEXT / UI</div>
+                </div>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">ACCENT THEMES</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div class="swatch">
+                    <div class="swatch__color color-swatch-prime"></div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">VIOLET</div>
+                        <div class="swatch__role">PRIMARY ACCENT</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color color-swatch-hy"></div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">MELON</div>
+                        <div class="swatch__role">SECONDARY ACCENT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number">003 // TYPOGRAPHY</div>
+            <h2 class="section-title">Type Hierarchy</h2>
+            <p class="section-description" style="color: var(--text-muted);">Roslindale Condensed provides the
+                editorial, magazine-like headings. PP Neue Montreal serves as the robust body font.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: clamp(32px, 5vw, 64px); line-height: 0.8; font-weight: 400; color: var(--text-primary);">
+                    IDEAS THAT<br>SHIFT.
+                </div>
+                <span class="specimen__label">ROSLINDALE CONDENSED (H1 DISPLAY)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: 'Ppneuemontreal', Arial, sans-serif; font-weight: 400; font-size: clamp(18px, 2vw, 24px); color: var(--text-primary); letter-spacing: 0;">
+                    Strategic Communications Agency
+                </div>
+                <span class="specimen__label">PP NEUE MONTREAL (SUBHEADINGS)</span>
+            </div>
+
+            <table class="type-table">
+                <tr>
+                    <td>Typeface</td>
+                    <td>Roslindale / PP Neue Montreal</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Headlines & Body Text</td>
+                </tr>
+                <tr>
+                    <td>Letter Spacing</td>
+                    <td>-0.02em (Display) / 0em (Body)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divider-plus" style="color: var(--text-primary); font-family: 'IBM Plex Mono', monospace;">+</div>
+
+    <!-- 004 // INTERFACE + 005 // VISUAL ASSETS -->
+    <div class="spec-grid">
+        <!-- INTERFACE COMPONENTS -->
+        <div>
+            <div class="section-number">004 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title">Editorial UI</h2>
+
+            <p class="component-label">ACTION BUTTONS</p>
+            <div class="btn-showcase">
+                <button class="btn-demo btn-demo--solid">Our Expertise</button>
+                <button class="btn-demo btn-demo--outline">View Work</button>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">SURFACE PROPERTIES</p>
+            <div class="spacing-row" style="border-bottom: 1px solid var(--border);">
+                <span class="spacing-label"
+                    style="color: var(--text-muted); font-family: 'Ppneuemontreal', Arial, sans-serif;">Radius</span>
+                <div style="width: 80px; height: 32px; background: var(--accent-color); border-radius: 100vw;">
+                </div>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-muted);">100vw
+                    — BUTTONS</span>
+            </div>
+            <div class="spacing-row" style="border-bottom: 1px solid var(--border);">
+                <span class="spacing-label"
+                    style="color: var(--text-muted); font-family: 'Ppneuemontreal', Arial, sans-serif;">Radius</span>
+                <div
+                    style="width: 60px; height: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 0;">
+                </div>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-muted);">0px —
+                    MEDIA STRIPS</span>
+            </div>
+        </div>
+
+        <!-- VISUAL ASSETS -->
+        <div>
+            <div class="section-number">005 // VISUAL ASSETS</div>
+            <h2 class="section-title">Brand Imagery</h2>
+            <p class="section-description" style="color: var(--text-muted);">CoLab favors distinct, colorful photography
+                to contrast against the monochromatic UI shell.</p>
+
+            <div style="margin-bottom: 24px;">
+                <p class="component-label">THE ANTI-AGENCY</p>
+                <div
+                    style="background: var(--surface); padding: 0; border: 1px solid var(--border); border-radius: 0; overflow: hidden;">
+                    <img src="https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/6953ad87afa40871c4a4973c_anti-agency-colab.webp"
+                        style="width: 100%; height: 160px; object-fit: cover; opacity: 0.9;">
+                </div>
+            </div>
+
+            <p class="component-label">EDITORIAL EDGE</p>
+            <div
+                style="background: var(--surface); padding: 0; border: 1px solid var(--border); border-radius: 0; overflow: hidden;">
+                <img src="https://cdn.prod.website-files.com/691f0fdbda58c24b1fc1f432/695ba46cde14ae200bdcc915_horizontal_section-main.webp"
+                    style="width: 100%; height: 160px; object-fit: cover; opacity: 0.9;">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer">
+        <div>
+            <div class="guidelines-footer__brand" style="color: var(--text-primary);">COLAB COMMUNICATIONS // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link"
+                style="color: var(--accent-color); font-family: 'IBM Plex Mono', monospace; font-size: 14px;">← Back to
+                Galaxy Store</a>
+        </div>
+        <div class="guidelines-footer__version"
+            style="color: var(--text-muted); font-family: 'IBM Plex Mono', monospace;">END OF SPEC [SYS.VER.1.0]</div>
+    </footer>
+
+</body>
+
+</html>

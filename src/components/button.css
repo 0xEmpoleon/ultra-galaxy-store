@@ -1,0 +1,118 @@
+/* ============================================================
+ * BUTTON COMPONENT — src/components/button.css
+ * Variants: primary, secondary, ghost, destructive
+ * Uses tokens from: src/tokens/design-tokens.css
+ * ============================================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-6);
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-default, 0);
+    cursor: pointer;
+    transition:
+        background var(--transition-standard),
+        color var(--transition-standard),
+        border-color var(--transition-standard),
+        box-shadow var(--transition-standard),
+        transform var(--transition-fast);
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-brand-blue, var(--bi-blue, #0f87ff));
+    outline-offset: 2px;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ---- PRIMARY ---- */
+.btn--primary {
+    background: var(--color-brand-blue, #0f87ff);
+    color: #ffffff;
+    border-color: var(--color-brand-blue, #0f87ff);
+}
+
+.btn--primary:hover {
+    background: var(--sys-button-bg-hover, #ffffff);
+    color: var(--sys-button-text-hover, #000000);
+    border-color: var(--sys-button-bg-hover, #ffffff);
+}
+
+/* ---- SECONDARY ---- */
+.btn--secondary {
+    background: transparent;
+    color: var(--color-text-primary, var(--sys-text-primary));
+    border-color: var(--color-border, var(--sys-border));
+}
+
+.btn--secondary:hover {
+    background: var(--color-text-primary, var(--sys-text-primary));
+    color: var(--color-bg-primary, var(--sys-bg-main));
+    border-color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+/* ---- GHOST ---- */
+.btn--ghost {
+    background: transparent;
+    color: var(--color-text-secondary, var(--sys-text-secondary));
+    border-color: transparent;
+}
+
+.btn--ghost:hover {
+    background: var(--color-bg-elevated, rgba(255, 255, 255, 0.05));
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+/* ---- DESTRUCTIVE ---- */
+.btn--destructive {
+    background: #e53e3e;
+    color: #ffffff;
+    border-color: #e53e3e;
+}
+
+.btn--destructive:hover {
+    background: #c53030;
+    border-color: #c53030;
+}
+
+/* ---- SIZES ---- */
+.btn--sm {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-xs);
+}
+
+.btn--lg {
+    padding: var(--spacing-4) var(--spacing-8);
+    font-size: var(--font-size-base);
+}
+
+/* ---- PILL ---- */
+.btn--pill {
+    border-radius: var(--radius-pill, 3.125rem);
+}
+
+/* ---- ICON-ONLY ---- */
+.btn--icon {
+    padding: var(--spacing-3);
+    aspect-ratio: 1;
+}

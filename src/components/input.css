@@ -1,0 +1,119 @@
+/* ============================================================
+ * INPUT COMPONENT — src/components/input.css
+ * Types: text input, textarea, select
+ * Uses tokens from: src/tokens/design-tokens.css
+ * ============================================================ */
+
+/* ---- BASE INPUT ---- */
+.input {
+    width: 100%;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-primary, var(--sys-text-primary));
+    background: var(--color-bg-elevated, rgba(255, 255, 255, 0.05));
+    border: 1px solid var(--color-border, var(--sys-border));
+    border-radius: var(--radius-default, 0);
+    outline: none;
+    transition:
+        border-color var(--transition-standard),
+        box-shadow var(--transition-standard),
+        background var(--transition-standard);
+    -webkit-font-smoothing: antialiased;
+}
+
+.input::placeholder {
+    color: var(--color-text-muted, rgba(255, 255, 255, 0.3));
+    font-weight: var(--font-weight-regular);
+}
+
+.input:hover {
+    border-color: var(--color-text-secondary, var(--sys-text-secondary));
+}
+
+.input:focus {
+    border-color: var(--color-brand-blue, var(--bi-blue, #0f87ff));
+    box-shadow: 0 0 0 3px rgba(15, 135, 255, 0.15);
+}
+
+.input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ---- TEXTAREA ---- */
+.input--textarea {
+    min-height: 8rem;
+    resize: vertical;
+    line-height: var(--line-height-relaxed);
+}
+
+/* ---- SELECT ---- */
+.input--select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-4) center;
+    padding-right: var(--spacing-10);
+    cursor: pointer;
+}
+
+.input--select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%230f87ff' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+}
+
+/* ---- SIZES ---- */
+.input--sm {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
+}
+
+.input--lg {
+    padding: var(--spacing-4) var(--spacing-5);
+    font-size: var(--font-size-md);
+}
+
+/* ---- LABEL ---- */
+.input-label {
+    display: block;
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary, var(--sys-text-secondary));
+    margin-bottom: var(--spacing-2);
+}
+
+/* ---- HELPER TEXT ---- */
+.input-helper {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted, var(--sys-text-secondary));
+    margin-top: var(--spacing-1);
+}
+
+/* ---- ERROR STATE ---- */
+.input--error {
+    border-color: #e53e3e;
+}
+
+.input--error:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.15);
+}
+
+.input-helper--error {
+    color: #e53e3e;
+}
+
+/* ---- INPUT GROUP ---- */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.input-group+.input-group {
+    margin-top: var(--spacing-5);
+}

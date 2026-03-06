@@ -1,0 +1,150 @@
+/* ============================================================
+ * TYPOGRAPHY UTILITIES — src/components/typography.css
+ * Heading and body text utility classes
+ * Uses tokens from: src/tokens/design-tokens.css
+ * ============================================================ */
+
+/* ---- HEADINGS ---- */
+.heading-hero {
+    font-family: var(--font-display, var(--sys-font-display));
+    font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.04em;
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-display {
+    font-family: var(--font-display, var(--sys-font-display));
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-1 {
+    font-family: var(--font-display, var(--sys-font-display));
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-2 {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-snug);
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-3 {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-snug);
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-4 {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-5 {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+.heading-6 {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-text-primary, var(--sys-text-primary));
+}
+
+/* ---- BODY TEXT ---- */
+.body-lg {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary, var(--sys-text-secondary));
+}
+
+.body-md {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary, var(--sys-text-secondary));
+}
+
+.body-sm {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary, var(--sys-text-secondary));
+}
+
+/* ---- UTILITY CLASSES ---- */
+.label {
+    font-family: var(--font-primary, var(--sys-font-primary));
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted, var(--sys-text-secondary));
+}
+
+.caption {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted, var(--sys-text-secondary));
+    line-height: var(--line-height-normal);
+}
+
+.mono {
+    font-family: var(--font-mono, 'Source Code Pro', monospace);
+}
+
+.accent-text {
+    color: var(--color-brand-blue, var(--bi-blue, #0f87ff));
+}
+
+/* ---- TEXT ALIGNMENT ---- */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* ---- TEXT WRAPPING ---- */
+.text-balance {
+    text-wrap: balance;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

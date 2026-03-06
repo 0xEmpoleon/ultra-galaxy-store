@@ -93,51 +93,22 @@
         </div>
 
         <div class="store-grid">
-            <!-- System 1: Cipher Digital -->
-            <div class="product-card reveal" data-system="cipher">
-                <div class="product-media"
-                    style="background: radial-gradient(circle, rgba(15,135,255,0.2) 0%, #000000 80%); border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">
-                    <div
-                        style="font-family: 'articulat-cf', sans-serif; font-size: clamp(40px, 6vw, 80px); color: #ffffff; letter-spacing: 2px; font-weight: 600;">
-                        CIPHER</div>
-                    <div class="bookmark-trigger">
-                        <div class="bookmark-icon"></div>
-                    </div>
-                    <div class="card-overlay">
-                        <a href="src/integrations/design-system/index.html" class="overlay-btn view-btn">View System</a>
-                        <button class="overlay-btn apply-btn" data-apply="cipher">Apply System</button>
-                    </div>
-                </div>
-            </div>
+            <!-- Web Component Instances -->
+            <system-card system-id="cipher" title="CIPHER" accent="#0f87ff" font="'articulat-cf', sans-serif"
+                link="src/integrations/design-system/index.html">
+            </system-card>
 
-            <!-- System 2: JOY Tech -->
-            <div class="product-card reveal" data-system="joy">
-                <div class="product-media"
-                    style="background: radial-gradient(circle, rgba(57,255,20,0.15) 0%, #111111 80%); border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">
-                    <div
-                        style="font-family: 'Press Start 2P', cursive; font-size: clamp(32px, 5vw, 72px); color: #39FF14; text-shadow: 4px 4px 0px rgba(255,255,255,0.1); text-align: center;">
-                        JOY</div>
-                    <div class="bookmark-trigger">
-                        <div class="bookmark-icon"></div>
-                    </div>
-                    <div class="card-overlay">
-                        <a href="src/integrations/joy/index.html" class="overlay-btn view-btn">View System</a>
-                        <button class="overlay-btn apply-btn" data-apply="joy">Apply System</button>
-                    </div>
-                </div>
-            </div>
+            <system-card system-id="joy" title="JOY" accent="#39FF14" font="'Press Start 2P', cursive"
+                link="src/integrations/joy/index.html">
+            </system-card>
 
-            <!-- System 3: Awaiting -->
-            <div class="product-card reveal" style="opacity: 0.5;">
-                <div class="product-media"
-                    style="background: #111; display: flex; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,0.1);">
-                    <div
-                        style="font-family: 'Inter', sans-serif; font-size: 14px; color: #444; text-transform: uppercase; letter-spacing: 2px;">
-                        OFFLINE_NODE</div>
-                </div>
-            </div>
+            <system-card system-id="offline">
+            </system-card>
         </div>
     </section>
+
+    <!-- Component Registry -->
+    <script src="components.js"></script>
 
     <script src="main.js"></script>
     <!-- Three.js Library -->

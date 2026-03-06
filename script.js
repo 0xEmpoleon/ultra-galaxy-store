@@ -201,24 +201,56 @@ function initReveal() {
 init();
 initReveal();
 
-// Design System Theme Logic
-const applyButtons = document.querySelectorAll('.apply-btn');
-applyButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const theme = btn.getAttribute('data-apply');
+// Remove old Design System Theme Logic and replace with Token-Based Listener
+const DESIGN_SYSTEMS = {
+    cipher: {
+        '--sys-bg-main': '#000000',
+        '--sys-text-primary': '#ffffff',
+        '--sys-text-secondary': '#999999',
+        '--sys-border': 'rgba(255, 255, 255, 0.1)',
+        '--bi-divider': 'rgba(255, 255, 255, 0.1)',
+        '--bi-bg': '#0a0a0a',
+        '--bi-text': '#ffffff',
+        '--bi-header-bg': '#111111',
+        '--sys-font-primary': "'articulat-cf', 'Inter', sans-serif",
+        '--sys-font-display': "'articulat-cf', sans-serif",
+        '--sys-accent-shadow': '0 0 40px rgba(15, 135, 255, 0.3)',
+        '--bi-blue': '#0f87ff',
+        '--sys-button-bg-hover': '#ffffff',
+        '--sys-button-text-hover': '#000000'
+    },
+    joy: {
+        '--sys-bg-main': '#111111',
+        '--sys-text-primary': '#ffffff',
+        '--sys-text-secondary': '#999999',
+        '--sys-border': 'rgba(255, 255, 255, 0.1)',
+        '--bi-divider': 'rgba(255, 255, 255, 0.1)',
+        '--bi-bg': '#111111',
+        '--bi-text': '#ffffff',
+        '--bi-header-bg': '#111111',
+        '--sys-font-primary': "'Source Code Pro', monospace",
+        '--sys-font-display': "'Press Start 2P', cursive",
+        '--sys-accent-shadow': '6px 6px 0 rgba(255, 255, 255, 0.1)',
+        '--sys-button-radius': '0px',
+        '--sys-button-bg-hover': '#39FF14',
+        '--sys-button-text-hover': '#111111'
+    }
+};
 
-        // Remove existing themes
-        document.body.classList.remove('theme-cipher', 'theme-joy');
+// Listen for the custom event emitted by the <system-card> web component
+document.addEventListener('theme-applied', (e) => {
+    const systemId = e.detail.systemId;
+    const tokens = DESIGN_SYSTEMS[systemId];
 
-        // Apply new theme
-        if (theme) {
-            document.body.classList.add(`theme-${theme}`);
-            // Force dark mode base since Cipher is dark
-            isLightMode = false;
-            document.body.classList.remove('light-mode');
-            updateThemeAssets();
-        }
-    });
+    if (tokens) {
+        // Apply all design tokens to the root element
+        Object.entries(tokens).forEach(([customProperty, value]) => {
+            document.documentElement.style.setProperty(customProperty, value);
+        });
+
+        // Force Dark Mode context for 3D Asset
+        isLightMode = false;
+        document.body.classList.remove('dark-mode');
+        updateThemeAssets();
+    }
 });

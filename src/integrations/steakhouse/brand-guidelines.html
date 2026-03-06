@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steakhouse Financial — Design System</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --brand-primary: oklch(55% 0.103 173);
+        }
+
+        .guideline-container {
+            background: oklch(17% 0.004 229);
+            color: oklch(97% 0.022 92.9);
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .swatch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .swatch-card {
+            background: oklch(22.8% 0.007 229);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid oklch(31.1% 0.004 229);
+        }
+
+        .swatch-color {
+            height: 100px;
+        }
+
+        .swatch-info {
+            padding: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .vault-card-specimen {
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .vault-card-specimen:hover {
+            transform: translateY(-5px);
+        }
+
+        .specimen-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .specimen-tag {
+            background: rgba(0, 0, 0, 0.2);
+            align-self: flex-start;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="guideline-container">
+        <header>
+            <h1 style="color: var(--brand-primary); font-size: 3rem; font-weight: 800; letter-spacing: -0.05em;">
+                STEAKHOUSE<br>FINANCIAL</h1>
+            <p style="margin-top: 1rem; opacity: 0.6; font-size: 1.1rem; max-width: 600px;">
+                Institutional-grade design system for high-performance DeFi monitoring.
+            </p>
+        </header>
+
+        <section style="margin-top: 5rem;">
+            <h2>Core Palette (Dark)</h2>
+            <div class="swatch-grid">
+                <div class="swatch-card">
+                    <div class="swatch-color" style="background: oklch(17% 0.004 229);"></div>
+                    <div class="swatch-info">
+                        <strong>Background</strong><br>
+                        oklch(17% .004 229)
+                    </div>
+                </div>
+                <div class="swatch-card">
+                    <div class="swatch-color" style="background: oklch(55% 0.103 173);"></div>
+                    <div class="swatch-info">
+                        <strong>Primary Green</strong><br>
+                        oklch(55% .103 173)
+                    </div>
+                </div>
+                <div class="swatch-card">
+                    <div class="swatch-color" style="background: oklch(22.8% 0.007 229);"></div>
+                    <div class="swatch-info">
+                        <strong>Card Surface</strong><br>
+                        oklch(22.8% .007 229)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;">
+            <h2>Strategy Vault Specimens</h2>
+            <div class="strategy-grid">
+                <div class="vault-card-specimen" style="background: #355a52;">
+                    <span class="specimen-tag">STABLECOIN</span>
+                    <div class="specimen-title">Prime USDC</div>
+                    <div style="font-size: 2rem; font-weight: 800;">4.8% APY</div>
+                </div>
+                <div class="vault-card-specimen" style="background: #7c4032;">
+                    <span class="specimen-tag">RISK-ADJUSTED</span>
+                    <div class="specimen-title">High Yield</div>
+                    <div style="font-size: 2rem; font-weight: 800;">9.2% APY</div>
+                </div>
+                <div class="vault-card-specimen" style="background: #5b3a5d;">
+                    <span class="specimen-tag">FIXED TIME</span>
+                    <div class="specimen-title">Term Vault</div>
+                    <div style="font-size: 2rem; font-weight: 800;">12.5% APY</div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;">
+            <h2>Typography (Söhne)</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <h1 style="font-size: 4rem; font-weight: 800;">The Swiss industrial aesthetic of crypto finance.</h1>
+                <p style="font-size: 1.5rem; opacity: 0.8;">Söhne provides a functional clarity that institutions
+                    demand.</p>
+                <code style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                    font-family: 'Söhne', Arial, sans-serif;
+                </code>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -266,6 +266,24 @@ const DESIGN_SYSTEMS = {
         '--sys-button-text-hover': '#FFFFFF',
         '--sys-3d-color': '#FF4F33',
         '--sys-3d-edge': '#1A1A1A'
+    },
+    steakhouse: {
+        '--sys-bg-main': 'oklch(17% 0.004 229)',
+        '--sys-text-primary': 'oklch(97% 0.022 92.9)',
+        '--sys-text-secondary': 'oklch(83.8% 0.011 98.5)',
+        '--sys-border': 'oklch(31.1% 0.004 229)',
+        '--bi-divider': 'oklch(31.1% 0.004 229)',
+        '--bi-bg': 'oklch(20% 0.005 229)',
+        '--bi-text': 'oklch(97% 0.022 92.9)',
+        '--bi-header-bg': 'oklch(22.8% 0.007 229)',
+        '--sys-font-primary': "'Inter', sans-serif",
+        '--sys-font-display': "'Inter', sans-serif",
+        '--sys-accent-shadow': '0 0 30px oklch(55% 0.103 173 / 0.2)',
+        '--sys-button-radius': '4px',
+        '--sys-button-bg-hover': 'oklch(55% 0.103 173)',
+        '--sys-button-text-hover': 'oklch(17% 0.004 229)',
+        '--sys-3d-color': 'oklch(55% 0.103 173)',
+        '--sys-3d-edge': '#ffffff'
     }
 };
 

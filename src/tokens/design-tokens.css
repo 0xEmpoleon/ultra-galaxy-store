@@ -249,6 +249,61 @@
 
 
 /* ============================================================
+ * 5. STEAKHOUSE FINANCIAL — app.steakhouse.financial
+ * ============================================================
+ * Source: Website analysis (Dark Mode)
+ * Design Language: Institutional DeFi, precision-engineered,
+ *                  Swiss industrial influence (Söhne)
+ * Extracted: Deep charcoal base, mint primary green,
+ *            strategy-specific accent colors, 8px radii
+ * ============================================================ */
+[data-system="steakhouse"],
+.system-steakhouse {
+    /* ---- Colors (OKLCH) ---- */
+    --color-bg-primary: oklch(17% 0.004 229);
+    --color-bg-secondary: oklch(20% 0.005 229);
+    --color-bg-surface: oklch(22.8% 0.007 229);
+    --color-bg-elevated: oklch(25% 0.008 229);
+    --color-text-primary: oklch(97% 0.022 92.9);
+    --color-text-secondary: oklch(83.8% 0.011 98.5);
+    --color-text-muted: oklch(65% 0.01 229);
+    --color-brand-green: oklch(55% 0.103 173);
+    --color-border: oklch(31.1% 0.004 229);
+    --color-border-hover: oklch(55% 0.103 173);
+    --color-accent-shadow: 0 0 30px oklch(55% 0.103 173 / 0.2);
+
+    /* ---- Strategy Accents (HEX) ---- */
+    --color-strategy-prime: #355a52;
+    --color-strategy-hy: #7c4032;
+    --color-strategy-term: #5b3a5d;
+    --color-strategy-turbo: #726343;
+
+    /* ---- Typography ---- */
+    --font-primary: 'Inter', sans-serif;
+    /* Söhne Substitute */
+    --font-display: 'Inter', sans-serif;
+    --font-mono: 'Source Code Pro', monospace;
+
+    /* ---- Radii ---- */
+    --radius-sharp: 0.125rem;
+    --radius-default: 0.5rem;
+    /* 8px */
+    --radius-button: 0.25rem;
+    /* 4px */
+    --radius-pill: 3.125rem;
+
+    /* ---- Shadows ---- */
+    --shadow-glow: 0 0 20px oklch(55% 0.103 173 / 0.15);
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.7);
+
+    /* ---- 3D Asset Theming ---- */
+    --3d-color: oklch(55% 0.103 173);
+    --3d-edge: #ffffff;
+}
+
+
+/* ============================================================
  * 5. STOREFRONT SYSTEM TOKENS (Main site theming layer)
  * ============================================================
  * These are the "live" tokens consumed by the storefront.

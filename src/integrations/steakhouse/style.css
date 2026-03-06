@@ -1,0 +1,201 @@
+/* ---- Steakhouse Financial (Dark) Reconstruction ---- */
+
+:root {
+    /* Color Palette - OKLCH */
+    --stk-bg: oklch(17% 0.004 229);
+    --stk-fg: oklch(97% 0.022 92.9);
+    --stk-primary: oklch(55% 0.103 173);
+    --stk-card: oklch(22.8% 0.007 229);
+    --stk-border: oklch(31.1% 0.004 229);
+    --stk-muted: oklch(28.3% 0.007 229);
+    --stk-muted-fg: oklch(83.8% 0.011 98.5);
+
+    /* Typography */
+    --stk-font: 'Inter', sans-serif;
+    /* Söhne Substitute */
+    --stk-font-mono: 'Source Code Pro', monospace;
+    /* Söhne Mono Substitute */
+
+    /* Radius */
+    --stk-radius: 8px;
+    --stk-button-radius: 4px;
+
+    /* Transitions */
+    --stk-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--stk-bg);
+    color: var(--stk-fg);
+    font-family: var(--stk-font);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout --- */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--stk-border);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: var(--stk-fg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.btn-connect {
+    background: var(--stk-primary);
+    color: var(--stk-bg);
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--stk-button-radius);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- Hero --- */
+.hero {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    opacity: 0.7;
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+.hero-visual {
+    position: relative;
+    aspect-ratio: 1;
+    background: radial-gradient(circle at center, rgba(85, 255, 173, 0.05) 0%, transparent 70%);
+}
+
+.hero-visual-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px dashed var(--stk-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--stk-primary);
+}
+
+/* --- Vaults Grid --- */
+.vaults-section {
+    padding-bottom: 120px;
+}
+
+.section-label {
+    font-family: var(--stk-font-mono);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--stk-primary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.vault-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.vault-card {
+    background: var(--stk-card);
+    border: 1px solid var(--stk-border);
+    border-radius: var(--stk-radius);
+    padding: 32px;
+    transition: var(--stk-transition);
+}
+
+.vault-card:hover {
+    border-color: var(--stk-primary);
+    transform: translateY(-4px);
+}
+
+.vault-strategy {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.strategy-prime {
+    background: #355a52;
+    color: #fff;
+}
+
+.strategy-hy {
+    background: #7c4032;
+    color: #fff;
+}
+
+.vault-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.vault-apy {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--stk-primary);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 40px;
+    }
+}

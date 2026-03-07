@@ -1,0 +1,327 @@
+{
+  "tag": "body",
+  "display": "block",
+  "children": [
+    {
+      "tag": "div",
+      "classes": "page-wrapper",
+      "display": "block",
+      "children": [
+        {
+          "tag": "div",
+          "classes": "global-wrap",
+          "display": "block",
+          "children": [
+            {
+              "tag": "div",
+              "classes": "global-styles w-embed",
+              "display": "none",
+              "position": "fixed"
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": "css-page-specific w-embed",
+          "display": "none"
+        },
+        {
+          "tag": "main",
+          "classes": "main-wrapper",
+          "display": "block",
+          "children": [
+            {
+              "tag": "div",
+              "classes": "hp_page-container",
+              "display": "grid",
+              "gridTemplate": "1036.8px 403.188px",
+              "children": [
+                {
+                  "tag": "nav",
+                  "classes": "nav_wrapper",
+                  "display": "block",
+                  "position": "sticky",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": "navbar w-nav",
+                      "display": "flex",
+                      "position": "relative",
+                      "flexDirection": "row",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "nav_wrap",
+                          "display": "flex",
+                          "flexDirection": "row"
+                        },
+                        {
+                          "tag": "div",
+                          "id": "w-nav-overlay-0",
+                          "classes": "w-nav-overlay",
+                          "text": "",
+                          "display": "none",
+                          "position": "absolute"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "section",
+                  "classes": "section_hp-hero",
+                  "display": "block",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": "padding-block hp_hero",
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": "hp-hero_logo",
+                          "text": "",
+                          "display": "block"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": "hp-hero_bottom",
+                          "display": "flex",
+                          "flexDirection": "row"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": "projects",
+                  "classes": "is-anchor",
+                  "display": "block",
+                  "children": [
+                    {
+                      "tag": "section",
+                      "classes": "section_hp-projects",
+                      "display": "block",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "padding-block",
+                          "display": "block"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": "w-node-bf212374-79a0-1696-85f3-939fb3b85b56-c8147f69",
+                  "classes": "hp_sidebar no-scrollbar",
+                  "display": "block",
+                  "position": "sticky",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": "hp_sidebar-heading",
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "research_dot is-home",
+                          "text": "",
+                          "display": "block"
+                        },
+                        {
+                          "tag": "h2",
+                          "classes": "heading-style-h5 is-20-tablet",
+                          "text": "Research & Design",
+                          "display": "block"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": "w-dyn-list",
+                      "display": "block",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "hp_sidebar-items no-scrollbar w-dyn-items",
+                          "display": "flex",
+                          "flexDirection": "column"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "footer",
+          "classes": "section_footer",
+          "display": "block",
+          "children": [
+            {
+              "tag": "div",
+              "classes": "footer_top",
+              "display": "flex",
+              "flexDirection": "row",
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": "footer_block is-clocks",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": "time_block",
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "dot",
+                          "text": "",
+                          "display": "block"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": "text-size-mono-regular text-style-allcaps",
+                          "display": "block"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": "time_block",
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "dot",
+                          "text": "",
+                          "display": "block"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": "text-size-mono-regular text-style-allcaps",
+                          "display": "block"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": "footer_block is-menu",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": "footer_link w--current",
+                      "text": "Projects",
+                      "display": "block"
+                    },
+                    {
+                      "tag": "div",
+                      "classes": "w-dyn-list",
+                      "display": "block",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": "w-dyn-items",
+                          "display": "block"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "classes": "footer_link",
+                      "text": "About",
+                      "display": "block"
+                    },
+                    {
+                      "tag": "a",
+                      "classes": "footer_link",
+                      "text": "Contact",
+                      "display": "block"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "classes": "footer_bottom",
+              "display": "flex",
+              "flexDirection": "row",
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": "footer_block is-logo",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": "w-inline-block w--current",
+                      "display": "block",
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": "footer_logo",
+                          "text": "",
+                          "display": "inline-block"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": "footer_block is-corner",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "children": [
+                    {
+                      "tag": "img",
+                      "classes": "footer_icon",
+                      "text": "",
+                      "display": "block"
+                    },
+                    {
+                      "tag": "div",
+                      "text": "© 2025 Groth Design and Research LLC",
+                      "display": "block"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": "logo-tracker",
+          "display": "block",
+          "position": "absolute",
+          "children": [
+            {
+              "tag": "div",
+              "classes": "logo-tracker-empty",
+              "text": "",
+              "display": "none"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

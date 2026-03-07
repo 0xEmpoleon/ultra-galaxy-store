@@ -267,6 +267,24 @@ const DESIGN_SYSTEMS = {
         '--sys-3d-color': '#FF4F33',
         '--sys-3d-edge': '#1A1A1A'
     },
+    groth: {
+        '--sys-bg-main': '#FFFFFF',
+        '--sys-text-primary': '#000000',
+        '--sys-text-secondary': 'rgba(0, 0, 0, 0.6)',
+        '--sys-border': 'rgba(0, 0, 0, 0.1)',
+        '--bi-divider': 'rgba(0, 0, 0, 0.1)',
+        '--bi-bg': '#FFFFFF',
+        '--bi-text': '#000000',
+        '--bi-header-bg': '#595546',
+        '--sys-font-primary': "'PP Neue Montreal', sans-serif",
+        '--sys-font-display': "'PP Neue Montreal', sans-serif",
+        '--sys-accent-shadow': '0 0 40px rgba(89, 85, 70, 0.4)',
+        '--sys-button-radius': '0px',
+        '--sys-button-bg-hover': '#595546',
+        '--sys-button-text-hover': '#FCFAF2',
+        '--sys-3d-color': '#595546',
+        '--sys-3d-edge': '#000000'
+    },
     steakhouse: {
         '--sys-bg-main': '#002B24',
         '--sys-text-primary': '#ffffff',

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifact (David AI) | Design System [SYS.VER.2.1.0]</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Industrial Overrides for Guidelines */
+        :root {
+            --panel-bg: #ffffff;
+            --tech-accent: #2d62ff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9f9f6;
+            color: #1a1a19;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ticker {
+            background: #1a1a19;
+            color: #ffffff;
+            padding: 8px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: 'Departure Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .guideline-container {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid #1a1a19;
+            padding-bottom: 20px;
+            margin-bottom: 60px;
+        }
+
+        .section-num {
+            font-family: 'Departure Mono', monospace;
+            font-size: 12px;
+            color: var(--tech-accent);
+        }
+
+        .divider-plus {
+            position: relative;
+            height: 1px;
+            background: #1a1a19;
+            margin: 100px 0;
+        }
+
+        .divider-plus::before,
+        .divider-plus::after {
+            content: '+';
+            position: absolute;
+            top: -7px;
+            font-size: 14px;
+        }
+
+        .divider-plus::before {
+            left: 0;
+        }
+
+        .divider-plus::after {
+            right: 0;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #cfd0c8;
+            border: 1px solid #cfd0c8;
+        }
+
+        .spec-item {
+            background: #ffffff;
+            padding: 24px;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .swatch {
+            width: 100%;
+            height: 60%;
+            margin-bottom: 12px;
+        }
+
+        .swatch-label {
+            font-family: 'Departure Mono', monospace;
+            font-size: 10px;
+        }
+
+        .type-spec {
+            grid-column: span 2;
+            aspect-ratio: auto;
+            min-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticker">
+        <div class="ticker-content">
+            DAVID AI // INTELLECTUAL MINIMALISM // SYSTEM VERSION 2.1.0 // AUDIO DATA RESEARCH // C: 1A1A19 // B: F9F9F6
+            // DAVID AI // INTELLECTUAL MINIMALISM // SYSTEM VERSION 2.1.0 // AUDIO DATA RESEARCH // C: 1A1A19 // B:
+            F9F9F6
+        </div>
+    </div>
+
+    <div class="guideline-container">
+        <div class="header-meta">
+            <div>
+                <p class="section-num">DS.DOC.001</p>
+                <h1 style="font-family: Besley, serif; font-weight: 400;">Brand Identity</h1>
+            </div>
+            <div style="text-align: right; font-family: 'Departure Mono', monospace; font-size: 10px;">
+                LOC: /src/integrations/david-ai/<br>
+                TS: 2026.03.07
+            </div>
+        </div>
+
+        <section id="colors">
+            <p class="section-num">SECTION.001 // COLORS</p>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <div class="swatch" style="background: #f9f9f6;"></div>
+                    <div class="swatch-label">IVORY PRIMARY<br>#F9F9F6</div>
+                </div>
+                <div class="spec-item">
+                    <div class="swatch" style="background: #1a1a19;"></div>
+                    <div class="swatch-label">CHARCOAL DEEP<br>#1A1A19</div>
+                </div>
+                <div class="spec-item">
+                    <div class="swatch" style="background: #2d62ff;"></div>
+                    <div class="swatch-label">DATA BLUE<br>#2D62FF</div>
+                </div>
+                <div class="spec-item">
+                    <div class="swatch" style="background: #dd23bb;"></div>
+                    <div class="swatch-label">SIGNAL PINK<br>#DD23BB</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-plus"></div>
+
+        <section id="typography">
+            <p class="section-num">SECTION.002 // TYPOGRAPHY</p>
+            <div class="spec-grid">
+                <div class="spec-item type-spec">
+                    <h2 style="font-family: Besley, serif; font-weight: 400; font-size: 48px;">Besley</h2>
+                    <p class="swatch-label">SERIF PRIMARY // OPTICAL NARRATIVE</p>
+                </div>
+                <div class="spec-item type-spec">
+                    <h2 style="font-family: Inter, sans-serif; font-weight: 700; font-size: 48px;">Inter</h2>
+                    <p class="swatch-label">SANS SECONDARY // DATA PRECISION</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-plus"></div>
+
+        <section id="spacing">
+            <p class="section-num">SECTION.003 // SPACING SCALE</p>
+            <div style="font-family: 'Departure Mono', monospace; font-size: 12px; line-height: 2;">
+                UNIT_XS : 4px<br>
+                UNIT_SM : 8px<br>
+                UNIT_MD : 16px<br>
+                UNIT_LG : 32px<br>
+                UNIT_XL : 64px
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -360,6 +360,24 @@ const DESIGN_SYSTEMS = {
         '--sys-button-text-hover': '#180F26',
         '--sys-3d-color': '#C3A0FA',
         '--sys-3d-edge': '#180F26'
+    },
+    'david-ai': {
+        '--sys-bg-main': '#f9f9f6',
+        '--sys-text-primary': '#1a1a19',
+        '--sys-text-secondary': '#82837c',
+        '--sys-border': '#cfd0c8',
+        '--bi-divider': '#cfd0c8',
+        '--bi-bg': '#f9f9f6',
+        '--bi-text': '#1a1a19',
+        '--bi-header-bg': '#f1f2ea',
+        '--sys-font-primary': "'Inter', sans-serif",
+        '--sys-font-display': "'Besley', serif",
+        '--sys-accent-shadow': '0 0 40px rgba(45, 98, 255, 0.3)',
+        '--sys-button-radius': '100px',
+        '--sys-button-bg-hover': '#1a1a19',
+        '--sys-button-text-hover': '#ffffff',
+        '--sys-3d-color': '#2d62ff',
+        '--sys-3d-edge': '#cfd0c8'
     }
 };
 
@@ -375,7 +393,8 @@ document.addEventListener('theme-applied', (e) => {
         });
 
         // Force Dark Mode for dark-themed systems, light for light
-        const isDarkSystem = systemId !== 'telekom-ot';
+        const lightSystems = ['telekom-ot', 'david-ai', 'colab', 'groth'];
+        const isDarkSystem = !lightSystems.includes(systemId);
         isLightMode = !isDarkSystem;
         document.body.classList.toggle('dark-mode', isDarkSystem);
         updateThemeAssets();

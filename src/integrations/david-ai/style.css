@@ -1,0 +1,154 @@
+/* David AI — Industrial Brutalist Reconstruction */
+:root {
+    --bg-primary: #f9f9f6;
+    --bg-alternate: #1a1a19;
+    --text-primary: #1a1a19;
+    --text-secondary: #82837c;
+    --text-alternate: #ffffff;
+    --accent-blue: #2d62ff;
+    --accent-pink: #dd23bb;
+    --border-default: #cfd0c8;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Besley', 'Times', serif;
+    --font-mono: 'Departure Mono', monospace;
+    --spacing-unit: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1,
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-unit) * 8;
+}
+
+.hero-section {
+    padding: 80px 5%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    mix-blend-mode: difference;
+}
+
+.nav-logo svg {
+    height: 24px;
+    fill: currentColor;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 0.1em;
+}
+
+.visual-dna-strip {
+    width: 100%;
+    height: 120px;
+    background-image: url('_raw/screenshot-desktop-1440.png');
+    /* Temporary fallback */
+    background-size: cover;
+    background-position: top;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 100px;
+    background: var(--bg-alternate);
+    color: var(--text-alternate);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Grid Layouts */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 100px 5%;
+}
+
+.feature-card {
+    grid-column: span 6;
+    border-top: 1px solid var(--border-default);
+    padding-top: 24px;
+}
+
+.step-num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.feature-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+/* Specialized Components */
+.audio-visualizer {
+    width: 100%;
+    height: 300px;
+    background: var(--off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.footer {
+    padding: 60px 5%;
+    border-top: 1px solid var(--border-default);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-secondary);
+}

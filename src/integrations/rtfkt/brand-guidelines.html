@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifact (RTFKT) | Design System [SYS.VER.2.1.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <style>
+        :root {
+            --accent-color: #2020DF;
+            --bg: #FFFFFF;
+            --surface: #F6F8F9;
+        }
+
+        @font-face {
+            font-family: 'Departure Mono';
+            src: url('./fonts/DepartureMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        .hero__brand {
+            font-family: 'Departure Mono', monospace;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .hero__brand span {
+            color: #2020DF;
+        }
+
+        .specimen__sample--display {
+            font-family: 'Departure Mono', monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TICKER -->
+    <div class="ticker" style="color: #2020DF; opacity: 0.6;">
+        <div class="ticker__inner">
+            ARTIFACT (RTFKT) — DESIGN ENGINEERED — STRATEGY LED — SYSTEM VERSION: 2.1.0 — STATUS: ACTIVE — ARTIFACT
+            (RTFKT) — DESIGN ENGINEERED — STRATEGY LED — SYSTEM VERSION: 2.1.0 — STATUS: ACTIVE —&nbsp;
+        </div>
+    </div>
+
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">ARTIFACT<span>.</span></h1>
+        <p class="hero__tagline">Design Engineered.</p>
+        <p class="hero__description">
+            Your strategy-led design & engineering partner. We help businesses stay competitive in the digital landscape
+            by leveraging creative talent and the latest technologies to find new growth opportunities.
+        </p>
+        <p class="hero__source">Original → <a href="https://www.rtfct.com/" target="_blank"
+                style="color: #2020DF;">rtfct.com</a></p>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number">002 // PALETTE</div>
+            <h2 class="section-title">Color System</h2>
+            <p class="section-description">High-contrast foundations with digital-native accents. The Azure blue anchors
+                all technical interactions and CTA states.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #2020DF; color: #FFFFFF;">
+                    <span class="swatch__name">AZURE CORE</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#2020DF</div>
+                    <div class="swatch__role">PRIMARY ACCENT / CTA / TICKER</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color"
+                    style="background: #FFFFFF; color: #000000; border: 1px solid rgba(0,0,0,0.05);">
+                    <span class="swatch__name">PURE WHITE</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#FFFFFF</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #000000; color: #FFFFFF;">
+                    <span class="swatch__name">OBSIDIAN</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#000000</div>
+                    <div class="swatch__role">PRIMARY TEXT / UI CRITICAL</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #F6F8F9; color: #000000;">
+                    <span class="swatch__name">CANVAS</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#F6F8F9</div>
+                    <div class="swatch__role">SECONDARY SURFACE / BG ALT</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number">003 // TYPOGRAPHY</div>
+            <h2 class="section-title">Type Hierarchy</h2>
+            <p class="section-description">Departure Mono delivers the industrial-technical character required for
+                high-grade engineering partners.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: clamp(32px, 5vw, 64px); line-height: 0.9;">
+                    THE FUTURE IS ENGINEERED
+                </div>
+                <span class="specimen__label">DEPARTURE MONO REGULAR (DISPLAY)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: 'Departure Mono', monospace; font-size: 18px; line-height: 1.2; text-transform: uppercase;">
+                    Refining digital aesthetics for modern teams.
+                </div>
+                <span class="specimen__label">DEPARTURE MONO REGULAR (SUB-HEADINGS)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__body" style="font-family: 'Departure Mono', monospace;">
+                    A full-service agency creating digital products and experiences that open new growth opportunities
+                    for future-focused businesses.
+                </div>
+                <span class="specimen__label">DEPARTURE MONO REGULAR (BODY)</span>
+            </div>
+
+            <table class="type-table">
+                <tr>
+                    <td>Primary</td>
+                    <td>Departure Mono</td>
+                </tr>
+                <tr>
+                    <td>Technical</td>
+                    <td>Source Code Pro</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Display + Body Metadata</td>
+                </tr>
+                <tr>
+                    <td>Classification</td>
+                    <td>Monospace Industrial</td>
+                </tr>
+                <tr>
+                    <td>Sourcing</td>
+                    <td>Self-Hosted</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divider-plus" style="color: #2020DF;">+</div>
+
+    <!-- 004 // INTERFACE + 005 // STRUCTURE -->
+    <div class="spec-grid">
+        <!-- INTERFACE COMPONENTS -->
+        <div>
+            <div class="section-number">004 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title">Interactive Elements</h2>
+
+            <p class="component-label">ACTION BUTTONS · BRUTALIST</p>
+            <div class="btn-showcase">
+                <button class="btn-demo btn-demo--solid"
+                    style="background: #2020DF; color: #fff; border-radius: 0; font-family: 'Departure Mono', monospace;">LET'S
+                    TALK</button>
+                <button class="btn-demo btn-demo--outline"
+                    style="color: #2020DF; border-color: #2020DF; border-radius: 0; font-family: 'Departure Mono', monospace;">EXPLORE</button>
+            </div>
+
+            <p class="component-label">NAVIGATION PATTERN</p>
+            <div style="display: flex; border: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid rgba(0,0,0,0.1); font-family: 'Departure Mono', monospace; font-weight: 700; font-size: 14px;">
+                    ARTIFACT<span>.</span></div>
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid rgba(0,0,0,0.1); font-family: 'Departure Mono', monospace; font-size: 10px; text-transform: uppercase; display: flex; align-items: center; gap: 4px; color: #626364;">
+                    PORTFOLIO
+                </div>
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid rgba(0,0,0,0.1); font-family: 'Departure Mono', monospace; font-size: 10px; text-transform: uppercase; display: flex; align-items: center; gap: 4px; color: #626364;">
+                    ABOUT
+                </div>
+                <div
+                    style="padding: 12px 16px; background: #2020DF; color: #fff; font-family: 'Departure Mono', monospace; font-size: 10px; text-transform: uppercase; display: flex; align-items: center;">
+                    CONTACT</div>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">SURFACE PROPERTIES</p>
+            <div class="spacing-row">
+                <span class="spacing-label">Main Radius</span>
+                <div
+                    style="width: 60px; height: 40px; background: var(--surface); border: 1px solid #2020DF; border-radius: 0;">
+                </div>
+                <span style="font-family: 'Departure Mono', monospace; font-size: 11px; color: #626364;">0px —
+                    INDUSTRIAL</span>
+            </div>
+        </div>
+
+        <!-- STRUCTURE -->
+        <div>
+            <div class="section-number">005 // STRUCTURE & LAYOUT</div>
+            <h2 class="section-title">Spacing & Grid</h2>
+
+            <p class="component-label">SPACING SCALE</p>
+            <div class="spacing-row"><span class="spacing-label">4px</span>
+                <div class="spacing-block" style="width: 16px; background: #2020DF;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">8px</span>
+                <div class="spacing-block" style="width: 32px; background: #2020DF;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">16px</span>
+                <div class="spacing-block" style="width: 64px; background: #2020DF;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">32px</span>
+                <div class="spacing-block" style="width: 128px; background: #2020DF;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">64px</span>
+                <div class="spacing-block" style="width: 256px; background: #2020DF;"></div>
+            </div>
+
+            <p class="component-label" style="margin-top: 40px;">LAYOUT SYSTEM</p>
+            <table class="type-table">
+                <tr>
+                    <td>Max Width</td>
+                    <td>1440px</td>
+                </tr>
+                <tr>
+                    <td>Base Grid</td>
+                    <td>4px Units</td>
+                </tr>
+                <tr>
+                    <td>Section Gap</td>
+                    <td>120px Vertical</td>
+                </tr>
+                <tr>
+                    <td>Container</td>
+                    <td>1390px Fluid</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer">
+        <div>
+            <div class="guidelines-footer__brand" style="color: #2020DF;">ARTIFACT // RTFKT // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link" style="color: #2020DF;">← Back to Galaxy
+                Store</a>
+        </div>
+        <div class="guidelines-footer__version">END OF PROTOCOL [SYS.VER.2.1.0]</div>
+    </footer>
+
+</body>
+
+</html>

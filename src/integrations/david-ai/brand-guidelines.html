@@ -4,201 +4,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artifact (David AI) | Design System [SYS.VER.2.1.0]</title>
-    <link rel="stylesheet" href="style.css">
+    <title>David AI | Design System [SYS.VER.2.1.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <style>
-        /* Industrial Overrides for Guidelines */
         :root {
-            --panel-bg: #ffffff;
-            --tech-accent: #2d62ff;
+            --accent-color: #2d62ff;
+            --bg: #f9f9f6;
+            --surface: #f1f2ea;
+            --text: #1a1a19;
+            --text-muted: #82837c;
+            --border: rgba(26, 26, 25, 0.12);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #f9f9f6;
-            color: #1a1a19;
-            padding: 0;
-            margin: 0;
+            background: var(--bg);
+            color: var(--text);
         }
 
-        .ticker {
-            background: #1a1a19;
-            color: #ffffff;
-            padding: 8px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            font-family: 'Departure Mono', monospace;
-            font-size: 10px;
+        .swatch__meta {
+            background: var(--surface);
+        }
+
+        .hero__brand {
+            font-family: 'Besley', serif;
+            color: #1a1a19;
             text-transform: uppercase;
         }
 
-        .ticker-content {
-            display: inline-block;
-            animation: scroll 30s linear infinite;
+        .hero__brand span {
+            color: #2d62ff;
         }
 
-        @keyframes scroll {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        .guideline-container {
-            padding: 80px 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .header-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-bottom: 1px solid #1a1a19;
-            padding-bottom: 20px;
-            margin-bottom: 60px;
-        }
-
-        .section-num {
-            font-family: 'Departure Mono', monospace;
-            font-size: 12px;
-            color: var(--tech-accent);
-        }
-
-        .divider-plus {
-            position: relative;
-            height: 1px;
-            background: #1a1a19;
-            margin: 100px 0;
-        }
-
-        .divider-plus::before,
-        .divider-plus::after {
-            content: '+';
-            position: absolute;
-            top: -7px;
-            font-size: 14px;
-        }
-
-        .divider-plus::before {
-            left: 0;
-        }
-
-        .divider-plus::after {
-            right: 0;
-        }
-
-        .spec-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: #cfd0c8;
-            border: 1px solid #cfd0c8;
-        }
-
-        .spec-item {
-            background: #ffffff;
-            padding: 24px;
-            aspect-ratio: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .swatch {
-            width: 100%;
-            height: 60%;
-            margin-bottom: 12px;
-        }
-
-        .swatch-label {
-            font-family: 'Departure Mono', monospace;
-            font-size: 10px;
-        }
-
-        .type-spec {
-            grid-column: span 2;
-            aspect-ratio: auto;
-            min-height: 200px;
+        .specimen__sample--display {
+            font-family: 'Besley', serif;
         }
     </style>
 </head>
 
 <body>
-    <div class="ticker">
-        <div class="ticker-content">
-            DAVID AI // INTELLECTUAL MINIMALISM // SYSTEM VERSION 2.1.0 // AUDIO DATA RESEARCH // C: 1A1A19 // B: F9F9F6
-            // DAVID AI // INTELLECTUAL MINIMALISM // SYSTEM VERSION 2.1.0 // AUDIO DATA RESEARCH // C: 1A1A19 // B:
-            F9F9F6
+
+    <!-- TICKER -->
+    <div class="ticker" style="color: #2d62ff; opacity: 0.6;">
+        <div class="ticker__inner">
+            DAVID AI — AUDIO DATA RESEARCH — INTELLECTUAL MINIMALIST — SYSTEM VERSION: 2.1.0 — STATUS: ACTIVE — DAVID
+            AI — AUDIO DATA RESEARCH — INTELLECTUAL MINIMALIST — SYSTEM VERSION: 2.1.0 — STATUS: ACTIVE —&nbsp;
         </div>
     </div>
 
-    <div class="guideline-container">
-        <div class="header-meta">
-            <div>
-                <p class="section-num">DS.DOC.001</p>
-                <h1 style="font-family: Besley, serif; font-weight: 400;">Brand Identity</h1>
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">DAVID AI<span>.</span></h1>
+        <p class="hero__tagline">AI is meaningful when you can naturally interact with it.</p>
+        <p class="hero__description">
+            We are an audio data research company. Our mission is to bring AI into the real world through voice.
+            We develop audio datasets with the same rigor researchers bring to models.
+        </p>
+        <p class="hero__source">Original → <a href="https://www.withdavid.ai/" target="_blank"
+                style="color: #2d62ff;">withdavid.ai</a></p>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number">002 // PALETTE</div>
+            <h2 class="section-title">Color System</h2>
+            <p class="section-description">Warm ivory foundation with charcoal typography. The David Blue accent
+                anchors all interactive and link states. Signal Pink provides a secondary highlight for emphasis.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #2d62ff; color: #FFFFFF;">
+                    <span class="swatch__name">DAVID BLUE</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#2D62FF</div>
+                    <div class="swatch__role">PRIMARY ACCENT / CTA / LINKS</div>
+                </div>
             </div>
-            <div style="text-align: right; font-family: 'Departure Mono', monospace; font-size: 10px;">
-                LOC: /src/integrations/david-ai/<br>
-                TS: 2026.03.07
+
+            <div class="swatch">
+                <div class="swatch__color"
+                    style="background: #f9f9f6; color: #1a1a19; border: 1px solid rgba(0,0,0,0.05);">
+                    <span class="swatch__name">IVORY</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#F9F9F6</div>
+                    <div class="swatch__role">PRIMARY BACKGROUND</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #1a1a19; color: #f9f9f6;">
+                    <span class="swatch__name">CHARCOAL DEEP</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#1A1A19</div>
+                    <div class="swatch__role">PRIMARY TEXT / UI CRITICAL</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #dd23bb; color: #FFFFFF;">
+                    <span class="swatch__name">SIGNAL PINK</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#DD23BB</div>
+                    <div class="swatch__role">SECONDARY ACCENT / HIGHLIGHT</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #f1f2ea; color: #1a1a19;">
+                    <span class="swatch__name">WARM GRAY</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#F1F2EA</div>
+                    <div class="swatch__role">SURFACE / HEADER / FOOTER</div>
+                </div>
             </div>
         </div>
 
-        <section id="colors">
-            <p class="section-num">SECTION.001 // COLORS</p>
-            <div class="spec-grid">
-                <div class="spec-item">
-                    <div class="swatch" style="background: #f9f9f6;"></div>
-                    <div class="swatch-label">IVORY PRIMARY<br>#F9F9F6</div>
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number">003 // TYPOGRAPHY</div>
+            <h2 class="section-title">Type Hierarchy</h2>
+            <p class="section-description">Besley provides the editorial serif voice for all headlines, conveying
+                intellectual authority. Inter handles all functional UI text with clean precision.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: clamp(32px, 5vw, 64px); line-height: 0.9;">
+                    AI IS MEANINGFUL
                 </div>
-                <div class="spec-item">
-                    <div class="swatch" style="background: #1a1a19;"></div>
-                    <div class="swatch-label">CHARCOAL DEEP<br>#1A1A19</div>
-                </div>
-                <div class="spec-item">
-                    <div class="swatch" style="background: #2d62ff;"></div>
-                    <div class="swatch-label">DATA BLUE<br>#2D62FF</div>
-                </div>
-                <div class="spec-item">
-                    <div class="swatch" style="background: #dd23bb;"></div>
-                    <div class="swatch-label">SIGNAL PINK<br>#DD23BB</div>
-                </div>
+                <span class="specimen__label">BESLEY REGULAR (DISPLAY)</span>
             </div>
-        </section>
 
-        <div class="divider-plus"></div>
-
-        <section id="typography">
-            <p class="section-num">SECTION.002 // TYPOGRAPHY</p>
-            <div class="spec-grid">
-                <div class="spec-item type-spec">
-                    <h2 style="font-family: Besley, serif; font-weight: 400; font-size: 48px;">Besley</h2>
-                    <p class="swatch-label">SERIF PRIMARY // OPTICAL NARRATIVE</p>
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: 'Besley', serif; font-size: 24px; line-height: 1.3; font-weight: 400;">
+                    We develop audio datasets with the same rigor researchers bring to models.
                 </div>
-                <div class="spec-item type-spec">
-                    <h2 style="font-family: Inter, sans-serif; font-weight: 700; font-size: 48px;">Inter</h2>
-                    <p class="swatch-label">SANS SECONDARY // DATA PRECISION</p>
+                <span class="specimen__label">BESLEY REGULAR (HEADINGS)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__body" style="font-family: 'Inter', sans-serif;">
+                    David AI is an audio data research company building datasets that unlock new capabilities in
+                    voice AI. Their approach combines rigorous data science with creative design methodology.
                 </div>
+                <span class="specimen__label">INTER REGULAR (BODY)</span>
             </div>
-        </section>
 
-        <div class="divider-plus"></div>
-
-        <section id="spacing">
-            <p class="section-num">SECTION.003 // SPACING SCALE</p>
-            <div style="font-family: 'Departure Mono', monospace; font-size: 12px; line-height: 2;">
-                UNIT_XS : 4px<br>
-                UNIT_SM : 8px<br>
-                UNIT_MD : 16px<br>
-                UNIT_LG : 32px<br>
-                UNIT_XL : 64px
-            </div>
-        </section>
+            <table class="type-table">
+                <tr>
+                    <td>Display</td>
+                    <td>Besley</td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td>Inter</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Editorial + UI Precision</td>
+                </tr>
+                <tr>
+                    <td>Classification</td>
+                    <td>Serif Narrative + Sans Functional</td>
+                </tr>
+                <tr>
+                    <td>Sourcing</td>
+                    <td>Google Fonts CDN</td>
+                </tr>
+            </table>
+        </div>
     </div>
+
+    <div class="divider-plus" style="color: #2d62ff;">+</div>
+
+    <!-- 004 // INTERFACE + 005 // STRUCTURE -->
+    <div class="spec-grid">
+        <!-- INTERFACE COMPONENTS -->
+        <div>
+            <div class="section-number">004 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title">Interactive Elements</h2>
+
+            <p class="component-label">ACTION BUTTONS · PILL</p>
+            <div class="btn-showcase">
+                <button class="btn-demo btn-demo--solid"
+                    style="background: #1a1a19; color: #f9f9f6; border-radius: 100px; font-family: 'Inter', sans-serif;">EXPLORE
+                    DATASETS</button>
+                <button class="btn-demo btn-demo--outline"
+                    style="color: #1a1a19; border-color: #1a1a19; border-radius: 100px; font-family: 'Inter', sans-serif;">CONTACT</button>
+            </div>
+
+            <p class="component-label">NAVIGATION PATTERN</p>
+            <div style="display: flex; border: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid rgba(0,0,0,0.1); font-family: 'Besley', serif; font-weight: 400; font-size: 14px;">
+                    David AI</div>
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; font-size: 10px; text-transform: uppercase; display: flex; align-items: center; gap: 4px; color: #82837c;">
+                    MISSION
+                </div>
+                <div
+                    style="padding: 12px 16px; border-right: 1px solid rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; font-size: 10px; text-transform: uppercase; display: flex; align-items: center; gap: 4px; color: #82837c;">
+                    DATASETS
+                </div>
+                <div
+                    style="padding: 12px 16px; background: #1a1a19; color: #f9f9f6; font-family: 'Inter', sans-serif; font-size: 10px; text-transform: uppercase; display: flex; align-items: center;">
+                    CONTACT</div>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px;">SURFACE PROPERTIES</p>
+            <div class="spacing-row">
+                <span class="spacing-label">Corner Radius</span>
+                <div
+                    style="width: 60px; height: 40px; background: var(--surface); border: 1px solid #2d62ff; border-radius: 100px;">
+                </div>
+                <span style="font-family: var(--mono); font-size: 11px; color: #82837c;">100px — PILL</span>
+            </div>
+        </div>
+
+        <!-- STRUCTURE -->
+        <div>
+            <div class="section-number">005 // STRUCTURE & LAYOUT</div>
+            <h2 class="section-title">Spacing & Grid</h2>
+
+            <p class="component-label">SPACING SCALE</p>
+            <div class="spacing-row"><span class="spacing-label">4px</span>
+                <div class="spacing-block" style="width: 16px; background: #2d62ff;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">8px</span>
+                <div class="spacing-block" style="width: 32px; background: #2d62ff;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">16px</span>
+                <div class="spacing-block" style="width: 64px; background: #2d62ff;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">32px</span>
+                <div class="spacing-block" style="width: 128px; background: #2d62ff;"></div>
+            </div>
+            <div class="spacing-row"><span class="spacing-label">64px</span>
+                <div class="spacing-block" style="width: 256px; background: #2d62ff;"></div>
+            </div>
+
+            <p class="component-label" style="margin-top: 40px;">LAYOUT SYSTEM</p>
+            <table class="type-table">
+                <tr>
+                    <td>Max Width</td>
+                    <td>1440px</td>
+                </tr>
+                <tr>
+                    <td>Base Grid</td>
+                    <td>4px Units</td>
+                </tr>
+                <tr>
+                    <td>Section Gap</td>
+                    <td>120px Vertical</td>
+                </tr>
+                <tr>
+                    <td>Container</td>
+                    <td>960px Content</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer">
+        <div>
+            <div class="guidelines-footer__brand" style="color: #2d62ff;">DAVID AI // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link" style="color: #2d62ff;">← Back to Galaxy
+                Store</a>
+        </div>
+        <div class="guidelines-footer__version">END OF PROTOCOL [SYS.VER.2.1.0]</div>
+    </footer>
+
 </body>
 
 </html>

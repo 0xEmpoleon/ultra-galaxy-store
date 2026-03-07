@@ -6,42 +6,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groth Studio | Design System [SYS.VER.2.0]</title>
     <link rel="stylesheet" href="../../shared/brand-guidelines.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&family=Inter:wght@400;500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --accent-color: oklch(0.60 0.16 158);
-            --bg: oklch(0.12 0 0);
-            --surface: oklch(0.18 0 0);
+            --accent-color: #595546;
+            --bg: #FFFFFF;
+            --surface: #F5F3ED;
+            --border: rgba(0, 0, 0, 0.1);
+            --text-main: #000000;
+            --text-muted: rgba(0, 0, 0, 0.5);
+            --footer-bg: rgb(89, 85, 70);
+            --footer-text: rgb(252, 250, 242);
+            --mono: 'Source Code Pro', 'GT America Mono LCG', monospace;
+            --terracotta: #C14B2A;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+        }
+
+        /* Override dark-mode defaults from shared CSS for this light-mode system */
+        .hero,
+        .spec-grid,
+        .guidelines-footer {
+            background: var(--bg);
+            color: var(--text-main);
+        }
+
+        .section-number,
+        .component-label,
+        .spacing-label {
+            color: var(--text-muted);
+        }
+
+        .hero__number {
+            color: var(--text-muted);
+        }
+
+        .section-title {
+            color: var(--text-main);
+        }
+
+        .section-description {
+            color: var(--text-muted);
+        }
+
+        .swatch__meta {
+            border-color: var(--border);
+        }
+
+        .swatch__hex,
+        .swatch__role {
+            color: var(--text-muted);
+        }
+
+        .swatch__name {
+            font-weight: 600;
+        }
+
+        .type-table td {
+            border-color: var(--border);
+            color: var(--text-main);
+        }
+
+        .specimen__label {
+            color: var(--text-muted);
+        }
+
+        .divider-plus {
+            color: var(--accent-color);
         }
 
         .hero__brand {
-            font-family: 'Geist Sans', 'Inter', sans-serif;
+            font-family: 'PP Neue Montreal', 'Inter', sans-serif;
             color: var(--accent-color);
-            letter-spacing: -0.05em;
+            letter-spacing: -0.03em;
         }
 
         .specimen__sample--display {
-            font-family: 'Geist Sans', 'Inter', sans-serif;
+            font-family: 'PP Neue Montreal', 'Inter', sans-serif;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        .hero__tagline {
+            color: var(--text-main);
+        }
+
+        .hero__description {
+            color: var(--text-muted);
+        }
+
+        .hero__source a {
             color: var(--accent-color);
-            letter-spacing: -0.04em;
         }
 
-        .color-swatch-prime {
-            background: oklch(0.25 0.04 158);
+        .ticker {
+            background: var(--accent-color);
+            color: var(--footer-text);
         }
 
-        .color-swatch-hy {
-            background: oklch(0.28 0.06 40);
+        /* Footer override for Groth's olive palette */
+        .guidelines-footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
         }
 
-        .color-swatch-term {
-            background: oklch(0.32 0.06 85);
+        .guidelines-footer__brand {
+            color: var(--footer-text) !important;
         }
 
-        .color-swatch-turbo {
-            background: oklch(0.24 0.08 300);
+        .back-link {
+            color: var(--footer-text) !important;
+            opacity: 0.7;
+        }
+
+        .guidelines-footer__version {
+            color: var(--footer-text);
+            opacity: 0.5;
+        }
+
+        /* Dotted divider — signature Groth element */
+        .groth-divider {
+            border: none;
+            border-top: 1px dotted rgba(0, 0, 0, 0.2);
+            margin: 2rem 0;
+        }
+
+        /* Project card preview */
+        .project-preview {
+            border-radius: 0.6rem;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .project-preview img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-preview__meta {
+            padding: 12px 16px;
+            background: var(--surface);
+        }
+
+        .project-preview__name {
+            font-family: 'PP Neue Montreal', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .project-preview__desc {
+            font-family: 'PP Neue Montreal', sans-serif;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Mono label style — exact from Groth */
+        .groth-mono {
+            font-family: 'GT America Mono LCG', 'Source Code Pro', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--text-muted);
+        }
+
+        /* Research sidebar dot */
+        .research-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--terracotta);
+            border-radius: 50%;
+            display: inline-block;
         }
     </style>
 </head>
@@ -49,10 +191,10 @@
 <body>
 
     <!-- TICKER -->
-    <div class="ticker" style="color: var(--accent-color); opacity: 0.6;">
+    <div class="ticker" style="opacity: 0.95;">
         <div class="ticker__inner">
-            GROTH STUDIO — architectural and product design — narrative-driven interiors — regenerative materials — GROTH STUDIO —
-            architectural and product design — narrative-driven interiors — regenerative materials — GROTH STUDIO —&nbsp;
+            GROTH STUDIO — HOSPITALITY & INTERIOR DESIGN — BARCELONA & NYC — REGENERATIVE MATERIALS — GROTH STUDIO —
+            HOSPITALITY & INTERIOR DESIGN — BARCELONA & NYC — REGENERATIVE MATERIALS — GROTH STUDIO —&nbsp;
         </div>
     </div>
 
@@ -60,14 +202,14 @@
     <section class="hero">
         <div class="hero__number">001 // CORE IDENTITY</div>
         <h1 class="hero__brand">GROTH</h1>
-        <p class="hero__tagline">Institutional Grade Onchain Yield</p>
+        <p class="hero__tagline">Architectural & Product Design Studio</p>
         <p class="hero__description">
-            The canonical visual identity reference for Groth Studio. This system balances institutional
-            authority with cryptographic transparency. It utilizes high-contrast dark modes, industrial textures, and
-            strategic color banding to delineate risk profiles.
+            The canonical visual identity reference for Groth Studio. This system balances architectural
+            precision with natural materiality. It utilizes clean white space, PP Neue Montreal typography,
+            dotted dividers, and an earthy olive-cream palette to evoke craft and conscious design.
         </p>
-        <p class="hero__source">Original → <a href="https://app.steakhouse.financial/" target="_blank"
-                style="color: var(--accent-color);">app.steakhouse.financial</a></p>
+        <p class="hero__source">Original → <a href="https://www.groth.studio/" target="_blank"
+                style="color: var(--accent-color);">groth.studio</a></p>
     </section>
 
     <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
@@ -76,43 +218,45 @@
         <div>
             <div class="section-number">002 // PALETTE</div>
             <h2 class="section-title">Color System</h2>
-            <p class="section-description">A foundation of Pure Deep Black and Surface Grey. Brand Green serves as the
-                primary action accent.</p>
+            <p class="section-description">A clean white canvas paired with olive-brown accents and cream warmth.
+                The terracotta dot signals active research content.</p>
 
             <div class="swatch">
-                <div class="swatch__color" style="background: oklch(0.12 0 0); color: #ffffff;">
-                    <span class="swatch__name">DEEP BLACK</span>
+                <div class="swatch__color"
+                    style="background: #FFFFFF; color: #000000; border: 1px solid rgba(0,0,0,0.1);">
+                    <span class="swatch__name">PURE WHITE</span>
                 </div>
                 <div class="swatch__meta">
-                    <div class="swatch__hex">oklch(0.12 0 0)</div>
+                    <div class="swatch__hex">#FFFFFF</div>
                     <div class="swatch__role">PRIMARY BACKGROUND</div>
                 </div>
             </div>
 
             <div class="swatch">
-                <div class="swatch__color" style="background: oklch(0.60 0.16 158); color: #000000;">
-                    <span class="swatch__name">BRAND GREEN</span>
+                <div class="swatch__color" style="background: #595546; color: #FCFAF2;">
+                    <span class="swatch__name">OLIVE BROWN</span>
                 </div>
                 <div class="swatch__meta">
-                    <div class="swatch__hex">oklch(0.60 0.16 158)</div>
-                    <div class="swatch__role">ACTION / ACCENT</div>
+                    <div class="swatch__hex">rgb(89, 85, 70)</div>
+                    <div class="swatch__role">FOOTER / ACCENT</div>
                 </div>
             </div>
 
-            <p class="component-label" style="margin-top: 32px;">STRATEGY THEMES</p>
+            <p class="component-label" style="margin-top: 32px;">SUPPORTING TONES</p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-prime"></div>
+                    <div class="swatch__color"
+                        style="background: #FCFAF2; color: #000; border: 1px solid rgba(0,0,0,0.08);"></div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">PRIME</div>
-                        <div class="swatch__role">TEAL</div>
+                        <div class="swatch__hex">CREAM</div>
+                        <div class="swatch__role">FOOTER TEXT</div>
                     </div>
                 </div>
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-hy"></div>
+                    <div class="swatch__color" style="background: #C14B2A; color: #fff;"></div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">HIGH YIELD</div>
-                        <div class="swatch__role">ORANGE</div>
+                        <div class="swatch__hex">TERRACOTTA</div>
+                        <div class="swatch__role">RESEARCH DOT</div>
                     </div>
                 </div>
             </div>
@@ -122,37 +266,52 @@
         <div>
             <div class="section-number">003 // TYPOGRAPHY</div>
             <h2 class="section-title">Type Hierarchy</h2>
-            <p class="section-description">Geist Sans provides the modular, institutional clarity required for financial
-                data. Inter serves as the robust fallback.</p>
+            <p class="section-description">PP Neue Montreal provides warm, humanist clarity across all weights.
+                GT America Mono LCG handles metadata labels in uppercase micro-type.</p>
 
             <div class="specimen">
                 <div class="specimen__sample specimen__sample--display"
-                    style="font-size: clamp(24px, 4vw, 48px); line-height: 1.1; font-weight: 700;">
-                    CRYPTO VAULTS BUILT FOR TRUST
+                    style="font-size: clamp(24px, 4vw, 48px); line-height: 1.06; font-weight: 500;">
+                    Consciously Designed Environments
                 </div>
-                <span class="specimen__label">GEIST SANS BOLD (H1 DISPLAY)</span>
+                <span class="specimen__label">↳ PP NEUE MONTREAL MEDIUM (H3 DISPLAY)</span>
             </div>
 
             <div class="specimen">
                 <div class="specimen__sample"
-                    style="font-family: 'PP Neue Montreal', sans-serif; font-weight: 600; font-size: clamp(18px, 2vw, 24px);">
-                    architectural and product design Infrastructure
+                    style="font-family: 'PP Neue Montreal', sans-serif; font-weight: 500; font-size: clamp(18px, 2vw, 28px); line-height: 1.06;">
+                    Catskills Residence
                 </div>
-                <span class="specimen__label">INTER SEMIBOLD (SUBHEADINGS)</span>
+                <span class="specimen__label">↳ PP NEUE MONTREAL MEDIUM (H4 PROJECT TITLES)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample groth-mono" style="font-size: 10px; line-height: 14px;">
+                    IN PROGRESS &nbsp; • &nbsp; 7:52PM ET &nbsp; • &nbsp; CATSKILLS, NEW YORK
+                </div>
+                <span class="specimen__label">↳ GT AMERICA MONO LCG (METADATA LABELS)</span>
             </div>
 
             <table class="type-table">
                 <tr>
-                    <td>Typeface</td>
-                    <td>Geist Sans / Inter</td>
+                    <td>Primary Typeface</td>
+                    <td>PP Neue Montreal</td>
                 </tr>
                 <tr>
-                    <td>Role</td>
-                    <td>Headlines & UI Labels</td>
+                    <td>Mono Typeface</td>
+                    <td>GT America Mono LCG</td>
                 </tr>
                 <tr>
-                    <td>Letter Spacing</td>
-                    <td>-0.04em (Display) / 0.1em (Labels)</td>
+                    <td>Body Weight</td>
+                    <td>500 (Medium)</td>
+                </tr>
+                <tr>
+                    <td>Body Size / Line Height</td>
+                    <td>16px / 24px</td>
+                </tr>
+                <tr>
+                    <td>Mono Style</td>
+                    <td>Uppercase, 10px, weight 400</td>
                 </tr>
             </table>
         </div>
@@ -165,54 +324,88 @@
         <!-- INTERFACE COMPONENTS -->
         <div>
             <div class="section-number">004 // INTERFACE COMPONENTS</div>
-            <h2 class="section-title">Institutional UI</h2>
+            <h2 class="section-title">Navigation & Layout</h2>
 
-            <p class="component-label">ACTION BUTTONS</p>
-            <div class="btn-showcase">
-                <button class="btn-demo btn-demo--solid"
-                    style="background: var(--accent-color); color: #000; border-radius: 8px; font-weight: 600;">CONNECT
-                    WALLET</button>
-                <button class="btn-demo btn-demo--outline"
-                    style="color: var(--accent-color); border-color: var(--accent-color); border-radius: 8px;">DOCS
-                    ↗</button>
+            <p class="component-label">LINK ARROWS</p>
+            <div style="margin-bottom: 24px;">
+                <a href="#"
+                    style="display: inline-flex; align-items: center; gap: 8px; font-family: 'PP Neue Montreal', sans-serif; font-size: 20px; font-weight: 500; color: #000; text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 4px;">
+                    View Project
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.5186 6.85199L6.98997 13.536L5.63004 12.2077L9.9328 7.8025L0.150142 7.8025L0.150142 5.90149L9.9328 5.90149L5.63004 1.49628L6.98997 0.167968L13.5186 6.85199Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </a>
             </div>
 
-            <p class="component-label">RISK BADGES</p>
-            <div style="display: flex; gap: 8px;">
-                <span
-                    style="background: var(--accent-color); color: #000; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">A</span>
-                <span
-                    style="background: oklch(0.28 0.06 40); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">CC</span>
+            <p class="component-label">STATUS TAGS</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                <span class="groth-mono" style="background: rgba(0,0,0,0.06); padding: 4px 10px; border-radius: 4px;">in
+                    progress</span>
+                <span style="display: flex; align-items: center; gap: 6px;">
+                    <span class="research-dot"></span>
+                    <span class="groth-mono">Research & Design</span>
+                </span>
             </div>
+
+            <p class="component-label">DOTTED DIVIDERS</p>
+            <hr class="groth-divider">
+            <hr class="groth-divider">
 
             <p class="component-label" style="margin-top: 32px;">SURFACE PROPERTIES</p>
             <div class="spacing-row">
-                <span class="spacing-label">Radius</span>
+                <span class="spacing-label">Border Radius</span>
                 <div
-                    style="width: 60px; height: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;">
+                    style="width: 80px; height: 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 0.6rem;">
                 </div>
-                <span style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">16px — MODERN</span>
+                <span style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">0.6rem —
+                    ROUNDED</span>
+            </div>
+
+            <div class="spacing-row" style="margin-top: 12px;">
+                <span class="spacing-label">Image Corners</span>
+                <div style="width: 80px; height: 50px; background: #ddd; border-radius: 0.6rem; overflow: hidden;">
+                    <img src="https://cdn.prod.website-files.com/6632bf67ec9f77f3c8147f67/69067215597b1fed5d098682_Catskills%20kitchen%20teaser%20image%2002-p-500.jpg"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <span style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">.is-rounded</span>
             </div>
         </div>
 
         <!-- VISUAL ASSETS -->
         <div>
             <div class="section-number">005 // VISUAL ASSETS</div>
-            <h2 class="section-title">Textures & Masks</h2>
-            <p class="section-description">Groth utilizes layered photographic masks and dot patterns to create
-                depth.</p>
+            <h2 class="section-title">Brand Mark & Projects</h2>
+            <p class="section-description">Groth's identity centers on a geometric logo mark with an animated Lottie
+                sequence,
+                paired with clean project photography and hand-drawn SVG illustrations.</p>
 
-            <div style="margin-bottom: 24px;">
-                <p class="component-label">HERO COLLAGE</p>
-                <div style="background: #000; padding: 12px; border: 1px solid var(--border); border-radius: 8px;">
-                    <img src="https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcollage.0fe3853b.png&w=640&q=75"
-                        style="width: 100%; height: 120px; object-fit: contain; opacity: 0.6;">
-                </div>
+            <p class="component-label">LOGO MARK</p>
+            <div
+                style="background: #000; padding: 24px; border-radius: 0.6rem; text-align: center; margin-bottom: 24px;">
+                <img src="https://cdn.prod.website-files.com/6632bf67ec9f77f3c8147f67/66339b73ff90dd39cd456597_logo-groth.svg"
+                    style="height: 120px; opacity: 0.9;" alt="Groth Logo">
             </div>
 
-            <p class="component-label">DOT GRID OVERLAY</p>
+            <p class="component-label">BRAND WORDMARK</p>
             <div
-                style="height: 60px; background-image: url('https://app.steakhouse.financial/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdotgrid.2c508048.png&w=96&q=75'); background-size: 24px; border: 1px solid var(--border); opacity: 0.8; border-radius: 8px;">
+                style="background: var(--surface); padding: 20px; border-radius: 0.6rem; display: flex; align-items: center; gap: 12px; margin-bottom: 24px; border: 1px solid var(--border);">
+                <img src="https://cdn.prod.website-files.com/6632bf67ec9f77f3c8147f67/663a8cec29f13cfb5cc0a57d_groth.svg"
+                    style="height: 32px;" alt="Groth Symbol">
+                <img src="https://cdn.prod.website-files.com/6632bf67ec9f77f3c8147f67/663a8cecc06ab0c519c34d12_text.svg"
+                    style="height: 20px;" alt="Groth Text">
+            </div>
+
+            <p class="component-label">PROJECT CARD</p>
+            <div class="project-preview">
+                <img src="https://cdn.prod.website-files.com/6632bf67ec9f77f3c8147f67/680182948c4be08929f9d9a4_ernestos%20cover-p-500.jpg"
+                    alt="Ernesto's">
+                <div class="project-preview__meta">
+                    <div class="project-preview__name">Ernesto's</div>
+                    <div class="project-preview__desc">Art nouveau architecture through a Basque lens, featuring custom
+                        lighting.</div>
+                </div>
             </div>
         </div>
     </div>
@@ -220,8 +413,8 @@
     <!-- FOOTER -->
     <footer class="guidelines-footer">
         <div>
-            <div class="guidelines-footer__brand" style="color: var(--accent-color);">GROTH STUDIO // 2026</div>
-            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link" style="color: var(--accent-color);">←
+            <div class="guidelines-footer__brand">GROTH STUDIO // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link">←
                 Back to Galaxy Store</a>
         </div>
         <div class="guidelines-footer__version">END OF SPEC [SYS.VER.2.0]</div>

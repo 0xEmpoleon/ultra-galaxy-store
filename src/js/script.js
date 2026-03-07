@@ -267,6 +267,24 @@ const DESIGN_SYSTEMS = {
         '--sys-3d-color': '#FF4F33',
         '--sys-3d-edge': '#1A1A1A'
     },
+    somnia: {
+        '--sys-bg-main': '#000000',
+        '--sys-text-primary': '#FFFFFF',
+        '--sys-text-secondary': 'rgba(255, 255, 255, 0.5)',
+        '--sys-border': 'rgba(255, 255, 255, 0.1)',
+        '--bi-divider': 'rgba(255, 255, 255, 0.1)',
+        '--bi-bg': '#0F0F0F',
+        '--bi-text': '#FFFFFF',
+        '--bi-header-bg': '#711AFF',
+        '--sys-font-primary': "'polySans', system-ui, sans-serif",
+        '--sys-font-display': "'polySans', system-ui, sans-serif",
+        '--sys-accent-shadow': '0 0 60px rgba(113, 26, 255, 0.4)',
+        '--sys-button-radius': '12px',
+        '--sys-button-bg-hover': '#711AFF',
+        '--sys-button-text-hover': '#FFFFFF',
+        '--sys-3d-color': '#711AFF',
+        '--sys-3d-edge': '#333AFF'
+    },
     groth: {
         '--sys-bg-main': '#FFFFFF',
         '--sys-text-primary': '#000000',

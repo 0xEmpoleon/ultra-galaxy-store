@@ -1,0 +1,16 @@
+[
+  {
+    "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "fontWeight": "400",
+    "fontSize": "16px",
+    "sampleTag": "html",
+    "sampleClass": "light"
+  },
+  {
+    "fontFamily": "polySans, \"polySans Fallback\"",
+    "fontWeight": "400",
+    "fontSize": "16px",
+    "sampleTag": "body",
+    "sampleClass": "antialiased font-sans polysans_a1f00868-module__z1_7Wa__className"
+  }
+]

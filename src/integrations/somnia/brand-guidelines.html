@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia Network | Design System [SYS.VER.2.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #711AFF;
+            --bg: #000000;
+            --surface: #0F0F0F;
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.5);
+            --mono: 'Source Code Pro', monospace;
+            --gradient-orion: linear-gradient(225deg, #8E47FF 0%, #333AFF 100%);
+            --gradient-aurora: linear-gradient(225deg, #00D4FF 0%, #FF00D5 100%);
+            --gradient-celestine: linear-gradient(225deg, #00D4FF 0%, #D6FF66 100%);
+            --gradient-solaris: linear-gradient(225deg, #FF00D5 0%, #FCFF66 100%);
+            --gradient-phoenix: linear-gradient(225deg, #FBFF00 0%, #FF006A 100%);
+        }
+
+        .hero__brand {
+            font-family: 'polySans', system-ui, sans-serif;
+            background: var(--gradient-orion);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .specimen__sample--display {
+            font-family: 'polySans', system-ui, sans-serif;
+            color: var(--text-main);
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        .gradient-strip {
+            height: 48px;
+            border-radius: 0.75rem;
+            margin-bottom: 8px;
+        }
+
+        .gradient-label {
+            font-family: var(--mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+
+        .nebula-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .nebula-swatch {
+            height: 60px;
+            border-radius: 0.75rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nebula-swatch span {
+            position: absolute;
+            bottom: 4px;
+            left: 8px;
+            font-family: var(--mono);
+            font-size: 8px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .color-chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .color-chip__dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .color-chip__name {
+            font-family: var(--mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .color-chip__hex {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--text-main);
+        }
+
+        .somnia-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-family: 'polySans', system-ui, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .somnia-btn--primary {
+            background: var(--gradient-orion);
+        }
+
+        .somnia-btn--outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+        }
+
+        .somnia-btn--secondary {
+            background: #1A1A1A;
+            color: var(--text-main);
+        }
+
+        .ticker {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TICKER -->
+    <div class="ticker" style="opacity: 0.95;">
+        <div class="ticker__inner">
+            SOMNIA NETWORK — BUILD EVERYTHING ON CHAIN — THE FASTEST EVM-COMPATIBLE L1 — SOMNIA NETWORK —
+            BUILD EVERYTHING ON CHAIN — THE FASTEST EVM-COMPATIBLE L1 — SOMNIA NETWORK —&nbsp;
+        </div>
+    </div>
+
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">SOMNIA</h1>
+        <p class="hero__tagline" style="color: var(--text-main);">Build Everything On Chain</p>
+        <p class="hero__description" style="color: var(--text-muted);">
+            The canonical visual identity reference for Somnia Network. This system pairs a dark cosmic
+            aesthetic with vibrant gradient accents, polySans typography, and a rich token system spanning
+            291 CSS variables. The design language evokes deep space exploration and next-generation blockchain
+            infrastructure.
+        </p>
+        <p class="hero__source">Original → <a href="https://somnia.network/" target="_blank"
+                style="color: var(--accent-color);">somnia.network</a></p>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">002 // PALETTE</div>
+            <h2 class="section-title" style="color: var(--text-main);">Color System</h2>
+            <p class="section-description" style="color: var(--text-muted);">A dual-tone foundation of pure black and
+                white,
+                accented by a vivid spectrum of purples, blues, greens, and warm tones. 291 CSS variables power the full
+                system.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #000000; color: #ffffff;">
+                    <span class="swatch__name">PRIMARY BLACK</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex" style="color: var(--text-muted);">#000000</div>
+                    <div class="swatch__role" style="color: var(--text-muted);">BACKGROUND / FOOTER</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #FFFFFF; color: #000000;">
+                    <span class="swatch__name">PRIMARY WHITE</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex" style="color: var(--text-muted);">#FFFFFF</div>
+                    <div class="swatch__role" style="color: var(--text-muted);">CONTENT BACKGROUND</div>
+                </div>
+            </div>
+
+            <p class="component-label" style="margin-top: 28px; color: var(--text-muted);">ACCENT SPECTRUM</p>
+            <div class="color-chip">
+                <div class="color-chip__dot" style="background: #711AFF;"></div>
+                <span class="color-chip__name">Deep Purple</span>
+                <span class="color-chip__hex">#711AFF</span>
+            </div>
+            <div class="color-chip">
+                <div class="color-chip__dot" style="background: #00D4FF;"></div>
+                <span class="color-chip__name">Ice Blue</span>
+                <span class="color-chip__hex">#00D4FF</span>
+            </div>
+            <div class="color-chip">
+                <div class="color-chip__dot" style="background: #61EA7D;"></div>
+                <span class="color-chip__name">Mint Green</span>
+                <span class="color-chip__hex">#61EA7D</span>
+            </div>
+            <div class="color-chip">
+                <div class="color-chip__dot" style="background: #FF00D5;"></div>
+                <span class="color-chip__name">Pink</span>
+                <span class="color-chip__hex">#FF00D5</span>
+            </div>
+            <div class="color-chip">
+                <div class="color-chip__dot" style="background: #BBFF00;"></div>
+                <span class="color-chip__name">Acid Green</span>
+                <span class="color-chip__hex">#BBFF00</span>
+            </div>
+            <div class="color-chip">
+                <div class="color-chip__dot" style="background: #FF7B00;"></div>
+                <span class="color-chip__name">Orange</span>
+                <span class="color-chip__hex">#FF7B00</span>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">003 // TYPOGRAPHY</div>
+            <h2 class="section-title" style="color: var(--text-main);">Type Hierarchy</h2>
+            <p class="section-description" style="color: var(--text-muted);">polySans serves as the sole typeface across
+                all weights,
+                providing a clean geometric sans-serif voice for both hero displays and body text.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: clamp(28px, 5vw, 56px); line-height: 100%;">
+                    Build Everything On Chain
+                </div>
+                <span class="specimen__label" style="color: var(--text-muted);">↳ POLYSANS SEMIBOLD (H1 — clamp(56px,
+                    4.5vw, 72px))</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display" style="font-size: 32px; line-height: 100%;">
+                    The Fastest EVM Layer One
+                </div>
+                <span class="specimen__label" style="color: var(--text-muted);">↳ POLYSANS SEMIBOLD (H2 — 32px)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-family: 'polySans', system-ui, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: var(--text-muted);">
+                    The fastest EVM-compatible layer one blockchain for a fully onchain world.
+                </div>
+                <span class="specimen__label" style="color: var(--text-muted);">↳ POLYSANS REGULAR (BODY — 20px /
+                    16px)</span>
+            </div>
+
+            <table class="type-table">
+                <tr>
+                    <td style="border-color: var(--border); color: var(--text-main);">Typeface</td>
+                    <td style="border-color: var(--border); color: var(--text-main);">polySans</td>
+                </tr>
+                <tr>
+                    <td style="border-color: var(--border); color: var(--text-main);">Weights</td>
+                    <td style="border-color: var(--border); color: var(--text-main);">400 (Regular), 600 (Semibold)</td>
+                </tr>
+                <tr>
+                    <td style="border-color: var(--border); color: var(--text-main);">H1 Size</td>
+                    <td style="border-color: var(--border); color: var(--text-main);">clamp(56px, 4.5vw, 72px)</td>
+                </tr>
+                <tr>
+                    <td style="border-color: var(--border); color: var(--text-main);">Letter Spacing</td>
+                    <td style="border-color: var(--border); color: var(--text-main);">0% (all weights)</td>
+                </tr>
+                <tr>
+                    <td style="border-color: var(--border); color: var(--text-main);">Border Radius</td>
+                    <td style="border-color: var(--border); color: var(--text-main);">0.75rem (12px)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divider-plus" style="color: var(--accent-color);">+</div>
+
+    <!-- 004 // GRADIENTS + 005 // INTERFACE -->
+    <div class="spec-grid">
+        <!-- GRADIENT SYSTEM -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">004 // GRADIENT SYSTEM</div>
+            <h2 class="section-title" style="color: var(--text-main);">Dream Gradients</h2>
+            <p class="section-description" style="color: var(--text-muted);">Five signature gradients define Somnia's
+                visual energy.
+                Each is a 225° diagonal blend of two accent colors.</p>
+
+            <div class="gradient-strip" style="background: var(--gradient-orion);"></div>
+            <div class="gradient-label">DREAM ORION — Purple → Blue</div>
+
+            <div class="gradient-strip" style="background: var(--gradient-aurora);"></div>
+            <div class="gradient-label">DREAM AURORA — Ice Blue → Pink</div>
+
+            <div class="gradient-strip" style="background: var(--gradient-celestine);"></div>
+            <div class="gradient-label">DREAM CELESTINE — Ice Blue → Acid Green</div>
+
+            <div class="gradient-strip" style="background: var(--gradient-solaris);"></div>
+            <div class="gradient-label">DREAM SOLARIS — Pink → Yellow</div>
+
+            <div class="gradient-strip" style="background: var(--gradient-phoenix);"></div>
+            <div class="gradient-label">DREAM PHOENIX — Yellow → Cherry Red</div>
+
+            <p class="component-label" style="margin-top: 28px; color: var(--text-muted);">NEBULA RADIAL BACKGROUNDS</p>
+            <div class="nebula-grid">
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #510135 0%, #000 100%);">
+                    <span>Rosette</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #320151 0%, #000 100%);">
+                    <span>Helix</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #0021B3 0%, #000 100%);">
+                    <span>Lunar</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #00382E 0%, #000 100%);">
+                    <span>Lagoon</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #01512A 0%, #000 100%);">
+                    <span>Tarantula</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #513501 0%, #000 100%);">
+                    <span>Butterfly</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #511901 0%, #000 100%);">
+                    <span>Carina</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #510101 0%, #000 100%);">
+                    <span>Crab</span></div>
+                <div class="nebula-swatch"
+                    style="background: radial-gradient(85.65% 100% at 50% 100%, #1A1A1A 0%, #000 100%);">
+                    <span>Horsehead</span></div>
+            </div>
+        </div>
+
+        <!-- INTERFACE COMPONENTS -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">005 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title" style="color: var(--text-main);">Buttons & Surfaces</h2>
+
+            <p class="component-label" style="color: var(--text-muted);">PRIMARY CTA</p>
+            <div style="margin-bottom: 24px;">
+                <button class="somnia-btn somnia-btn--primary">Explore Documentation</button>
+            </div>
+
+            <p class="component-label" style="color: var(--text-muted);">SECONDARY ACTIONS</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
+                <button class="somnia-btn somnia-btn--secondary">Read All</button>
+                <button class="somnia-btn somnia-btn--outline">Learn More</button>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px; color: var(--text-muted);">SURFACE PROPERTIES</p>
+            <div class="spacing-row">
+                <span class="spacing-label" style="color: var(--text-muted);">Card Radius</span>
+                <div
+                    style="width: 80px; height: 50px; background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem;">
+                </div>
+                <span style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">0.75rem — 12px</span>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px; color: var(--text-muted);">HERO SECTION</p>
+            <div
+                style="background: #000; border-radius: 0.75rem; padding: 32px; text-align: center; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(113,26,255,0.15) 0%, transparent 70%);">
+                </div>
+                <div style="position: relative; z-index: 1;">
+                    <div
+                        style="font-family: 'polySans', system-ui, sans-serif; font-weight: 600; font-size: 28px; color: #fff; margin-bottom: 8px;">
+                        Build Everything On Chain</div>
+                    <div
+                        style="font-family: 'polySans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 16px;">
+                        The fastest EVM-compatible layer one blockchain</div>
+                    <button class="somnia-btn somnia-btn--primary" style="font-size: 12px; padding: 8px 16px;">Explore
+                        Documentation</button>
+                </div>
+            </div>
+
+            <p class="component-label" style="margin-top: 32px; color: var(--text-muted);">FOOTER LAYOUT</p>
+            <div
+                style="background: #000; border-radius: 0.75rem; padding: 20px; border: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; font-size: 11px;">
+                <div>
+                    <div
+                        style="font-family: 'polySans', system-ui, sans-serif; font-weight: 600; color: #fff; margin-bottom: 6px;">
+                        somnia</div>
+                    <div style="color: rgba(255,255,255,0.4); font-family: var(--mono); font-size: 9px;">© 2026 SOMNIA
+                        NETWORK</div>
+                </div>
+                <div style="display: flex; gap: 24px;">
+                    <div>
+                        <div
+                            style="color: rgba(255,255,255,0.4); font-family: var(--mono); font-size: 9px; margin-bottom: 4px;">
+                            APP</div>
+                        <div
+                            style="color: rgba(255,255,255,0.7); font-family: 'polySans', system-ui, sans-serif; font-size: 10px;">
+                            Liquidity Points</div>
+                    </div>
+                    <div>
+                        <div
+                            style="color: rgba(255,255,255,0.4); font-family: var(--mono); font-size: 9px; margin-bottom: 4px;">
+                            COMPANY</div>
+                        <div
+                            style="color: rgba(255,255,255,0.7); font-family: 'polySans', system-ui, sans-serif; font-size: 10px;">
+                            Careers</div>
+                    </div>
+                    <div>
+                        <div
+                            style="color: rgba(255,255,255,0.4); font-family: var(--mono); font-size: 9px; margin-bottom: 4px;">
+                            LEARN</div>
+                        <div
+                            style="color: rgba(255,255,255,0.7); font-family: 'polySans', system-ui, sans-serif; font-size: 10px;">
+                            Docs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer" style="background: #000; color: #fff;">
+        <div>
+            <div class="guidelines-footer__brand" style="color: var(--accent-color);">SOMNIA NETWORK // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link"
+                style="color: var(--accent-color); opacity: 0.7;">←
+                Back to Galaxy Store</a>
+        </div>
+        <div class="guidelines-footer__version" style="color: rgba(255,255,255,0.4);">END OF SPEC [SYS.VER.2.0]</div>
+    </footer>
+
+</body>
+
+</html>

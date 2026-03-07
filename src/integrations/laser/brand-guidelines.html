@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Digital | Design System [SYS.VER.2.0]</title>
+    <link rel="stylesheet" href="../../shared/brand-guidelines.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #ff6568;
+            --bg: #0d0e10;
+            --surface: #18181e;
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #ffffff;
+            --text-muted: #636b74;
+            --mono: 'Source Code Pro', monospace;
+        }
+
+        body {
+            background: var(--bg);
+        }
+
+        .hero__brand {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--accent-color);
+            letter-spacing: -0.02em;
+        }
+
+        .specimen__sample--display {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text-main);
+        }
+
+        .ticker {
+            background: var(--accent-color);
+        }
+
+        .swatch__color {
+            border: 1px solid var(--border);
+        }
+
+        .gradient-preview {
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .gradient-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .gradient-value {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.4);
+            word-break: break-all;
+        }
+
+        .gradient-card {
+            margin-bottom: 24px;
+        }
+
+        .video-preview {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            mix-blend-mode: lighten;
+            margin: 20px 0;
+        }
+
+        .grid-line-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1px;
+            background: var(--border);
+            margin: 20px 0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .grid-line-demo div {
+            background: var(--surface);
+            padding: 24px 16px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-main);
+            font-family: 'Inter', system-ui;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: transparent;
+            margin-right: 12px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-preview:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-preview--primary {
+            background: var(--text-main);
+            color: var(--bg);
+            border-color: transparent;
+        }
+
+        .btn-preview--accent {
+            background: transparent;
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker__inner">
+            LASER DIGITAL — POWERING DIGITAL FINANCE FOR INSTITUTIONS — LASER DIGITAL — POWERING DIGITAL FINANCE FOR
+            INSTITUTIONS —&nbsp;
+        </div>
+    </div>
+
+    <!-- 001 // CORE IDENTITY -->
+    <section class="hero">
+        <div class="hero__number">001 // CORE IDENTITY</div>
+        <h1 class="hero__brand">Laser Digital</h1>
+        <p class="hero__tagline" style="color: var(--text-main);">Powering Digital Finance <em
+                style="color: var(--accent-color);">for</em> Institutions</p>
+        <p class="hero__description" style="color: var(--text-muted);">
+            A regulated full-spectrum digital finance company, operating as a trusted partner to institutions seeking
+            compliant, risk-managed opportunities in digital assets. A subsidiary of the Nomura Group.
+        </p>
+        <p class="hero__source">Original → <a href="https://laser-capital.vercel.app/" target="_blank"
+                style="color: var(--accent-color);">laser-capital.vercel.app</a></p>
+
+        <!-- 3D Logo Preview -->
+        <video class="video-preview" autoplay loop muted playsinline>
+            <source
+                src="https://be-laserdigital-prod-lpenf.ondigitalocean.app/api/media/file/Laser%20Website%20Logo%20Off%20Black%202026.mp4"
+                type="video/mp4">
+        </video>
+    </section>
+
+    <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
+    <div class="spec-grid">
+        <!-- PALETTE -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">002 // PALETTE</div>
+            <h2 class="section-title" style="color: var(--text-main);">Color System</h2>
+            <p class="section-description" style="color: var(--text-muted);">Deep dark institutional palette with
+                iridescent accents. Minimalist surfaces separated by architectural grid lines.</p>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #0d0e10;">
+                    <span class="swatch__name" style="color: #fff;">Background</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#0D0E10</div>
+                    <div class="swatch__role">base1000 — Primary Background</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #18181e;">
+                    <span class="swatch__name" style="color: #fff;">Surface</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#18181E</div>
+                    <div class="swatch__role">base900 — Cards, Surfaces, Ticker</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #ff6568;">
+                    <span class="swatch__name">Coral</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#FF6568</div>
+                    <div class="swatch__role">red-400 — Accent, Highlights, Ticker glow</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #c0ffe3;">
+                    <span class="swatch__name" style="color: #0d0e10;">Seafoam</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#C0FFE3</div>
+                    <div class="swatch__role">accent500 — CTAs, Read More links</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #00ff95;">
+                    <span class="swatch__name" style="color: #0d0e10;">Neon Green</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#00FF95</div>
+                    <div class="swatch__role">accent800 — Active States</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #636b74;">
+                    <span class="swatch__name" style="color: #fff;">Muted</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#636B74</div>
+                    <div class="swatch__role">base500 — Secondary Text, Captions</div>
+                </div>
+            </div>
+
+            <div class="swatch">
+                <div class="swatch__color" style="background: #bfc7cf;">
+                    <span class="swatch__name" style="color: #0d0e10;">Body Text</span>
+                </div>
+                <div class="swatch__meta">
+                    <div class="swatch__hex">#BFC7CF</div>
+                    <div class="swatch__role">base200 — Body Copy, Descriptions</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">003 // TYPOGRAPHY</div>
+            <h2 class="section-title" style="color: var(--text-main);">Type Hierarchy</h2>
+            <p class="section-description" style="color: var(--text-muted);">Aspekta — a modern geometric sans-serif
+                loaded in weights 250–700. Clean, institutional, with italic emphasis for "for" in taglines.</p>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display" style="font-size: 48px; font-weight: 300;">
+                    Powering Digital Finance
+                </div>
+                <span class="specimen__label">↳ ASPEKTA LIGHT (HERO — 4rem / 64px)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display" style="font-size: 36px; font-weight: 500;">
+                    Research & Insights
+                </div>
+                <span class="specimen__label">↳ ASPEKTA MEDIUM (H2 — 3rem / 48px)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample specimen__sample--display"
+                    style="font-size: 18px; font-weight: 400; color: #bfc7cf; line-height: 1.7;">
+                    A regulated full-spectrum digital finance company, operating as a trusted partner to institutions.
+                </div>
+                <span class="specimen__label">↳ ASPEKTA REGULAR (BODY — 1.125rem / 18px)</span>
+            </div>
+
+            <div class="specimen">
+                <div class="specimen__sample"
+                    style="font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">
+                    SERVICES · RESEARCH · COMPANY · GLOBAL
+                </div>
+                <span class="specimen__label">↳ ASPEKTA MEDIUM (NAV — 0.75rem / CAPS / 0.1em)</span>
+            </div>
+
+            <table class="type-table">
+                <tr>
+                    <td>Typeface</td>
+                    <td>Aspekta</td>
+                </tr>
+                <tr>
+                    <td>Weights</td>
+                    <td>250 · 300 · 400 · 500 · 700</td>
+                </tr>
+                <tr>
+                    <td>Hero</td>
+                    <td>4rem / 64px · Light 300 · LH 5rem</td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>3rem / 48px · Medium 500 · LH 4.3rem</td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td>1.125rem / 18px · Regular 400 · LH 1.6</td>
+                </tr>
+                <tr>
+                    <td>Caption</td>
+                    <td>0.75rem / 12px · Medium 500 · UPPERCASE</td>
+                </tr>
+                <tr>
+                    <td>Italic Emphasis</td>
+                    <td>"for" in tagline — italic, weight 300, coral accent</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divider-plus" style="color: var(--accent-color);">+</div>
+
+    <!-- 004 // GRADIENTS + 005 // INTERFACE -->
+    <div class="spec-grid">
+        <!-- GRADIENTS -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">004 // EFFECTS</div>
+            <h2 class="section-title" style="color: var(--text-main);">Iridescent Gradients & Grid Architecture</h2>
+            <p class="section-description" style="color: var(--text-muted);">Deep magenta-to-navy gradients create a
+                cosmic institutional feel. 1px architectural grid lines divide the page into a financial terminal grid.
+            </p>
+
+            <div class="gradient-card">
+                <div class="gradient-preview"
+                    style="background: linear-gradient(200.06deg, #621c44 0%, #191c3b 25.9%, #0d0e10 74.2%);"></div>
+                <div class="gradient-label">Laser Gradient</div>
+                <div class="gradient-value">linear-gradient(200.06deg, #621c44 0%, #191c3b 25.9%, #0d0e10 74.2%)</div>
+            </div>
+
+            <div class="gradient-card">
+                <div class="gradient-preview"
+                    style="background: linear-gradient(224deg, #611b43 0%, #171b39 31.76%, #0d0e10 65%);"></div>
+                <div class="gradient-label">Header Gradient</div>
+                <div class="gradient-value">linear-gradient(224deg, #611b43 0%, #171b39 31.76%, #0d0e10 65%)</div>
+            </div>
+
+            <div class="gradient-card">
+                <div class="gradient-preview"
+                    style="background: linear-gradient(90deg, transparent, #ff6568, #c0ffe3, transparent);"></div>
+                <div class="gradient-label">Ticker Glow</div>
+                <div class="gradient-value">linear-gradient(90deg, transparent, #ff6568, #c0ffe3, transparent)</div>
+            </div>
+
+            <div style="margin-top: 32px;">
+                <div class="gradient-label" style="margin-bottom: 12px;">Architectural Grid System</div>
+                <div class="grid-line-demo">
+                    <div>Trading</div>
+                    <div>Asset Mgmt</div>
+                    <div>Solutions</div>
+                    <div>Ventures</div>
+                </div>
+                <div class="gradient-value">1px borders · rgba(255,255,255,0.08) · Financial terminal feel</div>
+            </div>
+        </div>
+
+        <!-- INTERFACE -->
+        <div>
+            <div class="section-number" style="color: var(--text-muted);">005 // INTERFACE COMPONENTS</div>
+            <h2 class="section-title" style="color: var(--text-main);">Buttons & Surfaces</h2>
+
+            <div style="margin-bottom: 32px;">
+                <div class="gradient-label" style="margin-bottom: 16px;">Button Variants</div>
+                <button class="btn-preview btn-preview--primary">Subscribe</button>
+                <button class="btn-preview">Learn More →</button>
+                <button class="btn-preview btn-preview--accent">Read Case Study →</button>
+            </div>
+
+            <div style="margin-bottom: 32px;">
+                <div class="gradient-label" style="margin-bottom: 16px;">Service Card Triangle</div>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div
+                        style="width: 0; height: 0; border-left: 24px solid #ff6568; border-bottom: 24px solid transparent;">
+                    </div>
+                    <span style="font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted);">Top-left
+                        triangle indicator on service cards · #FF6568</span>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 32px;">
+                <div class="gradient-label" style="margin-bottom: 16px;">News Ticker</div>
+                <div
+                    style="background: #18181e; padding: 10px 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-radius: 4px; position: relative; overflow: hidden;">
+                    <span style="color: #ff6568; font-weight: 600;">LASER DIGITAL</span> RECEIVES APPROVAL FOR DIGITAL
+                    ASSET CUSTODY
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #ff6568, #c0ffe3, transparent); opacity: 0.5;">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="gradient-label" style="margin-bottom: 16px;">Institutional Partners</div>
+                <div style="display: flex; gap: 32px; align-items: center;">
+                    <img src="https://laser-capital.vercel.app/images/nomura.svg" alt="Nomura"
+                        style="height: 24px; filter: brightness(0) invert(1); opacity: 0.6;">
+                    <img src="https://laser-capital.vercel.app/images/vara.svg" alt="VARA"
+                        style="height: 24px; filter: brightness(0) invert(1); opacity: 0.6;">
+                    <img src="https://laser-capital.vercel.app/images/adgm.svg" alt="ADGM"
+                        style="height: 24px; filter: brightness(0) invert(1); opacity: 0.6;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="guidelines-footer" style="background: var(--bg); color: var(--text-main);">
+        <div>
+            <div class="guidelines-footer__brand" style="color: var(--accent-color);">LASER DIGITAL // 2026</div>
+            <a href="https://ultra-galaxy-store.vercel.app/" class="back-link"
+                style="color: var(--accent-color); opacity: 0.7;">← Back to Galaxy Store</a>
+        </div>
+        <div class="guidelines-footer__version" style="color: var(--text-muted);">END OF SPEC [SYS.VER.2.0]</div>
+    </footer>
+
+</body>
+
+</html>

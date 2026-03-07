@@ -325,6 +325,24 @@ const DESIGN_SYSTEMS = {
         '--strategy-term': '#696038',
         '--strategy-turbo': '#583655'
     },
+    laser: {
+        '--sys-bg-main': '#0d0e10',
+        '--sys-text-primary': '#ffffff',
+        '--sys-text-secondary': '#bfc7cf',
+        '--sys-border': 'rgba(255, 255, 255, 0.08)',
+        '--bi-divider': 'rgba(255, 255, 255, 0.08)',
+        '--bi-bg': '#18181e',
+        '--bi-text': '#ffffff',
+        '--bi-header-bg': '#621c44',
+        '--sys-font-primary': "'Inter', ui-sans-serif, sans-serif",
+        '--sys-font-display': "'Inter', ui-sans-serif, sans-serif",
+        '--sys-accent-shadow': '0 0 40px rgba(255, 101, 104, 0.4)',
+        '--sys-button-radius': '4px',
+        '--sys-button-bg-hover': '#ff6568',
+        '--sys-button-text-hover': '#ffffff',
+        '--sys-3d-color': '#ff6568',
+        '--sys-3d-edge': '#c0ffe3'
+    },
     colab: {
         '--sys-bg-main': '#F5F2E8',
         '--sys-text-primary': '#180F26',

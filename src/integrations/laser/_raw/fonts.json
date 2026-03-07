@@ -1,0 +1,19 @@
+{
+    "google": [],
+    "fontFace": [],
+    "usedFamilies": [
+        "Aspekta",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif"
+    ],
+    "primaryFont": "Aspekta",
+    "weights": [
+        250,
+        300,
+        400,
+        500,
+        700
+    ],
+    "note": "Aspekta is loaded as a self-hosted font via the Next.js build system (woff2 files inlined)"
+}

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USD.ai | Design System [SYS.VER.1.0]</title>
+    <title>USD.ai | Design System [SYS.VER.2.0]</title>
     <link rel="stylesheet" href="../../shared/brand-guidelines.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --accent-color: #0D0D0D;
+            --accent-color: #655343;
             --bg: #1a1a1a;
             --surface: #242424;
             --font-display: 'Playfair Display', 'PPEiko', Georgia, serif;
@@ -19,7 +19,7 @@
         .hero__brand {
             font-family: 'Playfair Display', 'PPEiko', Georgia, serif;
             color: var(--accent-color);
-            letter-spacing: -0.03em;
+            letter-spacing: -0.025em;
         }
 
         .specimen__sample--display {
@@ -33,34 +33,44 @@
             color: #e0e0e0;
         }
 
-        /* Light-on-dark swatch overrides */
-        .color-swatch-bg { background: #FAFAFA; }
-        .color-swatch-surface { background: #F5F5F5; }
-        .color-swatch-card { background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); }
-        .color-swatch-text { background: #0D0D0D; }
-        .color-swatch-muted { background: #6B6B6B; }
-        .color-swatch-border { background: rgba(0,0,0,0.08); border: 1px solid #444; }
-        .color-swatch-success { background: #16A34A; }
+        /* Stone palette swatches */
+        .swatch-stone-50 { background: #fafaf9; }
+        .swatch-stone-100 { background: #f5f5f4; }
+        .swatch-stone-200 { background: #ebe9e8; }
+        .swatch-stone-300 { background: #d6d3d1; }
+        .swatch-stone-400 { background: #a6a09b; }
+        .swatch-stone-500 { background: #79716b; }
+        .swatch-stone-950 { background: #1d1a19; }
 
-        /* Component demos */
-        .demo-swap-card {
-            background: #FFFFFF;
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 16px;
-            padding: 20px;
+        /* Brown palette swatches */
+        .swatch-brown-100 { background: #fff1e5; }
+        .swatch-brown-500 { background: #a99482; }
+        .swatch-brown-700 { background: #655343; }
+        .swatch-brown-900 { background: #2f2823; }
+
+        /* Status swatches */
+        .swatch-green-500 { background: #00c758; }
+        .swatch-status-green { background: #2d8714; }
+        .swatch-teal { background: #68c4ba; }
+
+        /* Component demos — exact token match */
+        .demo-card {
+            background: #fff;
+            border: 1px solid #d6d3d1;
+            border-radius: 12px;
+            padding: 16px;
             max-width: 320px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }
 
-        .demo-input-row {
+        .demo-input {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #F7F7F8;
-            border: 1px solid rgba(0,0,0,0.08);
+            background: #f5f5f4;
+            border: 1px solid #d6d3d1;
             border-radius: 12px;
             padding: 12px 14px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .demo-token {
@@ -70,55 +80,54 @@
             font-family: 'Inter', sans-serif;
             font-weight: 600;
             font-size: 0.875rem;
-            color: #0D0D0D;
+            color: #1d1a19;
         }
 
-        .demo-token-circle {
+        .demo-circle {
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: #2775CA;
         }
 
-        .demo-token-circle--dark {
-            background: #0D0D0D;
-        }
+        .demo-circle--usdc { background: #2775CA; }
+        .demo-circle--usdai { background: #655343; }
+        .demo-circle--susdai { background: #a99482; }
 
         .demo-amount {
             font-family: 'Inter', sans-serif;
             font-size: 1.125rem;
             font-weight: 500;
-            color: #9A9A9A;
+            color: #a6a09b;
         }
 
-        .demo-arrow {
+        .demo-arrow-wrap {
             display: flex;
             justify-content: center;
-            padding: 4px 0;
+            padding: 2px 0;
         }
 
         .demo-arrow-box {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(0,0,0,0.08);
+            border: 1px solid #d6d3d1;
             border-radius: 8px;
-            color: #6B6B6B;
-            font-size: 0.875rem;
+            color: #79716b;
+            font-size: 0.75rem;
         }
 
         .demo-cta {
             width: 100%;
-            margin-top: 12px;
-            padding: 12px;
-            background: #0D0D0D;
-            color: #FFFFFF;
+            margin-top: 10px;
+            padding: 10px;
+            background: #1d1a19;
+            color: #fff;
             border: none;
             border-radius: 12px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             font-weight: 600;
             cursor: pointer;
         }
@@ -126,57 +135,119 @@
         .demo-tab-group {
             display: flex;
             gap: 0;
-            background: #F0F0F2;
-            border-radius: 8px;
-            padding: 3px;
+            border-bottom: 1px solid #d6d3d1;
             max-width: 260px;
             margin-bottom: 1.5rem;
         }
 
         .demo-tab {
-            padding: 6px 20px;
+            flex: 1;
+            padding: 8px 0;
             font-family: 'Inter', sans-serif;
             font-size: 0.75rem;
-            font-weight: 600;
-            color: #9A9A9A;
+            font-weight: 500;
+            color: #79716b;
             background: transparent;
             border: none;
-            border-radius: 6px;
+            border-bottom: 2px solid transparent;
             cursor: pointer;
+            text-align: center;
         }
 
         .demo-tab--active {
-            color: #0D0D0D;
-            background: #FFFFFF;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+            color: #1d1a19;
+            font-weight: 600;
+            border-bottom-color: #1d1a19;
+        }
+
+        .demo-nav-btn {
+            padding: 6px 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+            background: #1d1a19;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+
+        .demo-nav-btn--outline {
+            background: transparent;
+            color: #1d1a19;
+            border: 1px solid #a6a09b;
+        }
+
+        .demo-metric-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .demo-metric {
-            display: inline-flex;
+            display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
-            padding: 8px 16px;
+            gap: 1px;
         }
 
         .demo-metric-label {
             font-family: 'Inter', sans-serif;
             font-size: 0.625rem;
             font-weight: 500;
-            color: #9A9A9A;
+            color: #79716b;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.05em;
         }
 
         .demo-metric-value {
             font-family: 'Inter', sans-serif;
             font-size: 0.875rem;
             font-weight: 600;
-            color: #0D0D0D;
+            color: #1d1a19;
         }
 
-        .demo-metric-value--green {
-            color: #16A34A;
+        .demo-metric-value--green { color: #00c758; }
+
+        .demo-banner {
+            background: #2f2823;
+            color: #fff1e5;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            max-width: 320px;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-allo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: #ddecdc;
+            border: 1px solid #81bb70;
+            border-radius: 8px;
+            max-width: 320px;
+        }
+
+        .demo-allo-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2d8714;
+            flex-shrink: 0;
+        }
+
+        .demo-allo-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6875rem;
+            color: #1d1a19;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -186,7 +257,7 @@
     <!-- TICKER -->
     <div class="ticker" style="color: var(--accent-color); opacity: 0.6;">
         <div class="ticker__inner">
-            USDai &mdash; GPU-BACKED STABLECOIN &mdash; DEFI LENDING &mdash; YIELD PROTOCOL &mdash; ALLO REWARDS &mdash; MACHINE-BACKED CREDIT &mdash; USDai &mdash; GPU-BACKED STABLECOIN &mdash; DEFI LENDING &mdash; YIELD PROTOCOL &mdash; ALLO REWARDS &mdash; MACHINE-BACKED CREDIT &mdash;&nbsp;
+            USDai &mdash; GPU-BACKED STABLECOIN &mdash; DEFI LENDING &mdash; YIELD PROTOCOL &mdash; ALLO REWARDS &mdash; MACHINE-BACKED CREDIT &mdash; PPEIKO + SWISSNOW &mdash; STONE PALETTE &mdash; USDai &mdash; GPU-BACKED STABLECOIN &mdash; DEFI LENDING &mdash; YIELD PROTOCOL &mdash; ALLO REWARDS &mdash;&nbsp;
         </div>
     </div>
 
@@ -196,13 +267,14 @@
         <h1 class="hero__brand">USDai</h1>
         <p class="hero__tagline">GPU-Backed Stablecoin Credit</p>
         <p class="hero__description">
-            The canonical visual identity reference for USD.ai Protocol. This system pairs editorial serif typography
-            (PPEiko) with a clean Swiss sans-serif (SwissNow) across a light, institutional interface. The design
-            language communicates trust and precision through generous whitespace, subtle borders, and restrained
-            dark accents against a near-white canvas.
+            The canonical visual identity reference for USD.ai Protocol. The design language pairs PPEiko (editorial
+            serif) with SwissNow (geometric sans-serif) across a warm stone palette &mdash; institutional restraint
+            communicated through earthy browns, generous whitespace, and near-zero chromatic saturation. The interface
+            reads as quietly authoritative: fintech precision without visual noise.
         </p>
         <p class="hero__source">Original &rarr; <a href="https://app.usd.ai/" target="_blank"
                 style="color: var(--accent-color);">app.usd.ai</a></p>
+        <p class="hero__source" style="margin-top:0.5rem;">Sitemap &rarr; /buy &middot; /stake &middot; /bridge &middot; /rewards</p>
     </section>
 
     <!-- 002 // PALETTE + 003 // TYPOGRAPHY -->
@@ -211,68 +283,144 @@
         <div>
             <div class="section-number">002 // PALETTE</div>
             <h2 class="section-title">Color System</h2>
-            <p class="section-description">A foundation of near-white backgrounds with near-black text and accents.
-                The palette is intentionally restrained &mdash; institutional confidence through absence of color.
-                Green signals positive yield metrics.</p>
+            <p class="section-description">Dual-axis palette: Stone (neutral UI chrome) + Brown (brand accent).
+                Warm undertones throughout &mdash; no pure grays. Status green for yield metrics.
+                Near-zero chroma maintains institutional restraint.</p>
 
-            <div class="grid-container" style="margin-top: 1.5rem;">
+            <!-- Stone Scale -->
+            <div style="margin-top:1.5rem; margin-bottom:0.5rem;">
+                <span style="font-family:var(--mono);font-size:0.625rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);">Stone Scale</span>
+            </div>
+            <div class="grid-container">
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-bg">
-                        <span class="swatch__name" style="color: #0D0D0D;">Page BG</span>
+                    <div class="swatch__color swatch-stone-50">
+                        <span class="swatch__name" style="color:#1d1a19;">50</span>
                     </div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">#FAFAFA</div>
-                        <div class="swatch__role">Primary Background</div>
+                        <div class="swatch__hex">#fafaf9</div>
+                        <div class="swatch__role">Page Background (bg-page)</div>
                     </div>
                 </div>
-
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-surface">
-                        <span class="swatch__name" style="color: #0D0D0D;">Surface</span>
+                    <div class="swatch__color swatch-stone-100">
+                        <span class="swatch__name" style="color:#1d1a19;">100</span>
                     </div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">#F5F5F5</div>
-                        <div class="swatch__role">Sidebar &amp; Input BG</div>
+                        <div class="swatch__hex">#f5f5f4</div>
+                        <div class="swatch__role">Primary BG (inputs, sidebar)</div>
                     </div>
                 </div>
-
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-text">
-                        <span class="swatch__name" style="color: #FFFFFF;">Primary</span>
+                    <div class="swatch__color swatch-stone-200">
+                        <span class="swatch__name" style="color:#1d1a19;">200</span>
                     </div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">#0D0D0D</div>
-                        <div class="swatch__role">Text &amp; Interactive Accent</div>
+                        <div class="swatch__hex">#ebe9e8</div>
+                        <div class="swatch__role">Secondary BG (hover states)</div>
                     </div>
                 </div>
-
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-muted">
-                        <span class="swatch__name" style="color: #FFFFFF;">Muted</span>
+                    <div class="swatch__color swatch-stone-300">
+                        <span class="swatch__name" style="color:#1d1a19;">300</span>
                     </div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">#6B6B6B</div>
-                        <div class="swatch__role">Secondary Text</div>
+                        <div class="swatch__hex">#d6d3d1</div>
+                        <div class="swatch__role">Outline Minor (borders)</div>
                     </div>
                 </div>
-
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-success">
-                        <span class="swatch__name" style="color: #FFFFFF;">Success</span>
+                    <div class="swatch__color swatch-stone-400">
+                        <span class="swatch__name" style="color:#fff;">400</span>
                     </div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">#16A34A</div>
-                        <div class="swatch__role">Positive APY &amp; Yield</div>
+                        <div class="swatch__hex">#a6a09b</div>
+                        <div class="swatch__role">Outline Major</div>
                     </div>
                 </div>
-
                 <div class="swatch">
-                    <div class="swatch__color color-swatch-card">
-                        <span class="swatch__name" style="color: #0D0D0D;">Card</span>
+                    <div class="swatch__color swatch-stone-500">
+                        <span class="swatch__name" style="color:#fff;">500</span>
                     </div>
                     <div class="swatch__meta">
-                        <div class="swatch__hex">#FFFFFF</div>
-                        <div class="swatch__role">Card Surface + 0.08 Border</div>
+                        <div class="swatch__hex">#79716b</div>
+                        <div class="swatch__role">Text Secondary</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color swatch-stone-950">
+                        <span class="swatch__name" style="color:#fff;">950</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#1d1a19</div>
+                        <div class="swatch__role">Text Primary / CTA</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brown Scale -->
+            <div style="margin-top:2rem; margin-bottom:0.5rem;">
+                <span style="font-family:var(--mono);font-size:0.625rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);">Brown Scale (Brand)</span>
+            </div>
+            <div class="grid-container">
+                <div class="swatch">
+                    <div class="swatch__color swatch-brown-100">
+                        <span class="swatch__name" style="color:#655343;">100</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#fff1e5</div>
+                        <div class="swatch__role">Primary Light</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color swatch-brown-500">
+                        <span class="swatch__name" style="color:#fff;">500</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#a99482</div>
+                        <div class="swatch__role">Secondary Accent</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color swatch-brown-700">
+                        <span class="swatch__name" style="color:#fff;">700</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#655343</div>
+                        <div class="swatch__role">Primary Brand</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color swatch-brown-900">
+                        <span class="swatch__name" style="color:#fff;">900</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#2f2823</div>
+                        <div class="swatch__role">Banner / Dark accent</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div style="margin-top:2rem; margin-bottom:0.5rem;">
+                <span style="font-family:var(--mono);font-size:0.625rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);">Status + Utility</span>
+            </div>
+            <div class="grid-container">
+                <div class="swatch">
+                    <div class="swatch__color swatch-green-500">
+                        <span class="swatch__name" style="color:#fff;">Green</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#00c758</div>
+                        <div class="swatch__role">Yield / APY positive</div>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch__color swatch-teal">
+                        <span class="swatch__name" style="color:#fff;">Teal</span>
+                    </div>
+                    <div class="swatch__meta">
+                        <div class="swatch__hex">#68c4ba</div>
+                        <div class="swatch__role">New Teal accent</div>
                     </div>
                 </div>
             </div>
@@ -282,12 +430,12 @@
         <div>
             <div class="section-number">003 // TYPOGRAPHY</div>
             <h2 class="section-title">Type System</h2>
-            <p class="section-description">Dual-typeface hierarchy: PPEiko (editorial serif) for display and brand
-                identity, SwissNow (geometric sans) for all interface text. The pairing balances institutional
-                authority with modern DeFi clarity.</p>
+            <p class="section-description">PPEiko (custom serif) for display &amp; brand identity.
+                SwissNow (custom sans) for all interface text. Both loaded as WOFF2 from Next.js static media.
+                Inter serves as the public fallback.</p>
 
-            <div class="specimen" style="margin-top: 1.5rem;">
-                <div class="specimen__sample specimen__sample--display" style="font-size: clamp(2rem, 5vw, 3.5rem);">
+            <div class="specimen" style="margin-top:1.5rem;">
+                <div class="specimen__sample specimen__sample--display" style="font-size:clamp(2rem,5vw,3.5rem);">
                     GPU-Backed Credit
                 </div>
                 <div class="specimen__label">PPEiko Medium &mdash; Display / Brand / Hero</div>
@@ -295,42 +443,29 @@
 
             <div class="specimen">
                 <div class="specimen__sample specimen__sample--body"
-                    style="font-size: clamp(1.25rem, 3vw, 2rem); font-weight: 400;">
-                    The future of machine-backed capital
+                    style="font-size:clamp(1.25rem,3vw,2rem); font-weight:400;">
+                    The yield-bearing synthetic dollar
                 </div>
-                <div class="specimen__label">SwissNow Regular &mdash; Body / Interface</div>
+                <div class="specimen__label">SwissNow Book &mdash; Body / Interface</div>
             </div>
 
             <div class="specimen">
-                <p class="specimen__body" style="font-family: 'Inter', sans-serif;">
+                <p class="specimen__body" style="font-family:'Inter',sans-serif;">
                     USDai is a synthetic stablecoin collateralized by GPU hardware &mdash; NVIDIA H100, H200, and B200
                     processors. The protocol bridges capital from yield-seeking investors to AI infrastructure builders
-                    through decentralized underwriting and oracle-free credit assessment.
+                    through decentralized underwriting and oracle-free credit assessment. sUSDai is the yield-bearing
+                    staked variant, currently offering 6.85% APY with an expected APY of 12.19%.
                 </p>
-                <div class="specimen__label">SwissNow / Inter &mdash; Paragraph Text &mdash; 1rem / 1.7 line-height</div>
+                <div class="specimen__label">SwissNow / Inter &mdash; Paragraph &mdash; 0.875rem / 1.43 line-height</div>
             </div>
 
             <table class="type-table">
-                <tr>
-                    <td>Display</td>
-                    <td>PPEiko</td>
-                    <td>-0.02em</td>
-                </tr>
-                <tr>
-                    <td>Body</td>
-                    <td>SwissNow</td>
-                    <td>0em</td>
-                </tr>
-                <tr>
-                    <td>Label</td>
-                    <td>SwissNow</td>
-                    <td>0.04em</td>
-                </tr>
-                <tr>
-                    <td>Mono</td>
-                    <td>Source Code Pro</td>
-                    <td>0em</td>
-                </tr>
+                <tr><td>Display</td><td>PPEiko</td><td>-0.025em</td></tr>
+                <tr><td>Body</td><td>SwissNow</td><td>0em</td></tr>
+                <tr><td>Label</td><td>SwissNow</td><td>0.05em</td></tr>
+                <tr><td>Mono</td><td>SF Mono / Source Code Pro</td><td>0em</td></tr>
+                <tr><td>Nav Tab</td><td>SwissNow 500</td><td>0.01em</td></tr>
+                <tr><td>Metric Value</td><td>SwissNow 600</td><td>-0.01em</td></tr>
             </table>
         </div>
     </div>
@@ -340,28 +475,30 @@
     <!-- 004 // INTERFACE COMPONENTS -->
     <section class="guideline-section">
         <div class="section-subtitle">004 // INTERFACE</div>
-        <h2 class="section-header" style="font-family: var(--font-display);">Components</h2>
+        <h2 class="section-header" style="font-family:var(--font-display);">Components</h2>
 
         <div class="grid-container">
-            <!-- Buttons -->
+            <!-- Buttons & Nav -->
             <div>
-                <div class="component-label">Action Buttons</div>
-                <div class="btn-showcase">
-                    <button class="btn-demo btn-demo--solid"
-                        style="background: #0D0D0D; color: #FFF; border-radius: 12px;">Connect Wallet</button>
-                    <button class="btn-demo btn-demo--outline"
-                        style="color: #0D0D0D; border-color: rgba(0,0,0,0.15); border-radius: 9999px;">Connect</button>
+                <div class="component-label">Banner</div>
+                <div class="demo-banner">
+                    &#9432; USDai is live on Arbitrum &amp; Plasma
                 </div>
 
-                <div class="component-label">Tab Navigation</div>
+                <div class="component-label">Action Buttons</div>
+                <div class="btn-showcase">
+                    <button class="demo-nav-btn">Connect</button>
+                    <button class="demo-nav-btn--outline" style="padding:6px 16px;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;border-radius:12px;">Connect Wallet</button>
+                </div>
+
+                <div class="component-label" style="margin-top:1.5rem;">Tab Navigation</div>
                 <div class="demo-tab-group">
                     <button class="demo-tab demo-tab--active">Buy</button>
-                    <button class="demo-tab">Stake</button>
-                    <button class="demo-tab">Bridge</button>
+                    <button class="demo-tab">Redeem</button>
                 </div>
 
                 <div class="component-label">Metric Display</div>
-                <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                <div class="demo-metric-group">
                     <div class="demo-metric">
                         <span class="demo-metric-label">TVL</span>
                         <span class="demo-metric-value">$48.2M</span>
@@ -375,28 +512,44 @@
                         <span class="demo-metric-value demo-metric-value--green">12.19%</span>
                     </div>
                 </div>
+
+                <div class="component-label" style="margin-top:1.5rem;">Allo Badge</div>
+                <div class="demo-allo">
+                    <div class="demo-allo-dot"></div>
+                    <span class="demo-allo-text">Eligible for <strong>Allo&trade;</strong> rewards</span>
+                </div>
             </div>
 
-            <!-- Swap Card Mini -->
+            <!-- Swap Card -->
             <div>
                 <div class="component-label">Swap Interface</div>
-                <div class="demo-swap-card">
-                    <div class="demo-input-row">
+                <div class="demo-card">
+                    <div class="demo-input">
                         <div class="demo-token">
-                            <div class="demo-token-circle"></div>
+                            <div class="demo-circle demo-circle--usdc"></div>
                             USDC
                         </div>
                         <span class="demo-amount">0.00</span>
                     </div>
-                    <div class="demo-arrow">
+                    <div class="demo-arrow-wrap">
                         <div class="demo-arrow-box">&darr;</div>
                     </div>
-                    <div class="demo-input-row">
+                    <div class="demo-input">
                         <div class="demo-token">
-                            <div class="demo-token-circle demo-token-circle--dark"></div>
+                            <div class="demo-circle demo-circle--usdai"></div>
                             USDai
                         </div>
                         <span class="demo-amount">0.00</span>
+                    </div>
+                    <div style="margin-top:10px;padding-top:10px;border-top:1px solid #d6d3d1;">
+                        <div style="display:flex;justify-content:space-between;font-size:0.6875rem;color:#79716b;margin-bottom:4px;">
+                            <span>Exchange Rate</span>
+                            <span style="color:#1d1a19;font-weight:500;">1 USDC &rarr; 1 USDai</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;font-size:0.6875rem;color:#79716b;">
+                            <span>Max Slippage</span>
+                            <span style="color:#1d1a19;font-weight:500;">0.1%</span>
+                        </div>
                     </div>
                     <button class="demo-cta">Connect Wallet</button>
                 </div>
@@ -405,72 +558,120 @@
             <!-- Surface & Radius -->
             <div>
                 <div class="component-label">Surface Properties</div>
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <div style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); border-radius: 16px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-                        <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #6B6B6B;">Card Surface &mdash; 16px radius &mdash; 0.08 border</span>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div style="background:#fff;border:1px solid #d6d3d1;border-radius:12px;padding:14px;">
+                        <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;color:#79716b;">Card &mdash; radius-xl 12px &mdash; outline-minor border</span>
                     </div>
-                    <div style="background: #F7F7F8; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 14px;">
-                        <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #6B6B6B;">Input Surface &mdash; 12px radius &mdash; #F7F7F8</span>
+                    <div style="background:#f5f5f4;border:1px solid #d6d3d1;border-radius:12px;padding:12px;">
+                        <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;color:#79716b;">Input &mdash; radius-xl 12px &mdash; bg-primary</span>
                     </div>
-                    <div style="background: #F0F0F2; border-radius: 8px; padding: 10px;">
-                        <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #6B6B6B;">Tab Group &mdash; 8px radius &mdash; #F0F0F2</span>
+                    <div style="background:#ebe9e8;border-radius:8px;padding:10px;">
+                        <span style="font-family:'Inter',sans-serif;font-size:0.6875rem;color:#79716b;">Hover Surface &mdash; radius-lg 8px &mdash; bg-secondary</span>
                     </div>
                 </div>
 
-                <div class="component-label" style="margin-top: 1.5rem;">Input Field</div>
+                <div class="component-label" style="margin-top:1.5rem;">Radius Scale</div>
+                <table class="type-table">
+                    <tr><td>radius-xs</td><td>2px</td><td></td></tr>
+                    <tr><td>radius-sm</td><td>4px</td><td></td></tr>
+                    <tr><td>radius-lg</td><td>8px</td><td>tabs, sidebar icons</td></tr>
+                    <tr><td>radius-xl</td><td>12px</td><td>cards, inputs, buttons</td></tr>
+                    <tr><td>full</td><td>999px</td><td>pills, connect btn</td></tr>
+                </table>
+
+                <div class="component-label" style="margin-top:1.5rem;">Input Field</div>
                 <input type="text" class="input-demo" placeholder="0.00"
-                    style="background: #F7F7F8; border-color: rgba(0,0,0,0.08); color: #0D0D0D; border-radius: 12px;">
+                    style="background:#f5f5f4;border-color:#d6d3d1;color:#1d1a19;border-radius:12px;">
             </div>
         </div>
     </section>
 
-    <!-- 005 // VISUAL ASSETS -->
+    <!-- 005 // SITEMAP -->
     <section class="guideline-section">
-        <div class="section-subtitle">005 // ASSETS</div>
-        <h2 class="section-header" style="font-family: var(--font-display);">Visual Assets</h2>
+        <div class="section-subtitle">005 // SITEMAP</div>
+        <h2 class="section-header" style="font-family:var(--font-display);">Pages</h2>
+
+        <div class="grid-container">
+            <div>
+                <div class="component-label">/buy (Default)</div>
+                <p style="font-size:0.8125rem;color:var(--text);line-height:1.6;margin-bottom:1rem;">
+                    Token swap interface. USDC &rarr; USDai on Arbitrum. Buy/Redeem sub-tabs.
+                    Metrics bar (TVL, APY, Exp. APY, Fair Value). Two-step tx flow (Approve + Buy).
+                    Allo rewards badge.
+                </p>
+
+                <div class="component-label">/stake</div>
+                <p style="font-size:0.8125rem;color:var(--text);line-height:1.6;margin-bottom:1rem;">
+                    USDai &harr; sUSDai staking. Stake/Unstake sub-tabs. 1:1 exchange rate.
+                    15-day average unstaking notice. Two-step tx flow (Approve + Stake).
+                </p>
+            </div>
+            <div>
+                <div class="component-label">/bridge</div>
+                <p style="font-size:0.8125rem;color:var(--text);line-height:1.6;margin-bottom:1rem;">
+                    Cross-chain bridge. Arbitrum &harr; Plasma. USDai + sUSDai tokens.
+                    Info banner: &quot;Bridging can take up to 15 minutes.&quot;
+                    Two-column from/to layout with chain selectors.
+                </p>
+
+                <div class="component-label">/rewards</div>
+                <p style="font-size:0.8125rem;color:var(--text);line-height:1.6;margin-bottom:1rem;">
+                    Allo&trade; opportunities table. 100+ DeFi integrations across Euler, Pendle,
+                    Morpho, Curve, Fluid, Silo, Equilibria, Gamma, Aerodrome, Balancer, Gearbox,
+                    Spectra, and more. Columns: Protocol, Network, Type (MM/DEX/Yield), Allo Rate,
+                    TVL, APY. Networks: Arbitrum, Plasma, Base, Ethereum.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 006 // VISUAL ASSETS -->
+    <section class="guideline-section">
+        <div class="section-subtitle">006 // ASSETS</div>
+        <h2 class="section-header" style="font-family:var(--font-display);">Visual Assets</h2>
 
         <div class="grid-container">
             <div>
                 <div class="component-label">Brand Lockup</div>
-                <div style="background: #FAFAFA; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 32px; display: flex; align-items: center; justify-content: center;">
-                    <img src="https://app.usd.ai/svg/protocols/usdai-full-horizontal-lockup.svg" alt="USDai Logo"
-                        style="height: 32px;"
-                        onerror="this.outerHTML='<span style=\'font-family: Playfair Display, serif; font-size: 2rem; font-weight: 600; color: #0D0D0D;\'>USDai</span>'">
+                <div style="background:#fafaf9;border:1px solid #d6d3d1;border-radius:12px;padding:28px;display:flex;align-items:center;justify-content:center;">
+                    <img src="https://app.usd.ai/svg/protocols/usdai-full-horizontal-lockup.svg" alt="USDai"
+                        style="height:28px;"
+                        onerror="this.outerHTML='<span style=\'font-family:Playfair Display,serif;font-size:1.75rem;font-weight:600;color:#1d1a19;letter-spacing:-0.025em\'>USDai</span>'">
                 </div>
             </div>
 
             <div>
                 <div class="component-label">Token Icons</div>
-                <div style="display: flex; gap: 16px; align-items: center; padding: 16px 0;">
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <div style="display:flex;gap:20px;align-items:center;padding:16px 0;">
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
                         <img src="https://app.usd.ai/svg/erc20/usdai.svg" alt="USDai"
-                            style="width: 40px; height: 40px; border-radius: 50%;"
-                            onerror="this.style.background='#0D0D0D'">
-                        <span style="font-size: 0.625rem; color: #6B6B6B; font-family: 'Inter', sans-serif;">USDai</span>
+                            style="width:40px;height:40px;border-radius:50%;" onerror="this.style.background='#655343'">
+                        <span style="font-size:0.625rem;color:#79716b;font-family:'Inter',sans-serif;">USDai</span>
                     </div>
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
                         <img src="https://app.usd.ai/svg/erc20/susdai.svg" alt="sUSDai"
-                            style="width: 40px; height: 40px; border-radius: 50%;"
-                            onerror="this.style.background='#333'">
-                        <span style="font-size: 0.625rem; color: #6B6B6B; font-family: 'Inter', sans-serif;">sUSDai</span>
+                            style="width:40px;height:40px;border-radius:50%;" onerror="this.style.background='#a99482'">
+                        <span style="font-size:0.625rem;color:#79716b;font-family:'Inter',sans-serif;">sUSDai</span>
                     </div>
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
                         <img src="https://app.usd.ai/svg/erc20/usdc.svg" alt="USDC"
-                            style="width: 40px; height: 40px; border-radius: 50%;"
-                            onerror="this.style.background='#2775CA'">
-                        <span style="font-size: 0.625rem; color: #6B6B6B; font-family: 'Inter', sans-serif;">USDC</span>
+                            style="width:40px;height:40px;border-radius:50%;" onerror="this.style.background='#2775CA'">
+                        <span style="font-size:0.625rem;color:#79716b;font-family:'Inter',sans-serif;">USDC</span>
                     </div>
                 </div>
             </div>
 
             <div>
                 <div class="component-label">Chain Logos</div>
-                <div style="display: flex; gap: 16px; align-items: center; padding: 16px 0;">
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <div style="display:flex;gap:20px;align-items:center;padding:16px 0;">
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
                         <img src="https://app.usd.ai/svg/chain-logos/arbitrum.svg" alt="Arbitrum"
-                            style="width: 40px; height: 40px; border-radius: 50%;"
-                            onerror="this.style.background='#28A0F0'">
-                        <span style="font-size: 0.625rem; color: #6B6B6B; font-family: 'Inter', sans-serif;">Arbitrum</span>
+                            style="width:40px;height:40px;border-radius:50%;" onerror="this.style.background='#28A0F0'">
+                        <span style="font-size:0.625rem;color:#79716b;font-family:'Inter',sans-serif;">Arbitrum</span>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+                        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#EC4899);"></div>
+                        <span style="font-size:0.625rem;color:#79716b;font-family:'Inter',sans-serif;">Plasma</span>
                     </div>
                 </div>
             </div>
@@ -483,7 +684,7 @@
             <div class="guidelines-footer__brand">USDai // 2026</div>
             <a href="../../../../index.html#store" class="back-link">&larr; Back to Galaxy Store</a>
         </div>
-        <div class="guidelines-footer__version">SYS.VER.1.0 // GPU-BACKED CREDIT</div>
+        <div class="guidelines-footer__version">SYS.VER.2.0 // GPU-BACKED CREDIT // STONE + BROWN</div>
     </footer>
 
 </body>
